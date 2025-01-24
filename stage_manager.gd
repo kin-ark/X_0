@@ -15,3 +15,7 @@ func _process(delta: float) -> void:
 	if !is_stopped:
 		time_elapsed += delta
 		#$Label.text = str(time_elapsed).pad_decimals(2)
+
+
+func fail():
+	print("fail")
