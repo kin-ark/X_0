@@ -19,3 +19,8 @@ texture = ExtResource("1_qn30o")
 
 [node name="SkillManager" type="Node" parent="."]
 script = ExtResource("3_iynpc")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+position = Vector2(1, 0)
+collide_with_areas = true
+collide_with_bodies = false

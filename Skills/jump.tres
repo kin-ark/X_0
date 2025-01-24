@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SkillResource" load_steps=3 format=3 uid="uid://bwuy05uunjbxo"]
+
+[ext_resource type="Script" path="res://Skills/skill_resource.gd" id="1_syjqf"]
+[ext_resource type="Texture2D" uid="uid://dgrmvtp5k53qh" path="res://icon.png" id="2_igmsp"]
+
+[resource]
+script = ExtResource("1_syjqf")
+skill_name = "Jump"
+skill_desc = "AWOOOOO"
+sprite = ExtResource("2_igmsp")
+button_name = "Button of Wolverine"

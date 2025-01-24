@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SkillResource" load_steps=3 format=3 uid="uid://dha4a04qbyhy2"]
+
+[ext_resource type="Script" path="res://Skills/skill_resource.gd" id="1_rtydg"]
+[ext_resource type="Texture2D" uid="uid://dgrmvtp5k53qh" path="res://icon.png" id="2_kkmy1"]
+
+[resource]
+script = ExtResource("1_rtydg")
+skill_name = "Break"
+skill_desc = "breaking bad uwu"
+sprite = ExtResource("2_kkmy1")
+button_name = "Button of Kinan"

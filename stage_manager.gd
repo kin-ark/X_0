@@ -3,11 +3,13 @@ extends Node2D
 var move_count = 0
 var time_elapsed = 0
 var is_stopped = false
-var tile_map_layer: TileMapLayer = null
+
 
 enum GAME_STATE {SKILL_SELECT, PLAY, SKILL_USE, END}
 
-var game_state: GAME_STATE = GAME_STATE.SKILL_SELECT
+var game_state: GAME_STATE = GAME_STATE.PLAY
+var tile_map_layer: TileMapLayer = null
+var player: Player = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -17,7 +19,12 @@ func _ready() -> void:
 			tile_map_layer = node
 		else:
 			print("Node not found")
-
+		
+		node = get_tree().current_scene.get_node("Player")
+		if node:
+			player = node
+		else:
+			print("Node not found")
 	else:
 		print("No current scene!")
 
