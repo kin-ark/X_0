@@ -32,7 +32,7 @@ sources/0 = SubResource("TileSetAtlasSource_s2kuh")
 [node name="Level" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAABAAEAAAD//wAAAAABAAAAAAD+/wAAAAAAAAAAAAD+////AAAAAAAAAAD/////AAABAAAAAAA=")
+tile_map_data = PackedByteArray("AAD+//7/AAAAAAAAAAD///7/AAAAAAAAAAAAAP7/AAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAABAAEAAAD//wAAAAABAAAAAAD+/wAAAAAAAAAAAAD+////AAAAAAAAAAD/////AAABAAAAAAD+/wEAAAAAAAEAAAD//wEAAAAAAAAAAAAAAAEAAAAAAAAAAAABAAEAAAAAAAAAAAD9/wEAAAAAAAAAAAD9/wAAAAAAAAAAAAD9////AAAAAAAAAAD9//7/AAAAAAAAAAD9//3/AAAAAAAAAAD+//3/AAAAAAAAAAD///3/AAAAAAAAAAAAAP3/AAAAAAAAAAABAP3/AAAAAAAAAAABAP7/AAAAAAAAAAABAP//AAAAAAAAAAABAAAAAAAAAAAAAAD9/wIAAAAAAAAAAAD+/wIAAAAAAAAAAAD//wIAAAAAAAAAAAAAAAIAAAAAAAAAAAABAAIAAAAAAAAAAAACAAIAAAAAAAEAAAACAAEAAAAAAAEAAAACAAAAAAAAAAAAAAACAP//AAAAAAAAAAACAP7/AAAAAAAAAAACAP3/AAAAAAAAAAA=")
 tile_set = SubResource("TileSet_xhwa0")
 script = ExtResource("2_fe2wb")
 
@@ -57,8 +57,13 @@ texture = ExtResource("3_nr4s1")
 [node name="StageManager" type="Node2D" parent="."]
 script = ExtResource("4_b20c1")
 
-[node name="Breakable" parent="." instance=ExtResource("6_8bnfk")]
-
 [node name="Enemies" type="Node" parent="."]
 
 [node name="EnemyChase" parent="Enemies" instance=ExtResource("9_f454c")]
+
+[node name="EnemyChase2" parent="Enemies" instance=ExtResource("9_f454c")]
+position = Vector2(32, 99)
+
+[node name="Breakables" type="Node" parent="."]
+
+[node name="Breakable" parent="Breakables" instance=ExtResource("6_8bnfk")]

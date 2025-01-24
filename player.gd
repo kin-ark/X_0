@@ -86,7 +86,7 @@ func _move(direction):
 		else:
 			return
 
-	if tile_data.get_custom_data("walkable") == false:
+	elif tile_data.get_custom_data("walkable") == false:
 		
 		if check_skill("Jump"):
 			var jump_tile = Vector2i(next_tile.x + direction.x, next_tile.y + direction.y)
@@ -105,7 +105,7 @@ func _move(direction):
 	sprite_2d.global_position = tile_map_layer.map_to_local(curr_tile)
 	
 	var tween = get_tree().create_tween().set_trans(Tween.TRANS_SINE)
-	tween.tween_property(sprite_2d, "global_position", tile_map_layer.map_to_local(next_tile), 1)
+	tween.tween_property(sprite_2d, "global_position", tile_map_layer.map_to_local(next_tile), 0.2)
 	tween.tween_callback(on_finish_move)
 	
 	#sprite_2d.global_position = tile_map_layer.map_to_local(curr_tile)

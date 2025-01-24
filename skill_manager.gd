@@ -1,5 +1,4 @@
 extends Node
-const JUMP = preload("res://Skills/jump.tscn")
 var skill_1: Node = null
 var skill_2: Node = null
 

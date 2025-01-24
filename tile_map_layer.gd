@@ -18,12 +18,19 @@ func _ready() -> void:
 	astar.diagonal_mode = AStarGrid2D.DIAGONAL_MODE_NEVER
 	astar.update()
 	
+	calculate_path()
+	
+func calculate_path():
 	for i in range(get_used_rect().position.x, get_used_rect().end.x):
 		for j in range(get_used_rect().position.y, get_used_rect().end.y):
 			var coords = Vector2i(i, j)
 			var tile_data = get_cell_tile_data(coords)
-			if not tile_data or (tile_data.get_custom_data("walkable") == false):
-				astar.set_point_solid(coords)
+			if not tile_data or (tile_data.get_custom_data("walkable") == false)\
+			or StageManager.is_blocked(coords):
+				astar.set_point_solid(coords, true)
+			else:
+				astar.set_point_solid(coords, false)
+		
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func is_point_walkable(position):
