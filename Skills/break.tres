@@ -8,4 +8,4 @@ script = ExtResource("1_rtydg")
 skill_name = "Break"
 skill_desc = "breaking bad uwu"
 sprite = ExtResource("2_kkmy1")
-button_name = "Button of Kinan"
+button_name = ""

@@ -1,29 +1,33 @@
 extends Node2D
-@onready var tile_map_layer: TileMapLayer = $TileMapLayer
-@onready var player: Player = $Player
-
-@onready var stage_manager: Node2D = $"../StageManager"
-
+@onready var ray_cast_2d: RayCast2D = $RayCast2D
 var current_path: Array[Vector2i]
-			
-func _unhandled_input(event: InputEvent) -> void:
-	var player_position = player.global_position
-	if event.is_action_pressed("left_eye"):
-		var is_walkable = tile_map_layer.is_point_walkable(player_position)
-		if is_walkable:
-			#print("yea")
-			current_path = tile_map_layer.astar.get_id_path(
-				tile_map_layer.local_to_map(global_position),
-				tile_map_layer.local_to_map(player_position)
-			).slice(1)
-			
-			if current_path.is_empty(): return
-			
-			var target_position = tile_map_layer.map_to_local(current_path.front())
-			var tween = get_tree().create_tween().set_trans(Tween.TRANS_SINE)
-			tween.tween_property(self, "global_position", target_position, 1)
-			
-			if current_path.size() == 1:
-				tween.tween_callback(stage_manager.fail)
-			#print(current_path)
-			#print(current_path)
+func move() -> void:
+	var player_position = StageManager.player.global_position
+	var is_walkable = StageManager.tile_map_layer.is_point_walkable(player_position)
+	if is_walkable:
+		#print("yea")
+		current_path = StageManager.tile_map_layer.astar.get_id_path(
+			StageManager.tile_map_layer.local_to_map(global_position),
+			StageManager.tile_map_layer.local_to_map(player_position)
+		).slice(1)
+
+		if current_path.is_empty(): return
+
+		var target_position = StageManager.tile_map_layer.map_to_local(current_path.front())
+		var direction = Vector2(target_position - global_position).normalized()
+		print(target_position, global_position)
+		ray_cast_2d.target_position = direction * 64
+	
+		ray_cast_2d.force_raycast_update()
+	
+		if ray_cast_2d.is_colliding():
+			var collider = ray_cast_2d.get_collider()
+			if collider:
+				return
+		var tween = get_tree().create_tween().set_trans(Tween.TRANS_SINE)
+		tween.tween_property(self, "global_position", target_position, 1)
+
+		if current_path.size() == 1:
+			tween.tween_callback(StageManager.fail)
+		#print(current_path)
+		#print(current_path)

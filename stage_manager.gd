@@ -10,6 +10,7 @@ enum GAME_STATE {SKILL_SELECT, PLAY, SKILL_USE, END}
 var game_state: GAME_STATE = GAME_STATE.PLAY
 var tile_map_layer: TileMapLayer = null
 var player: Player = null
+var enemies: Node = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -25,6 +26,12 @@ func _ready() -> void:
 			player = node
 		else:
 			print("Node not found")
+			
+		node = get_tree().current_scene.get_node("Enemies")
+		if node:
+			enemies = node
+		else:
+			print("Node not found")
 	else:
 		print("No current scene!")
 
@@ -33,3 +40,10 @@ func _process(delta: float) -> void:
 	if !is_stopped:
 		time_elapsed += delta
 		#$Label.text = str(time_elapsed).pad_decimals(2)
+
+func move_enemies():
+	for stuff in enemies.get_children():
+		stuff.move()
+
+func fail():
+	print("fail")

@@ -106,5 +106,11 @@ func _move(direction):
 	
 	var tween = get_tree().create_tween().set_trans(Tween.TRANS_SINE)
 	tween.tween_property(sprite_2d, "global_position", tile_map_layer.map_to_local(next_tile), 1)
-	tween.tween_callback(_set_is_moving.bind(false))
+	tween.tween_callback(on_finish_move)
+	
 	#sprite_2d.global_position = tile_map_layer.map_to_local(curr_tile)
+	
+	
+func on_finish_move():
+	_set_is_moving(false)
+	StageManager.move_enemies()
