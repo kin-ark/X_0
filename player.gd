@@ -10,16 +10,17 @@ var is_moving = false
 	
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if is_moving:
-		return
-	if Input.is_action_pressed("up"):
-		_move(Vector2.UP)
-	elif Input.is_action_pressed("down"):
-		_move(Vector2.DOWN)
-	elif Input.is_action_pressed("left"):
-		_move(Vector2.LEFT)
-	elif Input.is_action_pressed("right"):
-		_move(Vector2.RIGHT)
+	if StageManager.game_state == StageManager.GAME_STATE.PLAY:
+		if is_moving:
+			return
+		if Input.is_action_pressed("up"):
+			_move(Vector2.UP)
+		elif Input.is_action_pressed("down"):
+			_move(Vector2.DOWN)
+		elif Input.is_action_pressed("left"):
+			_move(Vector2.LEFT)
+		elif Input.is_action_pressed("right"):
+			_move(Vector2.RIGHT)
 
 func _set_is_moving(val):
 	is_moving = val

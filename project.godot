@@ -15,6 +15,10 @@ run/main_scene="res://level.tscn"
 config/features=PackedStringArray("4.3")
 config/icon="res://icon.png"
 
+[autoload]
+
+StageManager="*res://stage_manager.gd"
+
 [display]
 
 window/size/viewport_width=1920
