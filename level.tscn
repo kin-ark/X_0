@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="3_31ypp"]
 [ext_resource type="Texture2D" uid="uid://dgrmvtp5k53qh" path="res://icon.png" id="3_nr4s1"]
 [ext_resource type="Script" path="res://stage_manager.gd" id="4_b20c1"]
-[ext_resource type="Resource" uid="uid://dha4a04qbyhy2" path="res://Skills/break.tres" id="4_shdby"]
+[ext_resource type="Resource" uid="uid://boulre7hs3tgn" path="res://Skills/restoration.tres" id="5_arhru"]
 [ext_resource type="PackedScene" uid="uid://cfhyt71pjnllb" path="res://breakable.tscn" id="6_8bnfk"]
 [ext_resource type="PackedScene" uid="uid://3yjgfvxpfjw8" path="res://enemy_chase.tscn" id="9_f454c"]
 
@@ -42,7 +42,7 @@ position = Vector2(-31, -28)
 [node name="Player" parent="." instance=ExtResource("2_o0vlv")]
 position = Vector2(-96, 31)
 skill_1 = ExtResource("3_31ypp")
-skill_2 = ExtResource("4_shdby")
+skill_2 = ExtResource("5_arhru")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true

@@ -31,12 +31,21 @@ func _process(delta: float) -> void:
 		elif Input.is_action_pressed("right"):
 			_move(Vector2.RIGHT)
 		elif Input.is_action_pressed("left_eye"):
-			is_skill_1_active = true
+			_activate_skill(true)
 		elif Input.is_action_pressed("right_eye"):
-			is_skill_2_active = true
+			_activate_skill(false)
 
 func _set_is_moving(val):
 	is_moving = val
+	
+
+func _activate_skill(is_left):
+	if is_left:
+		is_skill_1_active = true
+	else:
+		is_skill_2_active = true
+	check_skill("Restoration")
+		
 
 
 func get_next_tile(direction) -> Vector2i:
@@ -56,11 +65,15 @@ func move(next_tile):
 
 func check_skill(skill_name):
 	if (skill_1 and is_skill_1_active and skill_1.skill_name == skill_name):
+		if (skill_name == "Restoration") and used_skill:
+			skill_2 = used_skill
 		is_skill_1_active = false
 		used_skill = skill_1
 		skill_1 = null
 		return true
 	elif (skill_2 and is_skill_2_active and skill_2.skill_name == skill_name):
+		if (skill_name == "Restoration") and used_skill:
+			skill_1 = used_skill
 		is_skill_2_active = false
 		used_skill = skill_2
 		skill_2 = null
@@ -97,7 +110,6 @@ func _move(direction):
 			
 			next_tile = jump_tile
 		else:
-			print("gabisa")
 			return
 	
 	is_moving = true
