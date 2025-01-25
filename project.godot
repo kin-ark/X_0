@@ -11,13 +11,13 @@ config_version=5
 [application]
 
 config/name="X_0"
-run/main_scene="res://level.tscn"
+run/main_scene="res://Levels/level.tscn"
 config/features=PackedStringArray("4.3")
 config/icon="res://icon.png"
 
 [autoload]
 
-StageManager="*res://stage_manager.gd"
+StageManager="*res://Levels/stage_manager.gd"
 
 [display]
 

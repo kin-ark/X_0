@@ -61,6 +61,7 @@ func get_next_tile(direction) -> Vector2i:
 	return next_tile
 
 func move(next_tile):
+	StageManager.move_count += 1
 	global_position = tile_map_layer.map_to_local(next_tile)
 
 func check_skill(skill_name):
@@ -112,13 +113,20 @@ func _move(direction):
 		else:
 			return
 	
+
+		
+		
+	
 	is_moving = true
 	move(next_tile)
 	sprite_2d.global_position = tile_map_layer.map_to_local(curr_tile)
 	
 	var tween = get_tree().create_tween().set_trans(Tween.TRANS_SINE)
 	tween.tween_property(sprite_2d, "global_position", tile_map_layer.map_to_local(next_tile), 0.2)
-	tween.tween_callback(on_finish_move)
+	if tile_data.get_custom_data("finish") == true:
+		tween.tween_callback(StageManager.win)
+	else:
+		tween.tween_callback(on_finish_move)
 	
 	#sprite_2d.global_position = tile_map_layer.map_to_local(curr_tile)
 	

@@ -12,6 +12,7 @@ var tile_map_layer: TileMapLayer = null
 var player: Player = null
 var enemies: Node = null
 var breakables: Node = null
+var player_win: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if get_tree().current_scene:
@@ -43,7 +44,7 @@ func _ready() -> void:
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
-	if !is_stopped:
+	if game_state != GAME_STATE.SKILL_SELECT && game_state != GAME_STATE.END:
 		time_elapsed += delta
 		#$Label.text = str(time_elapsed).pad_decimals(2)
 
@@ -64,3 +65,9 @@ func is_blocked(coords):
 
 func fail():
 	print("fail")
+	game_state = GAME_STATE.END
+
+func win():
+	print("win")
+	game_state = GAME_STATE.END
+	player_win = true
