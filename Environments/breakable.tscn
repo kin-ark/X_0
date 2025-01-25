@@ -24,6 +24,6 @@ script = ExtResource("1_xvraq")
 shape = SubResource("RectangleShape2D_ksp6l")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.72, 0.72)
+scale = Vector2(0.723, 0.723)
 texture = SubResource("AnimatedTexture_1imkx")
 region_rect = Rect2(0, 119, 119, 119)

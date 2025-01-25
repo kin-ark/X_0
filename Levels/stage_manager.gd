@@ -2,7 +2,7 @@ extends Node2D
 
 signal show_score
 
-@export var tile_size: int = 119
+@export var tile_size: int = 86
 
 var move_count = 0
 var time_elapsed = 0
