@@ -28,7 +28,7 @@ func move(direction) -> bool:
 	if tile_data == null:
 		return false
 		
-	ray_cast_2d.target_position = direction * 64
+	ray_cast_2d.target_position = direction * StageManager.tile_size
 	
 	ray_cast_2d.force_raycast_update()
 	
