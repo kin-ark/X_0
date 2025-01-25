@@ -18,7 +18,7 @@ func move() -> bool:
 		var target_position = StageManager.tile_map_layer.map_to_local(current_path.front())
 		var direction = Vector2(target_position - global_position).normalized()
 		#print(target_position, global_position)
-		ray_cast_2d.target_position = direction * 64
+		ray_cast_2d.target_position = direction * StageManager.tile_size
 	
 		ray_cast_2d.force_raycast_update()
 	
@@ -45,7 +45,7 @@ func move_direction(direction):
 	if tile_data == null:
 		return false
 		
-	ray_cast_2d.target_position = direction * 64
+	ray_cast_2d.target_position = direction * StageManager.tile_size
 	
 	ray_cast_2d.force_raycast_update()
 	

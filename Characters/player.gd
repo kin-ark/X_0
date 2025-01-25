@@ -107,12 +107,13 @@ func _move(direction):
 	if tile_data == null:
 		return
 		
-	ray_cast_2d.target_position = direction * 64
+	ray_cast_2d.target_position = direction * StageManager.tile_size
 	
 	ray_cast_2d.force_raycast_update()
 	
 	if ray_cast_2d.is_colliding():
 		var collider = ray_cast_2d.get_collider()
+		print(collider)
 		if collider is Breakable and check_skill("Break"):
 			collider.break_wall()
 		if collider is Pushable and check_skill("Push", false):
@@ -123,14 +124,28 @@ func _move(direction):
 
 	elif tile_data.get_custom_data("walkable") == false:
 		
-		if check_skill("Jump"):
+		if check_skill("Jump", false):
 			var jump_tile = Vector2i(next_tile.x + direction.x, next_tile.y + direction.y)
 			var jump_tile_data = tile_map_layer.get_cell_tile_data(jump_tile)
+			ray_cast_2d.target_position = direction * StageManager.tile_size * 2
+	
+			ray_cast_2d.force_raycast_update()
+			
 
 			if jump_tile_data == null or jump_tile_data.get_custom_data("walkable") == false:
 				return
-			
+				
+			if ray_cast_2d.is_colliding():
+				var collider = ray_cast_2d.get_collider()
+				if collider is Breakable and check_skill("Break"):
+					collider.break_wall()
+				if collider is Pushable and check_skill("Push", false):
+					if not collider.move(direction):
+						return
+				elif collider is not Plate:
+					return
 			next_tile = jump_tile
+			check_skill("Jump")
 		else:
 			return
 	
