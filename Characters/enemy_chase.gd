@@ -2,7 +2,7 @@ extends Node2D
 class_name Enemy
 
 @onready var ray_cast_2d: RayCast2D = $RayCast2D
-@onready var StageManager: Node2D = $"../../dwawwqStageManager"
+@onready var StageManager: Node2D = $"../../StageManager"
 
 var current_path: Array[Vector2i]
 func move() -> bool:

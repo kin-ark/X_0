@@ -6,12 +6,11 @@ var lut = [Vector2.LEFT, Vector2.RIGHT, Vector2.UP, Vector2.DOWN]
 var origin: Vector2
 var target: Vector2
 
-var StageManager = null
+@onready var StageManager: Node2D = $"../../StageManager"
 
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	StageManager = get_tree().current_scene.get_node("/root/StageManager")
 	origin = global_position
 	target = origin + lut[open_direction] * StageManager.tile_size
 
@@ -22,7 +21,6 @@ func _process(delta: float) -> void:
 
 
 func open():
-
 	var tween = get_tree().create_tween().set_trans(Tween.TRANS_CUBIC)
 	tween.tween_property(self, "global_position", target, 0.25)
 	

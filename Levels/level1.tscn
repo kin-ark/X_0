@@ -1,26 +1,26 @@
 [gd_scene load_steps=28 format=4 uid="uid://baixjoveubu2p"]
 
-[ext_resource type="Texture2D" uid="uid://dvyenvqoy76km" path="res://tile.png" id="1_5s4o4"]
-[ext_resource type="Texture2D" uid="uid://c8jteexdneiw8" path="res://Bg still.PNG" id="1_xtltr"]
-[ext_resource type="Texture2D" uid="uid://1bphfnv5qalu" path="res://atlas.png" id="2_gyhg8"]
-[ext_resource type="Script" path="res://tile_map_layer.gd" id="2_kwlco"]
-[ext_resource type="PackedScene" uid="uid://dnbrpve5d416o" path="res://Characters/player.tscn" id="3_d40aa"]
-[ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="4_bjigt"]
-[ext_resource type="Texture2D" uid="uid://ud0u7qcelavi" path="res://bigmc.PNG" id="4_pbpbx"]
-[ext_resource type="Texture2D" uid="uid://d1l40j44mk38d" path="res://Mata/pink.PNG" id="5_7jycv"]
-[ext_resource type="Resource" uid="uid://dha4a04qbyhy2" path="res://Skills/break.tres" id="5_h5cr8"]
-[ext_resource type="Script" path="res://game_ui.gd" id="6_448wm"]
-[ext_resource type="Texture2D" uid="uid://txqg4824akvo" path="res://Mata/ourple.PNG" id="6_gmf3j"]
-[ext_resource type="PackedScene" uid="uid://le8uioavgm85" path="res://Levels/level_summary.tscn" id="7_b3te7"]
-[ext_resource type="Shader" path="res://Shaders/portal.gdshader" id="7_c8ptl"]
-[ext_resource type="Texture2D" uid="uid://drfeyyuafjb3t" path="res://Bintang buat bg.PNG" id="7_jipjk"]
-[ext_resource type="Script" path="res://Levels/stage_manager.gd" id="8_rje0b"]
-[ext_resource type="Texture2D" uid="uid://pgftvqjjbihw" path="res://Environments/wall.tres" id="9_ytsf0"]
-[ext_resource type="Texture2D" uid="uid://ct0kko8nok8yl" path="res://wallanimated.png" id="10_e1pfk"]
-[ext_resource type="PackedScene" uid="uid://cj7l5wswmuu8a" path="res://Common/Pause Menu/pause_menu.tscn" id="18_icp2c"]
+[ext_resource type="Texture2D" uid="uid://c8jteexdneiw8" path="res://Bg still.PNG" id="1_6sfmg"]
+[ext_resource type="Texture2D" uid="uid://ud0u7qcelavi" path="res://bigmc.PNG" id="2_s7k0q"]
+[ext_resource type="Texture2D" uid="uid://d1l40j44mk38d" path="res://Mata/pink.PNG" id="3_sw4tg"]
+[ext_resource type="Texture2D" uid="uid://txqg4824akvo" path="res://Mata/ourple.PNG" id="4_s3a4c"]
+[ext_resource type="Texture2D" uid="uid://drfeyyuafjb3t" path="res://Bintang buat bg.PNG" id="5_oqii2"]
+[ext_resource type="Texture2D" uid="uid://dvyenvqoy76km" path="res://tile.png" id="6_71c8t"]
+[ext_resource type="Shader" path="res://Shaders/portal.gdshader" id="7_i3mo4"]
+[ext_resource type="Texture2D" uid="uid://1bphfnv5qalu" path="res://atlas.png" id="8_sf2sj"]
+[ext_resource type="Texture2D" uid="uid://pgftvqjjbihw" path="res://Environments/wall.tres" id="9_us4tr"]
+[ext_resource type="Texture2D" uid="uid://ct0kko8nok8yl" path="res://wallanimated.png" id="10_ey8b4"]
+[ext_resource type="Script" path="res://tile_map_layer.gd" id="11_6lgph"]
+[ext_resource type="PackedScene" uid="uid://dnbrpve5d416o" path="res://Characters/player.tscn" id="12_4aoda"]
+[ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="13_tig6a"]
+[ext_resource type="Resource" uid="uid://dha4a04qbyhy2" path="res://Skills/break.tres" id="14_7tdei"]
+[ext_resource type="Script" path="res://game_ui.gd" id="15_xqojy"]
+[ext_resource type="PackedScene" uid="uid://le8uioavgm85" path="res://Levels/Level Summary/level_summary.tscn" id="16_qt8xd"]
+[ext_resource type="Script" path="res://Levels/stage_manager.gd" id="17_q82uh"]
+[ext_resource type="PackedScene" uid="uid://cj7l5wswmuu8a" path="res://Common/Pause Menu/pause_menu.tscn" id="18_bviov"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2kuh"]
-texture = ExtResource("1_5s4o4")
+texture = ExtResource("6_71c8t")
 texture_region_size = Vector2i(64, 64)
 0:0/0 = 0
 0:0/0/custom_data_0 = true
@@ -31,10 +31,10 @@ texture_region_size = Vector2i(64, 64)
 1:1/0/custom_data_1 = true
 
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_q5g6c"]
-shader = ExtResource("7_c8ptl")
+shader = ExtResource("7_i3mo4")
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_1qw7p"]
-texture = ExtResource("2_gyhg8")
+texture = ExtResource("8_sf2sj")
 texture_region_size = Vector2i(119, 119)
 0:0/0 = 0
 1:0/0 = 0
@@ -51,12 +51,12 @@ texture_region_size = Vector2i(119, 119)
 0:2/0/custom_data_0 = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ifq5u"]
-texture = ExtResource("9_ytsf0")
+texture = ExtResource("9_us4tr")
 texture_region_size = Vector2i(119, 119)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_m7yyv"]
-texture = ExtResource("10_e1pfk")
+texture = ExtResource("10_ey8b4")
 texture_region_size = Vector2i(119, 119)
 0:0/animation_columns = 3
 0:0/animation_speed = 5.0
@@ -122,7 +122,7 @@ offset_right = 1879.5
 offset_bottom = 1039.5
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_xtltr")
+texture = ExtResource("1_6sfmg")
 
 [node name="TextureRect2" type="TextureRect" parent="Control"]
 layout_mode = 0
@@ -131,7 +131,7 @@ offset_top = 258.929
 offset_right = 972.857
 offset_bottom = 1338.93
 scale = Vector2(0.75, 0.75)
-texture = ExtResource("4_pbpbx")
+texture = ExtResource("2_s7k0q")
 
 [node name="TextureRect" type="TextureRect" parent="Control/TextureRect2"]
 self_modulate = Color(10, 1, 1, 1)
@@ -141,7 +141,7 @@ offset_top = 557.143
 offset_right = 661.191
 offset_bottom = 918.143
 scale = Vector2(0.428571, 0.428571)
-texture = ExtResource("5_7jycv")
+texture = ExtResource("3_sw4tg")
 
 [node name="TextureRect2" type="TextureRect" parent="Control/TextureRect2"]
 layout_mode = 0
@@ -150,28 +150,28 @@ offset_top = 534.524
 offset_right = 880.238
 offset_bottom = 895.524
 scale = Vector2(0.428571, 0.428571)
-texture = ExtResource("6_gmf3j")
+texture = ExtResource("4_s3a4c")
 
 [node name="TextureRect3" type="TextureRect" parent="Control"]
 layout_mode = 0
 offset_right = 40.0
 offset_bottom = 40.0
-texture = ExtResource("7_jipjk")
+texture = ExtResource("5_oqii2")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAFAAIAAQAAAAIAAAAFAAMAAQAAAAIAAAAFAAQAAQAAAAIAAAAFAAUAAQAAAAIAAAAFAAYAAQAAAAIAAAAGAAIAAQAAAAIAAAAGAAMAAQAAAAIAAAAGAAQAAQAAAAIAAAAGAAUAAQAAAAIAAAAGAAYAAQAAAAIAAAAHAAIAAwAAAAAAAAAHAAMAAwAAAAAAAAAHAAQAAwAAAAAAAAAHAAUAAwAAAAAAAAAHAAYAAwAAAAAAAAAIAAIAAQAAAAIAAAAIAAMAAQAAAAIAAAAIAAQAAQAAAAIAAAAIAAUAAQAAAAIAAAAIAAYAAQAAAAIAAAAJAAIAAQAAAAIAAAAJAAMAAQAAAAIAAAAJAAQAAQAAAAIAAAAJAAUAAQAAAAIAAAAJAAYAAQAAAAIAAAAFAAcAAQAAAAIAAAAGAAcAAQAAAAIAAAAHAAcAAwAAAAAAAAAIAAcAAQAAAAIAAAAJAAcAAQAAAAIAAAAKAAEAAwAAAAAAAAAKAAIAAQAAAAIAAAAKAAMAAQAAAAIAAAAKAAQAAQABAAAAAAAKAAUAAQAAAAIAAAAKAAYAAQAAAAIAAAAKAAcAAQAAAAIAAAAFAAEAAwAAAAAAAAAGAAEAAwAAAAAAAAAHAAEAAwAAAAAAAAAIAAEAAwAAAAAAAAAJAAEAAwAAAAAAAAAEAAIAAwAAAAAAAAAEAAMAAwAAAAAAAAAEAAQAAwAAAAAAAAAEAAUAAwAAAAAAAAAEAAYAAwAAAAAAAAAEAAcAAwAAAAAAAAALAAEAAwAAAAAAAAALAAIAAwAAAAAAAAALAAMAAwAAAAAAAAALAAQAAwAAAAAAAAALAAUAAwAAAAAAAAALAAYAAwAAAAAAAAALAAcAAwAAAAAAAAAEAAgAAwAAAAAAAAAFAAgAAwAAAAAAAAAGAAgAAwAAAAAAAAAHAAgAAwAAAAAAAAAIAAgAAwAAAAAAAAAJAAgAAwAAAAAAAAAKAAgAAwAAAAAAAAALAAgAAwAAAAAAAAAEAAEAAwAAAAAAAAA=")
 tile_set = SubResource("TileSet_xhwa0")
-script = ExtResource("2_kwlco")
+script = ExtResource("11_6lgph")
 
-[node name="Player" parent="." instance=ExtResource("3_d40aa")]
+[node name="Player" parent="." instance=ExtResource("12_4aoda")]
 position = Vector2(652, 541)
-skill_1 = ExtResource("4_bjigt")
-skill_2 = ExtResource("5_h5cr8")
+skill_1 = ExtResource("13_tig6a")
+skill_2 = ExtResource("14_7tdei")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
-script = ExtResource("6_448wm")
-score_board = ExtResource("7_b3te7")
+script = ExtResource("15_xqojy")
+score_board = ExtResource("16_qt8xd")
 
 [node name="Time" type="Label" parent="CanvasLayer"]
 anchors_preset = 5
@@ -201,7 +201,7 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="StageManager" type="Node2D" parent="."]
-script = ExtResource("8_rje0b")
+script = ExtResource("17_q82uh")
 
 [node name="Enemies" type="Node" parent="."]
 
@@ -215,5 +215,5 @@ zoom = Vector2(0.9, 0.9)
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_qtcs4")
 
-[node name="PauseMenu" parent="." instance=ExtResource("18_icp2c")]
+[node name="PauseMenu" parent="." instance=ExtResource("18_bviov")]
 visible = false

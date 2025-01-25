@@ -1,0 +1,14 @@
+[gd_scene load_steps=5 format=3 uid="uid://cek5bwgweha54"]
+
+[ext_resource type="Script" path="res://Levels/Level Selection/stage_button.gd" id="1_yx67b"]
+[ext_resource type="PackedScene" uid="uid://bibcioor4tpxc" path="res://Levels/Level Selection/star_selection_1.tscn" id="2_b5phk"]
+[ext_resource type="PackedScene" uid="uid://imoey0i1vec" path="res://Levels/Level Selection/star_selection_2.tscn" id="3_xml64"]
+[ext_resource type="PackedScene" uid="uid://c71aa6rrwa0w4" path="res://Levels/Level Selection/star_selection_3.tscn" id="4_jhpe0"]
+
+[node name="StageButton" type="TextureButton"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_yx67b")
+stars_scene = Array[PackedScene]([ExtResource("2_b5phk"), ExtResource("3_xml64"), ExtResource("4_jhpe0")])
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]
