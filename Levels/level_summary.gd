@@ -8,6 +8,8 @@ extends CenterContainer
 @onready var time_val_label: Label = $VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer/TimeValLabel
 @onready var move_val_label: Label = $VBoxContainer/PanelContainer/MarginContainer/VBoxContainer/HBoxContainer2/MoveValLabel
 
+@onready var StageManager: Node2D = $"../../StageManager"
+
 var tween_int_value: int
 
 func _ready() -> void:

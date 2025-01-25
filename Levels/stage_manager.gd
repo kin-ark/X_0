@@ -69,9 +69,10 @@ func possess_enemies(direction):
 	return moved
 
 func is_blocked(coords):
-	for environment in environments.get_children():
-		if coords == tile_map_layer.local_to_map(environment.global_position):
-			return true
+	if environments:
+		for environment in environments.get_children():
+			if coords == tile_map_layer.local_to_map(environment.global_position):
+				return true
 			
 	return false
 

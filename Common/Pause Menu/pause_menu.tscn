@@ -1,5 +1,6 @@
-[gd_scene load_steps=6 format=3 uid="uid://cj7l5wswmuu8a"]
+[gd_scene load_steps=7 format=3 uid="uid://cj7l5wswmuu8a"]
 
+[ext_resource type="Script" path="res://Common/Pause Menu/pause_menu.gd" id="1_6oogo"]
 [ext_resource type="Texture2D" uid="uid://bfkfs8au5gwyq" path="res://Common/Pause Menu/Visual Assets/bg_pause.PNG" id="1_samgf"]
 [ext_resource type="FontFile" uid="uid://e1s7fhiq80fb" path="res://Common/Pause Menu/Visual Assets/endless-smile/Endless Smile.ttf" id="2_ewpyb"]
 
@@ -10,6 +11,8 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jjje8"]
 
 [node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_6oogo")
 
 [node name="BG" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -106,3 +109,7 @@ theme_override_font_sizes/font_size = 150
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jjje8")
 text = "QUIT"
 flat = true
+
+[connection signal="pressed" from="ResumeButton" to="." method="pause_unpause"]
+[connection signal="pressed" from="RestartButton" to="." method="restart"]
+[connection signal="pressed" from="QuitButton" to="." method="exit"]

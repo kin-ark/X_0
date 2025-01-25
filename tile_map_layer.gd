@@ -3,9 +3,11 @@ class_name PlayableArea
 
 var astar = AStarGrid2D.new()
 var map_rect = Rect2i()
+var StageManager = null
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	StageManager = get_tree().current_scene.get_node("/root/StageManager")
 	var tilemap_size = get_used_rect().end - get_used_rect().position
 	map_rect = Rect2i(get_used_rect().position, tilemap_size)
 	

@@ -5,6 +5,7 @@ class_name Player
 @onready var sprite_2d: Sprite2D = $Sprite
 @onready var target: Sprite2D = $Target
 @onready var ray_cast_2d: RayCast2D = $RayCast2D
+@onready var StageManager: Node2D = $"../StageManager"
 
 var is_moving = false
 
