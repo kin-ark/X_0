@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SkillResource" load_steps=3 format=3 uid="uid://dcvk31ymhey7v"]
+
+[ext_resource type="Script" path="res://Skills/skill_resource.gd" id="1_wrg8w"]
+[ext_resource type="Texture2D" uid="uid://dgrmvtp5k53qh" path="res://icon.png" id="2_kvg01"]
+
+[resource]
+script = ExtResource("1_wrg8w")
+skill_name = "Possess"
+skill_desc = "pss"
+sprite = ExtResource("2_kvg01")
+button_name = "Button of Possess"

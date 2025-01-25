@@ -4,7 +4,7 @@
 [ext_resource type="Script" path="res://tile_map_layer.gd" id="2_kwlco"]
 [ext_resource type="PackedScene" uid="uid://dnbrpve5d416o" path="res://Characters/player.tscn" id="3_d40aa"]
 [ext_resource type="Resource" uid="uid://cpq6nhdackybv" path="res://Skills/push.tres" id="4_vgk68"]
-[ext_resource type="Resource" uid="uid://dha4a04qbyhy2" path="res://Skills/break.tres" id="5_j5gpp"]
+[ext_resource type="Resource" uid="uid://dcvk31ymhey7v" path="res://Skills/possess.tres" id="5_a0lit"]
 [ext_resource type="Script" path="res://game_ui.gd" id="6_448wm"]
 [ext_resource type="Texture2D" uid="uid://dgrmvtp5k53qh" path="res://icon.png" id="7_1rjpk"]
 [ext_resource type="Script" path="res://Levels/stage_manager.gd" id="8_rje0b"]
@@ -46,7 +46,7 @@ script = ExtResource("2_kwlco")
 [node name="Player" parent="." instance=ExtResource("3_d40aa")]
 position = Vector2(160, 671)
 skill_1 = ExtResource("4_vgk68")
-skill_2 = ExtResource("5_j5gpp")
+skill_2 = ExtResource("5_a0lit")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true

@@ -16,6 +16,8 @@ var is_skill_2_active: bool = false
 
 var used_skill: SkillResource = null
 
+var possess_count: int = -1
+
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
@@ -45,6 +47,7 @@ func _activate_skill(is_left):
 	else:
 		is_skill_2_active = true
 	check_skill("Restoration")
+	check_skill("Possess")
 		
 
 
@@ -68,6 +71,8 @@ func check_skill(skill_name, deactivate = true):
 	if (skill_1 and is_skill_1_active and skill_1.skill_name == skill_name):
 		if (skill_name == "Restoration") and used_skill:
 			skill_2 = used_skill
+		elif (skill_name == "Possess"):
+			possess_count = 3
 		if deactivate:
 			is_skill_1_active = false
 			used_skill = skill_1
@@ -76,6 +81,8 @@ func check_skill(skill_name, deactivate = true):
 	elif (skill_2 and is_skill_2_active and skill_2.skill_name == skill_name):
 		if (skill_name == "Restoration") and used_skill:
 			skill_1 = used_skill
+		elif (skill_name == "Possess"):
+			possess_count = 3
 		if deactivate:
 			is_skill_2_active = false
 			used_skill = skill_2
@@ -84,6 +91,12 @@ func check_skill(skill_name, deactivate = true):
 	return false
 
 func _move(direction):
+	
+	if possess_count > 0:
+		print("possess count:",possess_count)
+		if StageManager.possess_enemies(direction):
+			possess_count -= 1
+		
 	var curr_tile = tile_map_layer.local_to_map(global_position)
 	var next_tile = Vector2i(curr_tile.x + direction.x, curr_tile.y + direction.y)
 	var tile_data = tile_map_layer.get_cell_tile_data(next_tile)
@@ -117,6 +130,8 @@ func _move(direction):
 			next_tile = jump_tile
 		else:
 			return
+	
+
 
 	is_moving = true
 	move(next_tile)
@@ -124,6 +139,7 @@ func _move(direction):
 	
 	var tween = get_tree().create_tween().set_trans(Tween.TRANS_SINE)
 	tween.tween_property(sprite_2d, "global_position", tile_map_layer.map_to_local(next_tile), 0.2)
+	
 	if tile_data.get_custom_data("finish") == true:
 		tween.tween_callback(StageManager.win)
 	else:
@@ -134,4 +150,7 @@ func _move(direction):
 	
 func on_finish_move():
 	_set_is_moving(false)
-	StageManager.move_enemies()
+	if possess_count < 0:
+		StageManager.move_enemies()
+	elif possess_count == 0:
+		possess_count = -1

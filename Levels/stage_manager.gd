@@ -56,6 +56,13 @@ func move_enemies():
 			await get_tree().create_timer(0.2).timeout
 	game_state = GAME_STATE.PLAY
 
+func possess_enemies(direction):
+	var moved = false
+	for stuff in enemies.get_children():
+		if stuff.move_direction(direction):
+			moved = true
+	return moved
+
 func is_blocked(coords):
 	for environment in environments.get_children():
 		if coords == tile_map_layer.local_to_map(environment.global_position):
