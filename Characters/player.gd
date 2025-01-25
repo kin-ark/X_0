@@ -1,4 +1,4 @@
-extends Node2D
+extends Area2D
 class_name Player
 
 @onready var tile_map_layer: TileMapLayer = $"../TileMapLayer"
@@ -64,20 +64,22 @@ func move(next_tile):
 	StageManager.move_count += 1
 	global_position = tile_map_layer.map_to_local(next_tile)
 
-func check_skill(skill_name):
+func check_skill(skill_name, deactivate = true):
 	if (skill_1 and is_skill_1_active and skill_1.skill_name == skill_name):
 		if (skill_name == "Restoration") and used_skill:
 			skill_2 = used_skill
-		is_skill_1_active = false
-		used_skill = skill_1
-		skill_1 = null
+		if deactivate:
+			is_skill_1_active = false
+			used_skill = skill_1
+			skill_1 = null
 		return true
 	elif (skill_2 and is_skill_2_active and skill_2.skill_name == skill_name):
 		if (skill_name == "Restoration") and used_skill:
 			skill_1 = used_skill
-		is_skill_2_active = false
-		used_skill = skill_2
-		skill_2 = null
+		if deactivate:
+			is_skill_2_active = false
+			used_skill = skill_2
+			skill_2 = null
 		return true
 	return false
 
@@ -97,7 +99,10 @@ func _move(direction):
 		var collider = ray_cast_2d.get_collider()
 		if collider is Breakable and check_skill("Break"):
 			collider.break_wall()
-		else:
+		if collider is Pushable and check_skill("Push", false):
+			if not collider.move(direction):
+				return
+		elif collider is not Plate:
 			return
 
 	elif tile_data.get_custom_data("walkable") == false:
@@ -112,11 +117,7 @@ func _move(direction):
 			next_tile = jump_tile
 		else:
 			return
-	
 
-		
-		
-	
 	is_moving = true
 	move(next_tile)
 	sprite_2d.global_position = tile_map_layer.map_to_local(curr_tile)

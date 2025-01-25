@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SkillResource" load_steps=3 format=3 uid="uid://cpq6nhdackybv"]
+
+[ext_resource type="Script" path="res://Skills/skill_resource.gd" id="1_dmqla"]
+[ext_resource type="Texture2D" uid="uid://dgrmvtp5k53qh" path="res://icon.png" id="2_y23rf"]
+
+[resource]
+script = ExtResource("1_dmqla")
+skill_name = "Push"
+skill_desc = "push push"
+sprite = ExtResource("2_y23rf")
+button_name = "Button of push"
