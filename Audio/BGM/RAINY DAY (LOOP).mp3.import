@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://daw32futmaggh"
+path="res://.godot/imported/RAINY DAY (LOOP).mp3-b8b1a8fcca6e21cf9b9d60869b30adf6.mp3str"
+
+[deps]
+
+source_file="res://Audio/BGM/RAINY DAY (LOOP).mp3"
+dest_files=["res://.godot/imported/RAINY DAY (LOOP).mp3-b8b1a8fcca6e21cf9b9d60869b30adf6.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
