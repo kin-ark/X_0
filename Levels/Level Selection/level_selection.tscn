@@ -100,7 +100,6 @@ locked = false
 [node name="StageButton2" parent="VBoxContainer/HBoxContainer" groups=["level_buttons"] instance=ExtResource("1_euvtq")]
 layout_mode = 2
 level_number = 2
-locked = false
 
 [node name="StageButton3" parent="VBoxContainer/HBoxContainer" groups=["level_buttons"] instance=ExtResource("1_euvtq")]
 layout_mode = 2

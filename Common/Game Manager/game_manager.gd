@@ -3,6 +3,7 @@ extends Node
 var unlocked_levels: int = 1  # Start with level 1 unlocked
 var save_path: String = "user://save_game.dat"
 var level_data: Dictionary = {}  # Stores star ratings and requirements for each level
+var current_level: int = 1
 
 func _ready():
 	load_game()
@@ -48,6 +49,7 @@ func load_level(level_number: int):
 	if is_level_unlocked(level_number):
 		var level_path = "res://Levels/level%d.tscn" % level_number
 		if ResourceLoader.exists(level_path):
+			current_level = level_number
 			get_tree().change_scene_to_file(level_path)
 		else:
 			print("Level %d does not exist!" % level_number)

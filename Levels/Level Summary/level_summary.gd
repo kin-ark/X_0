@@ -41,7 +41,7 @@ func _ready() -> void:
 		
 		tween.tween_interval(0.5)
 
-	var stars = GameManager.calculate_stars(1, StageManager.move_count, StageManager.time_elapsed)
+	var stars = GameManager.calculate_stars(GameManager.current_level, StageManager.move_count, StageManager.time_elapsed)
 	print("Level Complete! Stars: ", stars)
 	
 	 #Star 1
@@ -82,7 +82,7 @@ func edit_move_value(count: int):
 
 
 func _on_next_button_pressed() -> void:
-	GameManager.unlock_next_level(1)
+	GameManager.unlock_next_level(GameManager.current_level)
 	GameManager.save_game()
 	GameManager.load_level(GameManager.unlocked_levels)
 
