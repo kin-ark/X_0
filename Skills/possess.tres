@@ -1,4 +1,4 @@
-[gd_resource type="Resource" script_class="SkillResource" load_steps=3 format=3 uid="uid://dcvk31ymhey7v"]
+[gd_resource type="Resource" script_class="SkillResource" load_steps=3 format=3 uid="uid://c35qfxalaxn7s"]
 
 [ext_resource type="Script" path="res://Skills/skill_resource.gd" id="1_wrg8w"]
 [ext_resource type="Texture2D" uid="uid://bh3p6dui88rjf" path="res://Mata/green.PNG" id="2_51yxl"]

@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=4 uid="uid://c50xyau6o5uer"]
+[gd_scene load_steps=31 format=4 uid="uid://baixjoveubu2p"]
 
 [ext_resource type="Texture2D" uid="uid://dvyenvqoy76km" path="res://tile.png" id="1_8mg8s"]
 [ext_resource type="Texture2D" uid="uid://1bphfnv5qalu" path="res://atlas.png" id="2_tv1tm"]
@@ -19,8 +19,8 @@
 [ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="17_6h5bf"]
 [ext_resource type="Resource" uid="uid://dha4a04qbyhy2" path="res://Skills/break.tres" id="18_iytmr"]
 [ext_resource type="Resource" uid="uid://boulre7hs3tgn" path="res://Skills/restoration.tres" id="19_ton5c"]
-[ext_resource type="Resource" uid="uid://dcvk31ymhey7v" path="res://Skills/possess.tres" id="20_h0ksn"]
-[ext_resource type="Resource" uid="uid://cpq6nhdackybv" path="res://Skills/push.tres" id="21_fn0nf"]
+[ext_resource type="Resource" uid="uid://c35qfxalaxn7s" path="res://Skills/possess.tres" id="20_h0ksn"]
+[ext_resource type="Resource" uid="uid://bcfvji2qjmubk" path="res://Skills/push.tres" id="21_fn0nf"]
 [ext_resource type="Script" path="res://Levels/stage_manager.gd" id="22_xi012"]
 [ext_resource type="PackedScene" uid="uid://dnbrpve5d416o" path="res://Characters/player.tscn" id="23_yy4rv"]
 [ext_resource type="PackedScene" uid="uid://cj7l5wswmuu8a" path="res://Common/Pause Menu/pause_menu.tscn" id="24_dnh0u"]
