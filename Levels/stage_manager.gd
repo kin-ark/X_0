@@ -11,7 +11,7 @@ var game_state: GAME_STATE = GAME_STATE.PLAY
 var tile_map_layer: TileMapLayer = null
 var player: Player = null
 var enemies: Node = null
-var breakables: Node = null
+var environments: Node = null
 var player_win: bool = false
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -34,9 +34,9 @@ func _ready() -> void:
 		else:
 			print("Node not found")
 			
-		node = get_tree().current_scene.get_node("Breakables")
+		node = get_tree().current_scene.get_node("Environments")
 		if node:
-			breakables = node
+			environments = node
 		else:
 			print("Node not found")
 	else:
@@ -57,8 +57,8 @@ func move_enemies():
 	game_state = GAME_STATE.PLAY
 
 func is_blocked(coords):
-	for breakable in breakables.get_children():
-		if coords == tile_map_layer.local_to_map(breakable.global_position):
+	for environment in environments.get_children():
+		if coords == tile_map_layer.local_to_map(environment.global_position):
 			return true
 			
 	return false
