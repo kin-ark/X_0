@@ -7,7 +7,7 @@
 [ext_resource type="Resource" uid="uid://dcvk31ymhey7v" path="res://Skills/possess.tres" id="5_a0lit"]
 [ext_resource type="Script" path="res://game_ui.gd" id="6_448wm"]
 [ext_resource type="Texture2D" uid="uid://dgrmvtp5k53qh" path="res://icon.png" id="7_1rjpk"]
-[ext_resource type="PackedScene" path="res://Levels/level_summary.tscn" id="7_b3te7"]
+[ext_resource type="PackedScene" uid="uid://b7fttkpcu4ffw" path="res://Levels/level_summary.tscn" id="7_b3te7"]
 [ext_resource type="Script" path="res://Levels/stage_manager.gd" id="8_rje0b"]
 [ext_resource type="PackedScene" uid="uid://3yjgfvxpfjw8" path="res://Characters/enemy_chase.tscn" id="9_5184o"]
 [ext_resource type="PackedScene" uid="uid://cfhyt71pjnllb" path="res://Environments/breakable.tscn" id="10_hlfje"]

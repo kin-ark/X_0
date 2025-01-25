@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://le8uioavgm85"]
+[gd_scene load_steps=3 format=3 uid="uid://b7fttkpcu4ffw"]
 
 [ext_resource type="Script" path="res://Levels/level_summary.gd" id="1_t3vs3"]
 [ext_resource type="AudioStream" uid="uid://dq6aj1q6wekx" path="res://Audio/click5.ogg" id="2_t5x68"]
@@ -53,7 +53,7 @@ horizontal_alignment = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_font_sizes/font_size = 30
-text = "1234"
+text = "10.242"
 horizontal_alignment = 1
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="VBoxContainer/PanelContainer/MarginContainer/VBoxContainer"]
