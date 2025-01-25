@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://baixjoveubu2p"]
+[gd_scene load_steps=29 format=4 uid="uid://baixjoveubu2p"]
 
 [ext_resource type="Texture2D" uid="uid://dvyenvqoy76km" path="res://tile.png" id="1_5s4o4"]
 [ext_resource type="Texture2D" uid="uid://c8jteexdneiw8" path="res://Bg still.PNG" id="1_xtltr"]
@@ -8,20 +8,17 @@
 [ext_resource type="Script" path="res://Characters/doll.gd" id="3_qdbco"]
 [ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="4_bjigt"]
 [ext_resource type="Texture2D" uid="uid://ud0u7qcelavi" path="res://bigmc.PNG" id="4_pbpbx"]
-[ext_resource type="PackedScene" uid="uid://va36l5srkgvk" path="res://Levels/Skill Selection/button_slot.tscn" id="4_vuqmq"]
+[ext_resource type="Texture2D" uid="uid://d1l40j44mk38d" path="res://Mata/pink.PNG" id="5_7jycv"]
 [ext_resource type="Resource" uid="uid://dha4a04qbyhy2" path="res://Skills/break.tres" id="5_h5cr8"]
 [ext_resource type="Script" path="res://game_ui.gd" id="6_448wm"]
+[ext_resource type="Texture2D" uid="uid://txqg4824akvo" path="res://Mata/ourple.PNG" id="6_gmf3j"]
 [ext_resource type="PackedScene" uid="uid://b7fttkpcu4ffw" path="res://Levels/level_summary.tscn" id="7_b3te7"]
 [ext_resource type="Shader" path="res://Shaders/portal.gdshader" id="7_c8ptl"]
 [ext_resource type="Texture2D" uid="uid://drfeyyuafjb3t" path="res://Bintang buat bg.PNG" id="7_jipjk"]
-[ext_resource type="Texture2D" uid="uid://c72de3ljdgo0k" path="res://List buttons.PNG" id="7_vuy38"]
 [ext_resource type="Script" path="res://Levels/stage_manager.gd" id="8_rje0b"]
-[ext_resource type="Resource" uid="uid://boulre7hs3tgn" path="res://Skills/restoration.tres" id="9_0pl5i"]
 [ext_resource type="Texture2D" uid="uid://pgftvqjjbihw" path="res://Environments/wall.tres" id="9_ytsf0"]
 [ext_resource type="Texture2D" uid="uid://ct0kko8nok8yl" path="res://wallanimated.png" id="10_e1pfk"]
-[ext_resource type="Resource" uid="uid://dcvk31ymhey7v" path="res://Skills/possess.tres" id="10_qtdkd"]
 [ext_resource type="PackedScene" uid="uid://cj7l5wswmuu8a" path="res://Common/Pause Menu/pause_menu.tscn" id="18_icp2c"]
-[ext_resource type="Resource" uid="uid://cpq6nhdackybv" path="res://Skills/push.tres" id="21_vigwg"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2kuh"]
 texture = ExtResource("1_5s4o4")
@@ -103,45 +100,64 @@ adjustment_contrast = 0.92
 adjustment_saturation = 2.1
 adjustment_color_correction = SubResource("GradientTexture1D_phjvy")
 
-[node name="Level" type="CanvasLayer"]
+[node name="Level" type="Node2D"]
+position = Vector2(1, 0)
 
-[node name="BG" type="Control" parent="."]
+[node name="Control" type="Control" parent="."]
 layout_mode = 3
+anchors_preset = 0
+offset_left = -115.0
+offset_top = -2.0
+offset_right = -75.0
+offset_bottom = 38.0
+scale = Vector2(1.12, 1.12)
+
+[node name="TextureRect" type="TextureRect" parent="Control"]
+layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -0.5
+offset_top = -0.5
+offset_right = 1879.5
+offset_bottom = 1039.5
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(1.16, 1.15215)
-size_flags_horizontal = 3
-size_flags_vertical = 3
-
-[node name="TextureRect" type="TextureRect" parent="BG"]
-visible = false
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 1.919
-anchor_bottom = 1.961
-offset_left = -115.56
-offset_top = -2.56
-offset_right = -0.0402832
-offset_bottom = -0.440186
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
 texture = ExtResource("1_xtltr")
 
-[node name="TextureRect2" type="TextureRect" parent="BG"]
+[node name="Doll" type="TextureRect" parent="Control"]
 layout_mode = 0
-offset_right = 1920.0
-offset_bottom = 1080.0
-texture = ExtResource("1_xtltr")
+offset_left = -107.143
+offset_top = 258.929
+offset_right = 972.857
+offset_bottom = 1338.93
+scale = Vector2(0.75, 0.75)
+texture = ExtResource("4_pbpbx")
+script = ExtResource("3_qdbco")
 
-[node name="TextureRect3" type="TextureRect" parent="BG"]
-layout_mode = 1
-offset_right = 1920.0
-offset_bottom = 1080.0
-mouse_filter = 2
+[node name="Left Button" type="TextureRect" parent="Control/Doll"]
+self_modulate = Color(10, 1, 1, 1)
+layout_mode = 0
+offset_left = 301.191
+offset_top = 557.143
+offset_right = 661.191
+offset_bottom = 918.143
+scale = Vector2(0.428571, 0.428571)
+texture = ExtResource("5_7jycv")
+
+[node name="RIght Button" type="TextureRect" parent="Control/Doll"]
+layout_mode = 0
+offset_left = 520.238
+offset_top = 534.524
+offset_right = 880.238
+offset_bottom = 895.524
+scale = Vector2(0.428571, 0.428571)
+texture = ExtResource("6_gmf3j")
+
+[node name="TextureRect3" type="TextureRect" parent="Control"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 texture = ExtResource("7_jipjk")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
@@ -193,124 +209,13 @@ script = ExtResource("8_rje0b")
 
 [node name="Environments" type="Node" parent="."]
 
-[node name="Control" type="Control" parent="."]
-layout_mode = 3
-anchors_preset = 0
-offset_left = -115.0
-offset_top = -2.0
-offset_right = -75.0
-offset_bottom = 38.0
-scale = Vector2(1.12, 1.12)
-mouse_filter = 2
-
-[node name="Doll" type="TextureRect" parent="Control"]
-layout_mode = 0
-offset_left = -107.143
-offset_top = 258.929
-offset_right = 972.857
-offset_bottom = 1338.93
-scale = Vector2(0.75, 0.75)
-mouse_filter = 2
-texture = ExtResource("4_pbpbx")
-script = ExtResource("3_qdbco")
-
-[node name="Left Button" parent="Control/Doll" instance=ExtResource("4_vuqmq")]
-layout_mode = 0
-offset_left = 303.572
-offset_top = 553.571
-offset_right = 663.572
-offset_bottom = 914.571
-
-[node name="Right Button" parent="Control/Doll" instance=ExtResource("4_vuqmq")]
-layout_mode = 0
-offset_left = 516.667
-offset_top = 530.952
-offset_right = 876.667
-offset_bottom = 891.952
-
-[node name="ConfirmButton" type="Button" parent="Control"]
-layout_mode = 0
-offset_left = 163.393
-offset_top = 365.179
-offset_right = 245.393
-offset_bottom = 396.179
-text = "CONFIRM"
-
-[node name="ButtonList" type="TextureRect" parent="Control"]
-layout_mode = 1
-offset_left = 125.893
-offset_top = 41.9643
-offset_right = 2045.89
-offset_bottom = 1121.96
-scale = Vector2(0.934199, 0.934199)
-mouse_filter = 2
-texture = ExtResource("7_vuy38")
-
-[node name="Button1" parent="Control/ButtonList" instance=ExtResource("4_vuqmq")]
-layout_mode = 0
-offset_left = 1383.93
-offset_top = 236.607
-offset_right = 1743.93
-offset_bottom = 597.607
-
-[node name="TextureRect" parent="Control/ButtonList/Button1" index="0"]
-button = ExtResource("4_bjigt")
-
-[node name="Button2" parent="Control/ButtonList" instance=ExtResource("4_vuqmq")]
-layout_mode = 0
-offset_left = 1385.83
-offset_top = 388.989
-offset_right = 1745.83
-offset_bottom = 749.989
-
-[node name="TextureRect" parent="Control/ButtonList/Button2" index="0"]
-button = ExtResource("5_h5cr8")
-
-[node name="Button3" parent="Control/ButtonList" instance=ExtResource("4_vuqmq")]
-layout_mode = 0
-offset_left = 1389.66
-offset_top = 539.997
-offset_right = 1749.66
-offset_bottom = 900.997
-
-[node name="TextureRect" parent="Control/ButtonList/Button3" index="0"]
-button = ExtResource("9_0pl5i")
-
-[node name="Button4" parent="Control/ButtonList" instance=ExtResource("4_vuqmq")]
-layout_mode = 0
-offset_left = 1386.79
-offset_top = 687.182
-offset_right = 1746.79
-offset_bottom = 1048.18
-
-[node name="TextureRect" parent="Control/ButtonList/Button4" index="0"]
-button = ExtResource("10_qtdkd")
-
-[node name="Button5" parent="Control/ButtonList" instance=ExtResource("4_vuqmq")]
-layout_mode = 0
-offset_left = 1385.83
-offset_top = 836.278
-offset_right = 1745.83
-offset_bottom = 1197.28
-
-[node name="TextureRect" parent="Control/ButtonList/Button5" index="0"]
-button = ExtResource("21_vigwg")
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(960, 540)
+offset = Vector2(0, 60)
+zoom = Vector2(0.9, 0.9)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_qtcs4")
 
 [node name="PauseMenu" parent="." instance=ExtResource("18_icp2c")]
 visible = false
-
-[node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(135, 78)
-offset = Vector2(960, 540)
-zoom = Vector2(0.89, 0.89)
-
-[connection signal="pressed" from="Control/ConfirmButton" to="Control/Doll" method="_on_confirm_button_pressed"]
-
-[editable path="Control/ButtonList/Button1"]
-[editable path="Control/ButtonList/Button2"]
-[editable path="Control/ButtonList/Button3"]
-[editable path="Control/ButtonList/Button4"]
-[editable path="Control/ButtonList/Button5"]

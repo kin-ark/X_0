@@ -10,7 +10,7 @@ var is_stopped = false
 
 enum GAME_STATE {SKILL_SELECT, PLAY, ENEMY, SKILL_USE, END}
 
-var game_state: GAME_STATE = GAME_STATE.PLAY
+var game_state: GAME_STATE = GAME_STATE.SKILL_SELECT
 var tile_map_layer: TileMapLayer = null
 var player: Player = null
 var enemies: Node = null

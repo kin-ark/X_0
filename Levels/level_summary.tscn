@@ -1,4 +1,4 @@
-[gd_scene load_steps=3 format=3 uid="uid://le8uioavgm85"]
+[gd_scene load_steps=3 format=3 uid="uid://b7fttkpcu4ffw"]
 
 [ext_resource type="Script" path="res://Levels/level_summary.gd" id="1_t3vs3"]
 [ext_resource type="AudioStream" uid="uid://dq6aj1q6wekx" path="res://Audio/click5.ogg" id="2_t5x68"]
