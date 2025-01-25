@@ -92,9 +92,12 @@ func check_skill(skill_name, deactivate = true):
 
 func _move(direction):
 	
+	var move_possessed = false
+	
 	if possess_count > 0:
 		print("possess count:",possess_count)
 		if StageManager.possess_enemies(direction):
+			move_possessed = true
 			possess_count -= 1
 		
 	var curr_tile = tile_map_layer.local_to_map(global_position)
@@ -139,7 +142,8 @@ func _move(direction):
 	
 	var tween = get_tree().create_tween().set_trans(Tween.TRANS_SINE)
 	tween.tween_property(sprite_2d, "global_position", tile_map_layer.map_to_local(next_tile), 0.2)
-	
+	if move_possessed == false:
+		possess_count -= 1
 	if tile_data.get_custom_data("finish") == true:
 		tween.tween_callback(StageManager.win)
 	else:
