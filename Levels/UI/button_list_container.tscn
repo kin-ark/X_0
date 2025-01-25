@@ -1,0 +1,190 @@
+[gd_scene load_steps=9 format=3 uid="uid://c61ypr8g3dx7m"]
+
+[ext_resource type="Texture2D" uid="uid://c72de3ljdgo0k" path="res://List buttons.PNG" id="1_ig8gf"]
+[ext_resource type="FontFile" uid="uid://e1s7fhiq80fb" path="res://Common/Pause Menu/Visual Assets/endless-smile/Endless Smile.ttf" id="2_w2q32"]
+[ext_resource type="PackedScene" uid="uid://va36l5srkgvk" path="res://Levels/Skill Selection/button_slot.tscn" id="3_xs3vv"]
+[ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="4_vciel"]
+[ext_resource type="Resource" uid="uid://dha4a04qbyhy2" path="res://Skills/break.tres" id="5_03n4i"]
+[ext_resource type="Resource" uid="uid://boulre7hs3tgn" path="res://Skills/restoration.tres" id="6_8upb0"]
+[ext_resource type="Resource" uid="uid://dcvk31ymhey7v" path="res://Skills/possess.tres" id="7_pw20m"]
+[ext_resource type="Resource" uid="uid://cpq6nhdackybv" path="res://Skills/push.tres" id="8_6p0k5"]
+
+[node name="ButtonListContainer" type="AspectRatioContainer"]
+anchors_preset = 11
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="ButtonList" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 8
+mouse_filter = 2
+texture = ExtResource("1_ig8gf")
+
+[node name="Label6" type="Label" parent="ButtonList"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -396.0
+offset_top = -451.0
+offset_right = -194.0
+offset_bottom = -409.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_w2q32")
+theme_override_font_sizes/font_size = 60
+text = "BUTTONS"
+
+[node name="Button1" parent="ButtonList" instance=ExtResource("3_xs3vv")]
+layout_mode = 0
+offset_left = 1384.0
+offset_top = 232.0
+offset_right = 1744.0
+offset_bottom = 593.0
+
+[node name="TextureRect" parent="ButtonList/Button1" index="0"]
+lock_content = true
+button = ExtResource("4_vciel")
+
+[node name="Button2" parent="ButtonList" instance=ExtResource("3_xs3vv")]
+layout_mode = 0
+offset_left = 1384.0
+offset_top = 380.0
+offset_right = 1744.0
+offset_bottom = 741.0
+
+[node name="TextureRect" parent="ButtonList/Button2" index="0"]
+lock_content = true
+button = ExtResource("5_03n4i")
+
+[node name="Button3" parent="ButtonList" instance=ExtResource("3_xs3vv")]
+layout_mode = 0
+offset_left = 1383.0
+offset_top = 534.0
+offset_right = 1743.0
+offset_bottom = 895.0
+
+[node name="TextureRect" parent="ButtonList/Button3" index="0"]
+lock_content = true
+button = ExtResource("6_8upb0")
+
+[node name="Button4" parent="ButtonList" instance=ExtResource("3_xs3vv")]
+layout_mode = 0
+offset_left = 1383.0
+offset_top = 687.0
+offset_right = 1743.0
+offset_bottom = 1048.0
+
+[node name="TextureRect" parent="ButtonList/Button4" index="0"]
+lock_content = true
+button = ExtResource("7_pw20m")
+
+[node name="Button5" parent="ButtonList" instance=ExtResource("3_xs3vv")]
+layout_mode = 0
+offset_left = 1386.0
+offset_top = 838.0
+offset_right = 1746.0
+offset_bottom = 1199.0
+
+[node name="TextureRect" parent="ButtonList/Button5" index="0"]
+lock_content = true
+button = ExtResource("8_6p0k5")
+
+[node name="Label" type="Label" parent="ButtonList"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -346.0
+offset_top = -253.0
+offset_right = -144.0
+offset_bottom = -211.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Phase"
+
+[node name="Label2" type="Label" parent="ButtonList"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -346.0
+offset_top = -90.0
+offset_right = -144.0
+offset_bottom = -48.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Break"
+
+[node name="Label3" type="Label" parent="ButtonList"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -349.0
+offset_top = 61.0
+offset_right = -147.0
+offset_bottom = 103.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Reestoration"
+
+[node name="Label4" type="Label" parent="ButtonList"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -354.0
+offset_top = 219.0
+offset_right = -152.0
+offset_bottom = 261.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Possess"
+
+[node name="Label5" type="Label" parent="ButtonList"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -345.0
+offset_top = 379.0
+offset_right = -143.0
+offset_bottom = 421.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+text = "Push"
+
+[editable path="ButtonList/Button1"]
+[editable path="ButtonList/Button2"]
+[editable path="ButtonList/Button3"]
+[editable path="ButtonList/Button4"]
+[editable path="ButtonList/Button5"]
