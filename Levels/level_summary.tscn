@@ -86,3 +86,4 @@ autowrap_mode = 3
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("2_t5x68")
+bus = &"Sfx"
