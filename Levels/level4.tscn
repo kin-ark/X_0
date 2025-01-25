@@ -15,7 +15,7 @@
 [ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="13_1ly3b"]
 [ext_resource type="Resource" uid="uid://dha4a04qbyhy2" path="res://Skills/break.tres" id="14_col7e"]
 [ext_resource type="Script" path="res://game_ui.gd" id="15_appg7"]
-[ext_resource type="PackedScene" uid="uid://b7fttkpcu4ffw" path="res://Levels/level_summary.tscn" id="16_jexvx"]
+[ext_resource type="PackedScene" uid="uid://dxg6qnimaeju5" path="res://Levels/level_summary.tscn" id="16_jexvx"]
 [ext_resource type="Script" path="res://Levels/stage_manager.gd" id="17_0v3i0"]
 [ext_resource type="PackedScene" uid="uid://cfhyt71pjnllb" path="res://Environments/breakable.tscn" id="18_c7ba0"]
 
