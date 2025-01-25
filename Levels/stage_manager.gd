@@ -1,9 +1,10 @@
 extends Node2D
 
+signal show_score
+
 var move_count = 0
 var time_elapsed = 0
 var is_stopped = false
-
 
 enum GAME_STATE {SKILL_SELECT, PLAY, ENEMY, SKILL_USE, END}
 
@@ -13,6 +14,8 @@ var player: Player = null
 var enemies: Node = null
 var environments: Node = null
 var player_win: bool = false
+var level_summary = null
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if get_tree().current_scene:
@@ -77,4 +80,5 @@ func fail():
 func win():
 	print("win")
 	game_state = GAME_STATE.END
+	show_score.emit()
 	player_win = true

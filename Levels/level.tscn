@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=4 uid="uid://baixjoveubu2p"]
+[gd_scene load_steps=14 format=4 uid="uid://baixjoveubu2p"]
 
 [ext_resource type="Texture2D" uid="uid://dvyenvqoy76km" path="res://tile.png" id="1_5s4o4"]
 [ext_resource type="Script" path="res://tile_map_layer.gd" id="2_kwlco"]
@@ -9,10 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://dgrmvtp5k53qh" path="res://icon.png" id="7_1rjpk"]
 [ext_resource type="Script" path="res://Levels/stage_manager.gd" id="8_rje0b"]
 [ext_resource type="PackedScene" uid="uid://3yjgfvxpfjw8" path="res://Characters/enemy_chase.tscn" id="9_5184o"]
-[ext_resource type="PackedScene" uid="uid://cfhyt71pjnllb" path="res://Environments/breakable.tscn" id="10_hlfje"]
-[ext_resource type="PackedScene" uid="uid://8k2lr60587he" path="res://Environments/gate.tscn" id="11_am7rf"]
-[ext_resource type="Script" path="res://Environments/pushable.gd" id="12_agsnr"]
-[ext_resource type="PackedScene" uid="uid://bxsk20hcg1ejk" path="res://plates.tscn" id="12_c7o4d"]
+[ext_resource type="PackedScene" path="res://Environments/breakable.tscn" id="10_hlfje"]
+[ext_resource type="PackedScene" uid="uid://le8uioavgm85" path="res://Levels/level_summary.tscn" id="11_p76gp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_s2kuh"]
 texture = ExtResource("1_5s4o4")
@@ -51,6 +49,7 @@ skill_2 = ExtResource("5_a0lit")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 follow_viewport_enabled = true
 script = ExtResource("6_448wm")
+score_board = ExtResource("11_p76gp")
 
 [node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
 offset_left = 109.0
