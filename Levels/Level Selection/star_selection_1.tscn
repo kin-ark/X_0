@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bibcioor4tpxc"]
+
+[ext_resource type="Texture2D" uid="uid://dhtbochit20u5" path="res://Levels/Level Selection/Assets/star 1.png" id="1_7d5tg"]
+
+[node name="StarSelection1" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_7d5tg")

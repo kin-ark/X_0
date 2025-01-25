@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://c1gkq7ml5gksy"]
+
+[ext_resource type="AudioStream" uid="uid://daw32futmaggh" path="res://Audio/BGM/RAINY DAY (LOOP).mp3" id="1_88vku"]
+
+[node name="BGM" type="AudioStreamPlayer"]
+stream = ExtResource("1_88vku")
+autoplay = true
+bus = &"Music"

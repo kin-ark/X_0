@@ -60,4 +60,6 @@ func win():
 	print("win")
 	game_state = GAME_STATE.END
 	show_score.emit()
+	print(move_count)
+	print(time_elapsed)
 	player_win = true

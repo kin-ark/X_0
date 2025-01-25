@@ -2,11 +2,8 @@ extends Area2D
 class_name Pushable
 @onready var ray_cast_2d: RayCast2D = $RayCast2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
+@onready var StageManager: Node2D = $"../../StageManager"
 
-var StageManager = null
-
-func _ready() -> void:
-	StageManager = get_tree().current_scene.get_node("/root/StageManager")
 
 func get_next_tile(direction) -> Vector2i:
 	var tile_map_layer = StageManager.tile_map_layer

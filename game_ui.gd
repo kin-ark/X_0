@@ -10,7 +10,6 @@ extends CanvasLayer
 func _ready() -> void:
 	StageManager.show_score.connect(show_score_board)
 
-
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	time.text = str(snapped(StageManager.time_elapsed, 0.01))

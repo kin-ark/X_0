@@ -6,7 +6,7 @@
 [ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="4_7y3t5"]
 [ext_resource type="Resource" uid="uid://cpq6nhdackybv" path="res://Skills/push.tres" id="5_v5p6j"]
 [ext_resource type="Script" path="res://game_ui.gd" id="6_yuab5"]
-[ext_resource type="PackedScene" uid="uid://b7fttkpcu4ffw" path="res://Levels/level_summary.tscn" id="7_5rkof"]
+[ext_resource type="PackedScene" uid="uid://le8uioavgm85" path="res://Levels/Level Summary/level_summary.tscn" id="7_5rkof"]
 [ext_resource type="Texture2D" uid="uid://dgrmvtp5k53qh" path="res://icon.png" id="8_fiq4j"]
 [ext_resource type="Script" path="res://Levels/stage_manager.gd" id="9_4mkxp"]
 [ext_resource type="PackedScene" uid="uid://3yjgfvxpfjw8" path="res://Characters/enemy_chase.tscn" id="10_arv05"]

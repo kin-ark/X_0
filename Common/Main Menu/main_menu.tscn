@@ -1,4 +1,4 @@
-[gd_scene load_steps=21 format=3 uid="uid://ctr4rjkisijxn"]
+[gd_scene load_steps=27 format=3 uid="uid://ctr4rjkisijxn"]
 
 [ext_resource type="Script" path="res://Common/Main Menu/main_menu.gd" id="1_8nbnl"]
 [ext_resource type="Texture2D" uid="uid://ue5tpwubejom" path="res://Common/Main Menu/Visual Assets/Main Menu/close.png" id="2_7hydv"]
@@ -16,6 +16,8 @@
 [ext_resource type="Texture2D" uid="uid://dbtlnv3j5s614" path="res://Common/Main Menu/Visual Assets/Main Menu/settings hover 1.png" id="8_tcddx"]
 [ext_resource type="Texture2D" uid="uid://hu2fs4ye60o1" path="res://Common/Main Menu/Visual Assets/Main Menu/settings hover 2.png" id="9_wl3ui"]
 [ext_resource type="Texture2D" uid="uid://b3pnxnu8wqm2g" path="res://Common/Main Menu/Visual Assets/Main Menu/settings hover 3.png" id="10_5h65b"]
+[ext_resource type="FontFile" uid="uid://e1s7fhiq80fb" path="res://Common/Pause Menu/Visual Assets/endless-smile/Endless Smile.ttf" id="17_56en0"]
+[ext_resource type="Script" path="res://Common/Main Menu/setting_layer.gd" id="17_yxmby"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_rxcfx"]
 frames = 3
@@ -52,6 +54,35 @@ frame_1/texture = ExtResource("4_1mhhv")
 frame_1/duration = 0.3
 frame_2/texture = ExtResource("5_6jbtn")
 frame_2/duration = 0.3
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_6jbd5"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_k6i41"]
+bg_color = Color(0.0196078, 0.180392, 0.498039, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_top = 16.0
+expand_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ewhnp"]
+bg_color = Color(0.980392, 0.815686, 0.345098, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_top = 16.0
+expand_margin_bottom = 16.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wksk0"]
+bg_color = Color(0.980392, 0.815686, 0.345098, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+expand_margin_top = 16.0
+expand_margin_bottom = 16.0
 
 [node name="MainMenu" type="CanvasLayer"]
 script = ExtResource("1_8nbnl")
@@ -93,6 +124,117 @@ layout_mode = 2
 texture_normal = ExtResource("2_tksvg")
 texture_hover = SubResource("AnimatedTexture_w7ubi")
 
+[node name="SettingLayer" type="CanvasLayer" parent="."]
+visible = false
+script = ExtResource("17_yxmby")
+
+[node name="BackButton" type="Button" parent="SettingLayer"]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 46.0
+offset_top = -154.0
+offset_right = 226.0
+offset_bottom = -46.0
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("17_56en0")
+theme_override_font_sizes/font_size = 100
+theme_override_styles/focus = SubResource("StyleBoxEmpty_6jbd5")
+text = "BACK"
+flat = true
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SettingLayer"]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -355.5
+offset_top = -130.0
+offset_right = 355.5
+offset_bottom = 130.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 40
+
+[node name="Label" type="Label" parent="SettingLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("17_56en0")
+theme_override_font_sizes/font_size = 100
+text = "SETTINGS"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="MasterContainer" type="HBoxContainer" parent="SettingLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="VolumeLabel" type="Label" parent="SettingLayer/VBoxContainer/MasterContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("17_56en0")
+theme_override_font_sizes/font_size = 60
+text = "VOLUME"
+
+[node name="VolumeSlider" type="HSlider" parent="SettingLayer/VBoxContainer/MasterContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_k6i41")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_ewhnp")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_wksk0")
+max_value = 1.0
+step = 0.001
+value = 0.5
+
+[node name="BGMContainer" type="HBoxContainer" parent="SettingLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="MusicLabel" type="Label" parent="SettingLayer/VBoxContainer/BGMContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("17_56en0")
+theme_override_font_sizes/font_size = 60
+text = "MUSIC"
+
+[node name="MusicSlider" type="HSlider" parent="SettingLayer/VBoxContainer/BGMContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_k6i41")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_ewhnp")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_wksk0")
+max_value = 1.0
+step = 0.001
+value = 0.5
+
+[node name="SFXContainer" type="HBoxContainer" parent="SettingLayer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="SFXLabel" type="Label" parent="SettingLayer/VBoxContainer/SFXContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_fonts/font = ExtResource("17_56en0")
+theme_override_font_sizes/font_size = 60
+text = "SFX"
+
+[node name="SFXSlider" type="HSlider" parent="SettingLayer/VBoxContainer/SFXContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(500, 50)
+layout_mode = 2
+theme_override_styles/slider = SubResource("StyleBoxFlat_k6i41")
+theme_override_styles/grabber_area = SubResource("StyleBoxFlat_ewhnp")
+theme_override_styles/grabber_area_highlight = SubResource("StyleBoxFlat_wksk0")
+max_value = 1.0
+step = 0.001
+value = 0.5
+
 [connection signal="pressed" from="HBoxContainer/CloseButton" to="." method="_on_close_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/SettingButton" to="." method="_on_setting_button_pressed"]
 [connection signal="pressed" from="HBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="SettingLayer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="value_changed" from="SettingLayer/VBoxContainer/MasterContainer/VolumeSlider" to="SettingLayer" method="_on_volume_slider_value_changed"]
+[connection signal="value_changed" from="SettingLayer/VBoxContainer/BGMContainer/MusicSlider" to="SettingLayer" method="_on_music_slider_value_changed"]
+[connection signal="value_changed" from="SettingLayer/VBoxContainer/SFXContainer/SFXSlider" to="SettingLayer" method="_on_sfx_slider_value_changed"]

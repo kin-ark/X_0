@@ -1,0 +1,23 @@
+[gd_scene load_steps=2 format=3 uid="uid://0lg5dkqpbko1"]
+
+[sub_resource type="GDScript" id="GDScript_sf5yn"]
+script/source = "extends Node
+
+var music_volume: int
+var sfx_volume: int
+
+# Code for updating volume
+#func update_volume() -> void:
+	#var bgm_index = AudioServer.get_bus_index(\"Music\")
+	#var sfx_index = AudioServer.get_bus_index(\"Sfx\")
+	#
+	#AudioServer.set_bus_volume_db(bgm_index, AudioManager.music_volume)
+	#AudioServer.set_bus_volume_db(sfx_index, AudioManager.sfx_volume)
+
+# How to make the volume slider:
+# use scroll bar with the min and max is the db that intended
+# example: min = -30 max = 0
+"
+
+[node name="AudioManager" type="Node"]
+script = SubResource("GDScript_sf5yn")
