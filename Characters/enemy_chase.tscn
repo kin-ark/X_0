@@ -4,11 +4,11 @@
 [ext_resource type="Texture2D" uid="uid://1bphfnv5qalu" path="res://atlas.png" id="2_m5qoc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2pfyf"]
-size = Vector2(118, 118)
+size = Vector2(86, 86)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_pnusq"]
 atlas = ExtResource("2_m5qoc")
-region = Rect2(119, 119, 119, 119)
+region = Rect2(86, 86, 86, 86)
 
 [node name="EnemyChase" type="Area2D"]
 script = ExtResource("1_n45ks")

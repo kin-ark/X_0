@@ -5,7 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://cbbx8hl0u5e86" path="res://smolmc.PNG" id="3_e3no4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h1ced"]
-size = Vector2(118, 118)
+size = Vector2(86, 86)
 
 [node name="Player" type="Area2D"]
 position = Vector2(-93, -28)
@@ -14,11 +14,11 @@ script = ExtResource("2_xn65q")
 [node name="Target" type="Sprite2D" parent="."]
 visible = false
 texture_filter = 1
-scale = Vector2(1.81605, 1.81383)
+scale = Vector2(1.001, 1)
 texture = ExtResource("2_10t7w")
 
 [node name="Sprite" type="Sprite2D" parent="."]
-scale = Vector2(0.200002, 0.180001)
+scale = Vector2(0.15, 0.135)
 texture = ExtResource("3_e3no4")
 
 [node name="RayCast2D" type="RayCast2D" parent="."]

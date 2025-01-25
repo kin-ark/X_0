@@ -1,11 +1,18 @@
 extends Area2D
 class_name Player
 
+signal destroy_button_left
+signal destroy_button_right
+signal use_button_left
+signal use_button_right
+signal use_restoration
+
 @onready var tile_map_layer: TileMapLayer = $"../TileMapLayer"
 @onready var sprite_2d: Sprite2D = $Sprite
 @onready var target: Sprite2D = $Target
 @onready var ray_cast_2d: RayCast2D = $RayCast2D
 @onready var StageManager: Node2D = $"../StageManager"
+@onready var big_mc: TextureRect = $"../UILayer/BigMC"
 
 var is_moving = false
 
@@ -17,7 +24,7 @@ var is_skill_2_active: bool = false
 
 var used_skill: SkillResource = null
 
-var possess_count: int = -1
+var possess_count: int = -10
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -33,9 +40,9 @@ func _process(delta: float) -> void:
 			_move(Vector2.LEFT)
 		elif Input.is_action_pressed("right"):
 			_move(Vector2.RIGHT)
-		elif Input.is_action_pressed("left_eye"):
+		elif Input.is_action_just_pressed("left_eye"):
 			_activate_skill(true)
-		elif Input.is_action_pressed("right_eye"):
+		elif Input.is_action_just_pressed("right_eye"):
 			_activate_skill(false)
 
 func _set_is_moving(val):
@@ -44,11 +51,13 @@ func _set_is_moving(val):
 
 func _activate_skill(is_left):
 	if is_left:
+		use_button_left.emit()
 		is_skill_1_active = true
 	else:
+		use_button_right.emit()
 		is_skill_2_active = true
 	check_skill("Restoration")
-	check_skill("Possess")
+	check_skill("Possess", false)
 		
 
 
@@ -69,27 +78,36 @@ func move(next_tile):
 	global_position = tile_map_layer.map_to_local(next_tile)
 
 func check_skill(skill_name, deactivate = true):
+
 	if (skill_1 and is_skill_1_active and skill_1.skill_name == skill_name):
+		print("1", skill_name)
 		if (skill_name == "Restoration") and used_skill:
 			skill_2 = used_skill
-		elif (skill_name == "Possess"):
+			use_restoration.emit()
+		elif (skill_name == "Possess") and possess_count == -10:
 			possess_count = 3
 		if deactivate:
 			is_skill_1_active = false
 			used_skill = skill_1
 			skill_1 = null
+			destroy_button_left.emit()
 		return true
 	elif (skill_2 and is_skill_2_active and skill_2.skill_name == skill_name):
+		print("2", skill_name)
 		if (skill_name == "Restoration") and used_skill:
 			skill_1 = used_skill
-		elif (skill_name == "Possess"):
+			use_restoration.emit()
+		elif (skill_name == "Possess")  and possess_count == -10:
 			possess_count = 3
 		if deactivate:
 			is_skill_2_active = false
 			used_skill = skill_2
 			skill_2 = null
+			destroy_button_right.emit()
 		return true
 	return false
+
+
 
 func _move(direction):
 	
@@ -100,6 +118,8 @@ func _move(direction):
 		if StageManager.possess_enemies(direction):
 			move_possessed = true
 			possess_count -= 1
+	else:
+		check_skill("Possess")
 		
 	var curr_tile = tile_map_layer.local_to_map(global_position)
 	var next_tile = Vector2i(curr_tile.x + direction.x, curr_tile.y + direction.y)

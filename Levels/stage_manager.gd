@@ -11,41 +11,17 @@ var is_stopped = false
 enum GAME_STATE {SKILL_SELECT, PLAY, ENEMY, SKILL_USE, END}
 
 var game_state: GAME_STATE = GAME_STATE.SKILL_SELECT
-var tile_map_layer: TileMapLayer = null
-var player: Player = null
-var enemies: Node = null
-var environments: Node = null
+
 var player_win: bool = false
-var level_summary = null
+
+@onready var tile_map_layer: PlayableArea = $"../TileMapLayer"
+@onready var player: Player = $"../Player"
+@onready var enemies: Node = $"../Enemies"
+@onready var environments: Node = $"../Environments"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	if get_tree().current_scene:
-		var node = get_tree().current_scene.get_node("TileMapLayer")
-		if node:
-			tile_map_layer = node
-		else:
-			print("Node not found")
-		
-		node = get_tree().current_scene.get_node("Player")
-		if node:
-			player = node
-		else:
-			print("Node not found")
-			
-		node = get_tree().current_scene.get_node("Enemies")
-		if node:
-			enemies = node
-		else:
-			print("Node not found")
-			
-		node = get_tree().current_scene.get_node("Environments")
-		if node:
-			environments = node
-		else:
-			print("Node not found")
-	else:
-		print("No current scene!")
+	pass
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
