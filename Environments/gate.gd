@@ -32,10 +32,11 @@ func close():
 	var player_check = player_coord == origin
 	print(player_coord)
 	print(origin)
+	var tween = get_tree().create_tween().set_trans(Tween.TRANS_CUBIC).bind_node(self)
 	while(player_check):
 		await get_tree().process_frame
 		player_coord = StageManager.player.global_position
 		player_check = player_coord == origin
 		
-	var tween = get_tree().create_tween().set_trans(Tween.TRANS_CUBIC)
+	
 	tween.tween_property(self, "global_position", origin, 0.25)

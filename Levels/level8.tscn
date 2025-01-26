@@ -1,38 +1,38 @@
-[gd_scene load_steps=31 format=4 uid="uid://4hxyqbhkihcu"]
+[gd_scene load_steps=31 format=4 uid="uid://dwn7i4s5jo5mi"]
 
-[ext_resource type="Texture2D" uid="uid://dvyenvqoy76km" path="res://Environments/Visual Assets/tile.png" id="1_n6gd6"]
-[ext_resource type="Texture2D" uid="uid://1bphfnv5qalu" path="res://Environments/Visual Assets/atlas.png" id="2_p6xiu"]
-[ext_resource type="Texture2D" uid="uid://ct0kko8nok8yl" path="res://Environments/Visual Assets/wallanimated.png" id="3_qf4lh"]
-[ext_resource type="Script" path="res://Environments/tile_map_layer.gd" id="4_xse3j"]
-[ext_resource type="PackedScene" uid="uid://cg4fyune7sx0a" path="res://Levels/UI/margin_container.tscn" id="7_anapn"]
-[ext_resource type="PackedScene" uid="uid://dyjnlagfgtc7s" path="res://Levels/UI/tutorial.tscn" id="7_og4bm"]
-[ext_resource type="PackedScene" uid="uid://4f3bwtludwxw" path="res://Levels/UI/black_overlay.tscn" id="8_axbt8"]
-[ext_resource type="Script" path="res://Levels/UI/game_ui.gd" id="9_taio3"]
-[ext_resource type="PackedScene" uid="uid://le8uioavgm85" path="res://Levels/Level Summary/level_summary.tscn" id="10_pejem"]
-[ext_resource type="Texture2D" uid="uid://ud0u7qcelavi" path="res://Characters/Visual Assets/bigmc.PNG" id="11_cubty"]
-[ext_resource type="Script" path="res://Characters/doll.gd" id="12_wcl1h"]
-[ext_resource type="PackedScene" uid="uid://va36l5srkgvk" path="res://Levels/Skill Selection/button_slot.tscn" id="13_w84vd"]
-[ext_resource type="Texture2D" uid="uid://ct32f42d0tpoc" path="res://Common/confirm.png" id="14_4roun"]
-[ext_resource type="PackedScene" uid="uid://c61ypr8g3dx7m" path="res://Levels/UI/button_list_container.tscn" id="14_5a0lu"]
-[ext_resource type="FontFile" uid="uid://e1s7fhiq80fb" path="res://Common/Pause Menu/Visual Assets/endless-smile/Endless Smile.ttf" id="15_ltfh4"]
-[ext_resource type="PackedScene" uid="uid://dvnjfxwsdadol" path="res://Levels/UI/warning.tscn" id="15_pp0ii"]
-[ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="17_rabyn"]
-[ext_resource type="Script" path="res://Levels/stage_manager.gd" id="22_e13xq"]
-[ext_resource type="PackedScene" uid="uid://dnbrpve5d416o" path="res://Characters/player.tscn" id="23_ml6r1"]
-[ext_resource type="PackedScene" uid="uid://cfhyt71pjnllb" path="res://Environments/breakable.tscn" id="24_c631k"]
-[ext_resource type="PackedScene" uid="uid://3yjgfvxpfjw8" path="res://Characters/enemy_chase.tscn" id="24_mwh20"]
-[ext_resource type="PackedScene" uid="uid://bqgrh70d48n5n" path="res://Levels/UI/background_layer.tscn" id="24_yails"]
-[ext_resource type="PackedScene" uid="uid://8k2lr60587he" path="res://Environments/gate.tscn" id="25_kyloe"]
-[ext_resource type="PackedScene" uid="uid://cj7l5wswmuu8a" path="res://Common/Pause Menu/pause_menu.tscn" id="25_pv8kn"]
-[ext_resource type="PackedScene" uid="uid://bxsk20hcg1ejk" path="res://Environments/plates.tscn" id="26_wlstd"]
+[ext_resource type="Texture2D" uid="uid://dvyenvqoy76km" path="res://Environments/Visual Assets/tile.png" id="1_0oxrr"]
+[ext_resource type="Texture2D" uid="uid://1bphfnv5qalu" path="res://Environments/Visual Assets/atlas.png" id="2_vib87"]
+[ext_resource type="Texture2D" uid="uid://ct0kko8nok8yl" path="res://Environments/Visual Assets/wallanimated.png" id="3_8kmvd"]
+[ext_resource type="Script" path="res://Environments/tile_map_layer.gd" id="4_m7r0j"]
+[ext_resource type="Script" path="res://Levels/UI/game_ui.gd" id="5_0ux6d"]
+[ext_resource type="PackedScene" uid="uid://le8uioavgm85" path="res://Levels/Level Summary/level_summary.tscn" id="6_tqkgm"]
+[ext_resource type="PackedScene" uid="uid://dyjnlagfgtc7s" path="res://Levels/UI/tutorial.tscn" id="7_qeihb"]
+[ext_resource type="PackedScene" uid="uid://cg4fyune7sx0a" path="res://Levels/UI/margin_container.tscn" id="8_7ofuq"]
+[ext_resource type="PackedScene" uid="uid://4f3bwtludwxw" path="res://Levels/UI/black_overlay.tscn" id="9_lolkt"]
+[ext_resource type="Texture2D" uid="uid://ud0u7qcelavi" path="res://Characters/Visual Assets/bigmc.PNG" id="10_ogfxm"]
+[ext_resource type="Script" path="res://Characters/doll.gd" id="11_5uqt3"]
+[ext_resource type="PackedScene" uid="uid://va36l5srkgvk" path="res://Levels/Skill Selection/button_slot.tscn" id="12_vqwnj"]
+[ext_resource type="Texture2D" uid="uid://ct32f42d0tpoc" path="res://Common/confirm.png" id="13_ewt8m"]
+[ext_resource type="FontFile" uid="uid://e1s7fhiq80fb" path="res://Common/Pause Menu/Visual Assets/endless-smile/Endless Smile.ttf" id="14_tifdb"]
+[ext_resource type="PackedScene" uid="uid://c61ypr8g3dx7m" path="res://Levels/UI/button_list_container.tscn" id="15_xgwxn"]
+[ext_resource type="PackedScene" uid="uid://dvnjfxwsdadol" path="res://Levels/UI/warning.tscn" id="16_jtfrw"]
+[ext_resource type="Script" path="res://Levels/stage_manager.gd" id="17_2fohn"]
+[ext_resource type="PackedScene" uid="uid://dnbrpve5d416o" path="res://Characters/player.tscn" id="18_03rau"]
+[ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="19_inp1c"]
+[ext_resource type="PackedScene" uid="uid://3yjgfvxpfjw8" path="res://Characters/enemy_chase.tscn" id="20_xsp01"]
+[ext_resource type="PackedScene" uid="uid://cfhyt71pjnllb" path="res://Environments/breakable.tscn" id="21_i2bui"]
+[ext_resource type="PackedScene" uid="uid://8k2lr60587he" path="res://Environments/gate.tscn" id="22_nhb06"]
+[ext_resource type="PackedScene" uid="uid://bxsk20hcg1ejk" path="res://Environments/plates.tscn" id="23_1xbrx"]
+[ext_resource type="PackedScene" uid="uid://cj7l5wswmuu8a" path="res://Common/Pause Menu/pause_menu.tscn" id="24_1str0"]
+[ext_resource type="PackedScene" uid="uid://bqgrh70d48n5n" path="res://Levels/UI/background_layer.tscn" id="25_4b37c"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_763ax"]
-texture = ExtResource("1_n6gd6")
+texture = ExtResource("1_0oxrr")
 texture_region_size = Vector2i(119, 119)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rsb8w"]
-texture = ExtResource("2_p6xiu")
+texture = ExtResource("2_vib87")
 texture_region_size = Vector2i(86, 86)
 0:0/0 = 0
 1:0/0 = 0
@@ -48,7 +48,7 @@ texture_region_size = Vector2i(86, 86)
 0:2/0/custom_data_0 = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5352i"]
-texture = ExtResource("3_qf4lh")
+texture = ExtResource("3_8kmvd")
 texture_region_size = Vector2i(86, 86)
 0:0/animation_columns = 3
 0:0/animation_speed = 5.0
@@ -84,17 +84,17 @@ glow_hdr_scale = 0.0
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
 tile_map_data = PackedByteArray("AAAHAAIAAgAAAAAAAAAIAAIAAgAAAAAAAAAJAAIAAgAAAAAAAAAKAAIAAgAAAAAAAAALAAIAAgAAAAAAAAAMAAIAAgAAAAAAAAANAAIAAgAAAAAAAAAHAAkAAgAAAAAAAAAIAAkAAgAAAAAAAAAJAAkAAgAAAAAAAAAKAAkAAgAAAAAAAAALAAkAAgAAAAAAAAAMAAkAAgAAAAAAAAANAAkAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAUAAgAAAAAAAAAHAAYAAgAAAAAAAAAHAAcAAgAAAAAAAAAHAAgAAgAAAAAAAAAOAAIAAgAAAAAAAAAOAAMAAgAAAAAAAAAOAAQAAgAAAAAAAAAOAAUAAgAAAAAAAAAOAAYAAgAAAAAAAAAOAAcAAgAAAAAAAAAOAAgAAgAAAAAAAAAOAAkAAgAAAAAAAAAIAAMAAQABAAAAAAAIAAQAAQAAAAIAAAAJAAMAAQAAAAIAAAAJAAQAAQAAAAIAAAAJAAYAAgAAAAAAAAAJAAcAAQAAAAIAAAAJAAgAAQAAAAIAAAALAAMAAQAAAAIAAAALAAQAAQAAAAIAAAAMAAQAAQAAAAIAAAAMAAUAAQAAAAIAAAAMAAcAAQAAAAIAAAAMAAgAAQAAAAIAAAANAAQAAQAAAAIAAAAIAAgAAQAAAAIAAAAKAAMAAgAAAAAAAAAKAAQAAQAAAAIAAAAKAAYAAgAAAAAAAAAIAAcAAQAAAAIAAAAKAAcAAQAAAAIAAAAKAAgAAQAAAAIAAAAMAAYAAgAAAAAAAAANAAYAAgAAAAAAAAALAAYAAgAAAAAAAAAKAAUAAgAAAAAAAAAMAAMAAQAAAAIAAAANAAMAAQAAAAIAAAAJAAUAAQAAAAIAAAAIAAUAAQAAAAIAAAAIAAYAAQAAAAIAAAALAAgAAQAAAAIAAAALAAcAAQAAAAIAAAANAAgAAQAAAAIAAAANAAcAAQAAAAIAAAA=")
 tile_set = SubResource("TileSet_lp5yr")
-script = ExtResource("4_xse3j")
+script = ExtResource("4_m7r0j")
 
 [node name="UILayer" type="CanvasLayer" parent="."]
-script = ExtResource("9_taio3")
-score_board = ExtResource("10_pejem")
+script = ExtResource("5_0ux6d")
+score_board = ExtResource("6_tqkgm")
 
-[node name="Tutorial" parent="UILayer" instance=ExtResource("7_og4bm")]
+[node name="Tutorial" parent="UILayer" instance=ExtResource("7_qeihb")]
 
-[node name="MarginContainer" parent="UILayer" instance=ExtResource("7_anapn")]
+[node name="MarginContainer" parent="UILayer" instance=ExtResource("8_7ofuq")]
 
-[node name="BlackOverlay" parent="UILayer" instance=ExtResource("8_axbt8")]
+[node name="BlackOverlay" parent="UILayer" instance=ExtResource("9_lolkt")]
 
 [node name="BigMC" type="TextureRect" parent="UILayer"]
 anchors_preset = 4
@@ -108,10 +108,10 @@ grow_vertical = 2
 scale = Vector2(0.644957, 0.644957)
 pivot_offset = Vector2(0, 1080)
 mouse_filter = 2
-texture = ExtResource("11_cubty")
-script = ExtResource("12_wcl1h")
+texture = ExtResource("10_ogfxm")
+script = ExtResource("11_5uqt3")
 
-[node name="LeftButton" parent="UILayer/BigMC" instance=ExtResource("13_w84vd")]
+[node name="LeftButton" parent="UILayer/BigMC" instance=ExtResource("12_vqwnj")]
 layout_mode = 0
 offset_left = 304.563
 offset_top = 558.941
@@ -121,7 +121,7 @@ offset_bottom = 919.941
 [node name="LeftParticleSpot" type="Marker2D" parent="UILayer/BigMC/LeftButton"]
 position = Vector2(168.482, 177.492)
 
-[node name="RightButton" parent="UILayer/BigMC" instance=ExtResource("13_w84vd")]
+[node name="RightButton" parent="UILayer/BigMC" instance=ExtResource("12_vqwnj")]
 layout_mode = 0
 offset_left = 523.505
 offset_top = 534.478
@@ -138,7 +138,7 @@ offset_top = 37.8822
 offset_right = 471.785
 offset_bottom = 182.882
 scale = Vector2(2.17257, 2.17257)
-texture_normal = ExtResource("14_4roun")
+texture_normal = ExtResource("13_ewt8m")
 
 [node name="Label" type="Label" parent="UILayer/BigMC/ConfirmButton"]
 layout_mode = 0
@@ -147,61 +147,61 @@ offset_top = 35.0562
 offset_right = 240.253
 offset_bottom = 85.0562
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("15_ltfh4")
+theme_override_fonts/font = ExtResource("14_tifdb")
 theme_override_font_sizes/font_size = 50
 text = "CONFIRM"
 
-[node name="ButtonListContainer" parent="UILayer" instance=ExtResource("14_5a0lu")]
+[node name="ButtonListContainer" parent="UILayer" instance=ExtResource("15_xgwxn")]
 
-[node name="Warning" parent="UILayer" instance=ExtResource("15_pp0ii")]
+[node name="Warning" parent="UILayer" instance=ExtResource("16_jtfrw")]
 
 [node name="StageManager" type="Node2D" parent="."]
-script = ExtResource("22_e13xq")
+script = ExtResource("17_2fohn")
 
-[node name="Player" parent="." instance=ExtResource("23_ml6r1")]
+[node name="Player" parent="." instance=ExtResource("18_03rau")]
 position = Vector2(1161, 387)
-skill_1 = ExtResource("17_rabyn")
+skill_1 = ExtResource("19_inp1c")
 
 [node name="Enemies" type="Node" parent="."]
 
-[node name="EnemyChase" parent="Enemies" instance=ExtResource("24_mwh20")]
+[node name="EnemyChase" parent="Enemies" instance=ExtResource("20_xsp01")]
 position = Vector2(903, 645)
 
 [node name="Environments" type="Node" parent="."]
 
-[node name="Breakable" parent="Environments" instance=ExtResource("24_c631k")]
+[node name="Breakable" parent="Environments" instance=ExtResource("21_i2bui")]
 position = Vector2(1161, 473)
 
-[node name="Breakable2" parent="Environments" instance=ExtResource("24_c631k")]
+[node name="Breakable2" parent="Environments" instance=ExtResource("21_i2bui")]
 position = Vector2(1075, 473)
 
-[node name="Breakable3" parent="Environments" instance=ExtResource("24_c631k")]
+[node name="Breakable3" parent="Environments" instance=ExtResource("21_i2bui")]
 position = Vector2(989, 473)
 
-[node name="Breakable4" parent="Environments" instance=ExtResource("24_c631k")]
+[node name="Breakable4" parent="Environments" instance=ExtResource("21_i2bui")]
 position = Vector2(817, 301)
 
-[node name="Breakable5" parent="Environments" instance=ExtResource("24_c631k")]
+[node name="Breakable5" parent="Environments" instance=ExtResource("21_i2bui")]
 position = Vector2(817, 473)
 
-[node name="Gate" parent="Environments" instance=ExtResource("25_kyloe")]
+[node name="Gate" parent="Environments" instance=ExtResource("22_nhb06")]
 position = Vector2(731, 559)
 
-[node name="Gate2" parent="Environments" instance=ExtResource("25_kyloe")]
+[node name="Gate2" parent="Environments" instance=ExtResource("22_nhb06")]
 position = Vector2(903, 387)
 open_direction = 2
 
-[node name="Plates" parent="Environments" node_paths=PackedStringArray("gates") instance=ExtResource("26_wlstd")]
+[node name="Plates" parent="Environments" node_paths=PackedStringArray("gates") instance=ExtResource("23_1xbrx")]
 position = Vector2(731, 731)
 gates = [NodePath("../Gate"), NodePath("../Gate2")]
 
-[node name="PauseMenu" parent="." instance=ExtResource("25_pv8kn")]
+[node name="PauseMenu" parent="." instance=ExtResource("24_1str0")]
 visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_23kcl")
 
-[node name="BackgroundLayer" parent="." instance=ExtResource("24_yails")]
+[node name="BackgroundLayer" parent="." instance=ExtResource("25_4b37c")]
 
 [connection signal="pressed" from="UILayer/BigMC/ConfirmButton" to="UILayer/BigMC" method="_on_confirm_button_pressed"]
 [connection signal="destroy_button_left" from="Player" to="UILayer/BigMC" method="_on_player_destroy_button_left"]

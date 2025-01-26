@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=4 uid="uid://cp8e7e0ba65vo"]
+[gd_scene load_steps=28 format=4 uid="uid://cp8e7e0ba65vo"]
 
 [ext_resource type="Texture2D" uid="uid://dvyenvqoy76km" path="res://Environments/Visual Assets/tile.png" id="1_0lvha"]
 [ext_resource type="Script" path="res://Environments/tile_map_layer.gd" id="2_caxgk"]
@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dnbrpve5d416o" path="res://Characters/player.tscn" id="3_f72w4"]
 [ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="4_7y3t5"]
 [ext_resource type="Script" path="res://Levels/UI/game_ui.gd" id="6_yuab5"]
+[ext_resource type="PackedScene" uid="uid://dyjnlagfgtc7s" path="res://Levels/UI/tutorial.tscn" id="7_4sbg0"]
 [ext_resource type="PackedScene" uid="uid://le8uioavgm85" path="res://Levels/Level Summary/level_summary.tscn" id="7_5rkof"]
 [ext_resource type="PackedScene" uid="uid://cg4fyune7sx0a" path="res://Levels/UI/margin_container.tscn" id="7_kn4n7"]
 [ext_resource type="PackedScene" uid="uid://4f3bwtludwxw" path="res://Levels/UI/black_overlay.tscn" id="8_301jh"]
@@ -85,6 +86,8 @@ script = ExtResource("2_caxgk")
 [node name="UILayer" type="CanvasLayer" parent="."]
 script = ExtResource("6_yuab5")
 score_board = ExtResource("7_5rkof")
+
+[node name="Tutorial" parent="UILayer" instance=ExtResource("7_4sbg0")]
 
 [node name="MarginContainer" parent="UILayer" instance=ExtResource("7_kn4n7")]
 

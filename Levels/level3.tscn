@@ -149,8 +149,6 @@ theme_override_font_sizes/font_size = 50
 text = "CONFIRM"
 
 [node name="ButtonListContainer" parent="UILayer" instance=ExtResource("14_xiyn6")]
-offset_left = 80.0
-offset_right = 2000.0
 
 [node name="Warning" parent="UILayer" instance=ExtResource("15_ecoj0")]
 
