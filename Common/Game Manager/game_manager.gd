@@ -3,18 +3,26 @@ extends Node
 var unlocked_levels: int = 1  # Start with level 1 unlocked
 var save_path: String = "user://save_game.dat"
 var level_data: Dictionary = {}  # Stores star ratings and requirements for each level
-var current_level: int = 1
+var current_level: int
 
 func _ready():
 	load_game()
-	initialize_level_data()
 
 func initialize_level_data():
 	# Define requirements for each level (move limit, time limit, etc.)
 	level_data = {
-		1: {"moves": 10, "time": 60.0, "stars": 0},  # Level 1: Max 10 moves, Max 60 seconds
-		2: {"moves": 15, "time": 90.0, "stars": 0},  # Level 2: Max 15 moves, Max 90 seconds
-		3: {"moves": 20, "time": 120.0, "stars": 0}, # Level 3: Max 20 moves, Max 120 seconds
+		1: {"moves": 10, "time": 20.0, "stars": 0},
+		2: {"moves": 10, "time": 20.0, "stars": 0},
+		3: {"moves": 10, "time": 20.0, "stars": 0},
+		4: {"moves": 10, "time": 20.0, "stars": 0},
+		5: {"moves": 10, "time": 20.0, "stars": 0},
+		6: {"moves": 10, "time": 20.0, "stars": 0},
+		7: {"moves": 10, "time": 20.0, "stars": 0},
+		8: {"moves": 10, "time": 20.0, "stars": 0},
+		9: {"moves": 10, "time": 20.0, "stars": 0},
+		10: {"moves": 10, "time": 20.0, "stars": 0},
+		11: {"moves": 10, "time": 20.0, "stars": 0},
+		12: {"moves": 10, "time": 20.0, "stars": 0},
 		# Add more levels as needed
 	}
 
@@ -50,6 +58,8 @@ func load_level(level_number: int):
 		var level_path = "res://Levels/level%d.tscn" % level_number
 		if ResourceLoader.exists(level_path):
 			current_level = level_number
+			TransitionScreen.transition()
+			await TransitionScreen.on_transition_finished
 			get_tree().change_scene_to_file(level_path)
 		else:
 			print("Level %d does not exist!" % level_number)

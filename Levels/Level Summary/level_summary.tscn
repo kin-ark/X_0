@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://le8uioavgm85"]
+[gd_scene load_steps=15 format=3 uid="uid://le8uioavgm85"]
 
 [ext_resource type="Script" path="res://Levels/Level Summary/level_summary.gd" id="1_t3vs3"]
 [ext_resource type="PackedScene" uid="uid://dolenc4kiw7ew" path="res://Levels/Level Summary/star_1.tscn" id="2_78lhq"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://msbb8nqh057" path="res://Levels/Level Solved Window/home hover.png" id="7_jcay8"]
 [ext_resource type="Texture2D" uid="uid://bpdlf6kdw8hu2" path="res://Levels/Level Solved Window/nextlevel.png" id="8_r7ao0"]
 [ext_resource type="Texture2D" uid="uid://br36ms7j4yj38" path="res://Levels/Level Solved Window/nextlevel hover.png" id="9_71fmh"]
+[ext_resource type="AudioStream" uid="uid://bqsdcwbb6f6ov" path="res://Audio/click4.ogg" id="14_acfxg"]
 
 [node name="LevelSummary" type="CenterContainer"]
 anchors_preset = 15
@@ -124,6 +125,10 @@ texture_hover = ExtResource("9_71fmh")
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 unique_name_in_owner = true
 stream = ExtResource("2_t5x68")
+bus = &"Sfx"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_acfxg")
 bus = &"Sfx"
 
 [connection signal="pressed" from="SummaryBG/VBoxContainer/HBoxContainer/SelectionButton" to="." method="_on_selection_button_pressed"]

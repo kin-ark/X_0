@@ -20,6 +20,7 @@ config/icon="res://icon.png"
 StageManager="res://Levels/stage_manager.gd"
 GameManager="*res://Common/Game Manager/game_manager.gd"
 Bgm="*res://Audio/BGM/bgm.tscn"
+TransitionScreen="*res://Common/Scene Transition/transition_screen.tscn"
 
 [display]
 

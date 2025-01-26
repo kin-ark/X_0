@@ -26,7 +26,6 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_confirm_button_pressed() -> void:
-
 	StageManager.player.skill_1 = left_button_slot.texture_rect.property["BUTTON"]
 	
 	StageManager.player.skill_2 = right_button_slot.texture_rect.property["BUTTON"]
