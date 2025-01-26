@@ -15,7 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dkkn5x6ioansw" path="res://Levels/UI/Tutorial/Keyboard/q.png" id="13_0v4v5"]
 [ext_resource type="Texture2D" uid="uid://dfx3sjvl3lh1f" path="res://Levels/UI/Tutorial/Keyboard/e.png" id="14_ubhtl"]
 [ext_resource type="FontFile" uid="uid://cay3ohjaj6giy" path="res://Levels/Level Solved Window/TechnoRaceItalic-eZRWe.otf" id="15_ndw18"]
-[ext_resource type="PackedScene" path="res://Levels/UI/black_overlay.tscn" id="16_nyp06"]
+[ext_resource type="PackedScene" uid="uid://4f3bwtludwxw" path="res://Levels/UI/black_overlay.tscn" id="16_nyp06"]
 [ext_resource type="Texture2D" uid="uid://ud0u7qcelavi" path="res://Characters/Visual Assets/bigmc.PNG" id="17_4veex"]
 [ext_resource type="Script" path="res://Characters/doll.gd" id="18_l5g40"]
 [ext_resource type="PackedScene" uid="uid://va36l5srkgvk" path="res://Levels/Skill Selection/button_slot.tscn" id="19_asb82"]
@@ -333,8 +333,6 @@ libraries = {
 autoplay = "big_mc"
 
 [node name="ButtonListContainer" parent="UILayer" instance=ExtResource("21_jb660")]
-offset_left = 80.0
-offset_right = 2000.0
 
 [node name="Warning" type="Label" parent="UILayer"]
 visible = false

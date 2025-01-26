@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://c50xyau6o5uer"]
+[gd_scene load_steps=32 format=4 uid="uid://c50xyau6o5uer"]
 
 [ext_resource type="Texture2D" uid="uid://dvyenvqoy76km" path="res://Environments/Visual Assets/tile.png" id="1_8mg8s"]
 [ext_resource type="Texture2D" uid="uid://1bphfnv5qalu" path="res://Environments/Visual Assets/atlas.png" id="2_tv1tm"]
@@ -18,13 +18,9 @@
 [ext_resource type="FontFile" uid="uid://e1s7fhiq80fb" path="res://Common/Pause Menu/Visual Assets/endless-smile/Endless Smile.ttf" id="15_dbgso"]
 [ext_resource type="PackedScene" uid="uid://cg4fyune7sx0a" path="res://Levels/UI/margin_container.tscn" id="15_tsahj"]
 [ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="17_6h5bf"]
-[ext_resource type="PackedScene" uid="uid://3yjgfvxpfjw8" path="res://Characters/enemy_chase.tscn" id="22_djxqx"]
 [ext_resource type="PackedScene" uid="uid://dvnjfxwsdadol" path="res://Levels/UI/warning.tscn" id="22_nqydm"]
 [ext_resource type="Script" path="res://Levels/stage_manager.gd" id="22_xi012"]
-[ext_resource type="PackedScene" uid="uid://diutlvqom6sxf" path="res://Environments/pushable.tscn" id="23_jg7cy"]
-[ext_resource type="PackedScene" uid="uid://8k2lr60587he" path="res://Environments/gate.tscn" id="23_t0iua"]
 [ext_resource type="PackedScene" uid="uid://dnbrpve5d416o" path="res://Characters/player.tscn" id="23_yy4rv"]
-[ext_resource type="PackedScene" uid="uid://bxsk20hcg1ejk" path="res://Environments/plates.tscn" id="24_2s25f"]
 [ext_resource type="PackedScene" uid="uid://cj7l5wswmuu8a" path="res://Common/Pause Menu/pause_menu.tscn" id="24_dnh0u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_763ax"]
@@ -133,7 +129,7 @@ glow_hdr_scale = 0.0
 [node name="Leveltest2" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAHAAIAAgAAAAAAAAAIAAIAAgAAAAAAAAAJAAIAAgAAAAAAAAAKAAIAAgAAAAAAAAALAAIAAgAAAAAAAAAMAAIAAgAAAAAAAAANAAIAAgAAAAAAAAAHAAkAAgAAAAAAAAAIAAkAAgAAAAAAAAAJAAkAAgAAAAAAAAAKAAkAAgAAAAAAAAALAAkAAgAAAAAAAAAMAAkAAgAAAAAAAAANAAkAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAUAAgAAAAAAAAAHAAYAAgAAAAAAAAAHAAcAAgAAAAAAAAAHAAgAAgAAAAAAAAAOAAIAAgAAAAAAAAAOAAMAAgAAAAAAAAAOAAQAAgAAAAAAAAAOAAUAAgAAAAAAAAAOAAYAAgAAAAAAAAAOAAcAAgAAAAAAAAAOAAgAAgAAAAAAAAAOAAkAAgAAAAAAAAAKAAMAAQAAAAIAAAAKAAQAAQAAAAIAAAAKAAUAAQAAAAIAAAAKAAYAAQAAAAIAAAAKAAcAAQAAAAIAAAAKAAgAAQAAAAIAAAAIAAMAAQAAAAIAAAAIAAQAAQAAAAIAAAAIAAUAAQAAAAIAAAAIAAYAAQAAAAIAAAAIAAcAAQAAAAIAAAAIAAgAAQAAAAIAAAAJAAMAAQAAAAIAAAAJAAQAAQAAAAIAAAAJAAUAAQAAAAIAAAAJAAYAAQAAAAIAAAAJAAcAAQAAAAIAAAAJAAgAAQAAAAIAAAALAAMAAQAAAAIAAAALAAQAAQAAAAIAAAALAAUAAQAAAAIAAAALAAYAAQAAAAIAAAALAAcAAQAAAAIAAAALAAgAAQAAAAIAAAAMAAMAAgAAAAAAAAAMAAQAAgAAAAAAAAAMAAUAAQAAAAIAAAAMAAYAAQAAAAIAAAAMAAcAAgAAAAAAAAAMAAgAAgAAAAAAAAANAAMAAgAAAAAAAAANAAQAAgAAAAAAAAANAAUAAwAAAAAAAAANAAYAAQAAAAIAAAANAAcAAgAAAAAAAAANAAgAAgAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAAHAAIAAgAAAAAAAAAIAAIAAgAAAAAAAAAJAAIAAgAAAAAAAAAKAAIAAgAAAAAAAAALAAIAAgAAAAAAAAAMAAIAAgAAAAAAAAANAAIAAgAAAAAAAAAHAAkAAgAAAAAAAAAIAAkAAgAAAAAAAAAJAAkAAgAAAAAAAAAKAAkAAgAAAAAAAAALAAkAAgAAAAAAAAAMAAkAAgAAAAAAAAANAAkAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAUAAgAAAAAAAAAHAAYAAgAAAAAAAAAHAAcAAgAAAAAAAAAHAAgAAgAAAAAAAAAOAAIAAgAAAAAAAAAOAAMAAgAAAAAAAAAOAAQAAgAAAAAAAAAOAAUAAgAAAAAAAAAOAAYAAgAAAAAAAAAOAAcAAgAAAAAAAAAOAAgAAgAAAAAAAAAOAAkAAgAAAAAAAAAKAAMAAgAAAAAAAAAKAAQAAgAAAAAAAAAKAAUAAgAAAAAAAAAKAAYAAgAAAAAAAAAKAAcAAgAAAAAAAAAKAAgAAgAAAAAAAAAIAAMAAQAAAAIAAAAIAAQAAQAAAAIAAAAIAAUAAQAAAAIAAAAIAAYAAQAAAAIAAAAIAAcAAQAAAAIAAAAIAAgAAQAAAAIAAAAJAAMAAQAAAAIAAAAJAAQAAQAAAAIAAAAJAAUAAQAAAAIAAAAJAAYAAQAAAAIAAAAJAAcAAQAAAAIAAAAJAAgAAQAAAAIAAAALAAMAAQAAAAIAAAALAAQAAQAAAAIAAAALAAUAAQAAAAIAAAALAAYAAQAAAAIAAAALAAcAAQAAAAIAAAALAAgAAQAAAAIAAAAMAAMAAQAAAAIAAAAMAAQAAQAAAAIAAAAMAAUAAQAAAAIAAAAMAAYAAQAAAAIAAAAMAAcAAQAAAAIAAAAMAAgAAQAAAAIAAAANAAMAAQAAAAIAAAANAAQAAQAAAAIAAAANAAUAAwAAAAAAAAANAAYAAQAAAAIAAAANAAcAAQAAAAIAAAANAAgAAQAAAAIAAAA=")
 tile_set = SubResource("TileSet_lp5yr")
 script = ExtResource("4_fikoh")
 
@@ -210,8 +206,6 @@ libraries = {
 autoplay = "big_mc"
 
 [node name="ButtonListContainer" parent="UILayer" instance=ExtResource("12_d5tsa")]
-offset_left = 80.0
-offset_right = 2000.0
 
 [node name="Warning" parent="UILayer" instance=ExtResource("22_nqydm")]
 
@@ -224,30 +218,7 @@ skill_1 = ExtResource("17_6h5bf")
 
 [node name="Enemies" type="Node" parent="."]
 
-[node name="EnemyChase" parent="Enemies" instance=ExtResource("22_djxqx")]
-position = Vector2(1161, 559)
-
-[node name="EnemyChase2" parent="Enemies" instance=ExtResource("22_djxqx")]
-position = Vector2(903, 731)
-
 [node name="Environments" type="Node" parent="."]
-
-[node name="Plates" parent="Environments" node_paths=PackedStringArray("gates") instance=ExtResource("24_2s25f")]
-position = Vector2(903, 645)
-gates = [NodePath("../Gate"), NodePath("../Gate2")]
-
-[node name="Pushable" parent="Environments" instance=ExtResource("23_jg7cy")]
-position = Vector2(903, 387)
-
-[node name="Gate" parent="Environments" instance=ExtResource("23_t0iua")]
-position = Vector2(1075, 473)
-rotation = -1.57079
-open_direction = 2
-
-[node name="Gate2" parent="Environments" instance=ExtResource("23_t0iua")]
-position = Vector2(1075, 559)
-rotation = -1.57079
-open_direction = 3
 
 [node name="PauseMenu" parent="." instance=ExtResource("24_dnh0u")]
 visible = false

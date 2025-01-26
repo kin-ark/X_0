@@ -71,3 +71,4 @@ func win():
 	print(move_count)
 	print(time_elapsed)
 	player_win = true
+	GameManager.unlock_next_level(GameManager.current_level)
