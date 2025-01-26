@@ -13,6 +13,7 @@ signal use_restoration
 @onready var ray_cast_2d: RayCast2D = $RayCast2D
 @onready var StageManager: Node2D = $"../StageManager"
 @onready var big_mc: TextureRect = $"../UILayer/BigMC"
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 var is_moving = false
 
@@ -76,6 +77,7 @@ func get_next_tile(direction) -> Vector2i:
 func move(next_tile):
 	StageManager.move_count += 1
 	global_position = tile_map_layer.map_to_local(next_tile)
+	audio_stream_player.play()
 
 func check_skill(skill_name, deactivate = true):
 

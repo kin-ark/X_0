@@ -7,6 +7,7 @@ var origin: Vector2
 var target: Vector2
 
 @onready var StageManager: Node2D = $"../../StageManager"
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 
 # Called when the node enters the scene tree for the first time.
@@ -21,11 +22,12 @@ func _process(delta: float) -> void:
 
 
 func open():
+	audio_stream_player.play()
 	var tween = get_tree().create_tween().set_trans(Tween.TRANS_CUBIC)
 	tween.tween_property(self, "global_position", target, 0.25)
 	
 func close():
-	
+	audio_stream_player.play()
 	var player_coord = StageManager.player.global_position
 	var player_check = player_coord == origin
 	print(player_coord)

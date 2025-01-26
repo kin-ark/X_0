@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://cfhyt71pjnllb"]
+[gd_scene load_steps=8 format=3 uid="uid://cfhyt71pjnllb"]
 
 [ext_resource type="Script" path="res://Environments/breakable.gd" id="1_xvraq"]
 [ext_resource type="Texture2D" uid="uid://qoht23aykcx1" path="res://Environments/Visual Assets/breakablewall.PNG" id="2_4n4rb"]
 [ext_resource type="Texture2D" uid="uid://d06t8l2fc3il0" path="res://Environments/Visual Assets/breakablewall2.png" id="3_k3cl0"]
 [ext_resource type="Texture2D" uid="uid://dst0ixvwqpfen" path="res://Environments/Visual Assets/breakablewall3.png" id="4_is6pt"]
+[ext_resource type="AudioStream" uid="uid://b1r6x1trk0v5m" path="res://Audio/Block Break 1.wav" id="5_l24ar"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ksp6l"]
 size = Vector2(86, 86)
@@ -27,3 +28,8 @@ shape = SubResource("RectangleShape2D_ksp6l")
 scale = Vector2(0.723, 0.723)
 texture = SubResource("AnimatedTexture_1imkx")
 region_rect = Rect2(0, 119, 119, 119)
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_l24ar")
+volume_db = 24.0
+pitch_scale = 1.01
