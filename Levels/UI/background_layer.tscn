@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=3 uid="uid://bqgrh70d48n5n"]
 
-[ext_resource type="Texture2D" uid="uid://c8jteexdneiw8" path="res://Bg still.PNG" id="1_0xald"]
-[ext_resource type="Texture2D" uid="uid://o2hjctk7tcab" path="res://IMG_0304.PNG" id="2_q3rcl"]
-[ext_resource type="Texture2D" uid="uid://d1hevewww2sw0" path="res://IMG_0305.PNG" id="3_n16de"]
-[ext_resource type="Texture2D" uid="uid://bblickox4lofc" path="res://IMG_0306.PNG" id="4_yif6n"]
+[ext_resource type="Texture2D" uid="uid://c8jteexdneiw8" path="res://Levels/Bg still.PNG" id="1_0xald"]
+[ext_resource type="Texture2D" uid="uid://o2hjctk7tcab" path="res://Levels/IMG_0304.PNG" id="2_q3rcl"]
+[ext_resource type="Texture2D" uid="uid://d1hevewww2sw0" path="res://Levels/IMG_0305.PNG" id="3_n16de"]
+[ext_resource type="Texture2D" uid="uid://bblickox4lofc" path="res://Levels/IMG_0306.PNG" id="4_yif6n"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_mkw47"]
 frames = 3

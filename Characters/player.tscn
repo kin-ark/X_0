@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://dnbrpve5d416o"]
 
-[ext_resource type="Texture2D" uid="uid://bl22enf4e7tlp" path="res://target.png" id="2_10t7w"]
+[ext_resource type="Texture2D" uid="uid://bl22enf4e7tlp" path="res://Environments/Visual Assets/target.png" id="2_10t7w"]
 [ext_resource type="Script" path="res://Characters/player.gd" id="2_xn65q"]
-[ext_resource type="Texture2D" uid="uid://cbbx8hl0u5e86" path="res://smolmc.PNG" id="3_e3no4"]
+[ext_resource type="Texture2D" uid="uid://cbbx8hl0u5e86" path="res://Characters/Visual Assets/smolmc.PNG" id="3_e3no4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h1ced"]
 size = Vector2(86, 86)

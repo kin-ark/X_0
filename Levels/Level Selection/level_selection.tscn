@@ -4,13 +4,14 @@
 [ext_resource type="PackedScene" uid="uid://cek5bwgweha54" path="res://Levels/Level Selection/stage_button.tscn" id="1_euvtq"]
 [ext_resource type="Script" path="res://Levels/Level Selection/level_selection.gd" id="1_xqqd1"]
 [ext_resource type="Texture2D" uid="uid://b70aocpofoj6m" path="res://Levels/Level Selection/Assets/IMG_0305.PNG" id="2_poacr"]
-[ext_resource type="Texture2D" uid="uid://ds6xbya3kyudk" path="res://bg1.png" id="2_u6txr"]
-[ext_resource type="Texture2D" uid="uid://br64xrhyewy3s" path="res://bg2.png" id="3_84i0b"]
+[ext_resource type="Texture2D" uid="uid://ds6xbya3kyudk" path="res://Levels/bg1.png" id="2_u6txr"]
+[ext_resource type="Texture2D" uid="uid://br64xrhyewy3s" path="res://Levels/bg2.png" id="3_84i0b"]
 [ext_resource type="Texture2D" uid="uid://cgd8f8lin0or7" path="res://Levels/Level Selection/Assets/IMG_0306.PNG" id="3_d8eyd"]
-[ext_resource type="Texture2D" uid="uid://ccrwowcebyj7w" path="res://bg3.png" id="4_hta7u"]
+[ext_resource type="Texture2D" uid="uid://ccrwowcebyj7w" path="res://Levels/bg3.png" id="4_hta7u"]
 [ext_resource type="FontFile" uid="uid://e1s7fhiq80fb" path="res://Common/Pause Menu/Visual Assets/endless-smile/Endless Smile.ttf" id="4_wlhfl"]
 [ext_resource type="Texture2D" uid="uid://dmvykxmuxvvwx" path="res://Common/Pause Menu/Visual Assets/pause_cursor.PNG" id="10_1o7sx"]
 [ext_resource type="AudioStream" uid="uid://bqsdcwbb6f6ov" path="res://Audio/click4.ogg" id="11_qrssc"]
+
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_husli"]
 frames = 3

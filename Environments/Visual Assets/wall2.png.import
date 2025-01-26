@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drfeyyuafjb3t"
-path="res://.godot/imported/Bintang buat bg.PNG-e719c03e00cd9b04b6934afb6dce178a.ctex"
+uid="uid://c2fd57u0vm3ft"
+path="res://.godot/imported/wall2.png-5075fd8beaeaa5e23f8f3fb0b75ef547.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bintang buat bg.PNG"
-dest_files=["res://.godot/imported/Bintang buat bg.PNG-e719c03e00cd9b04b6934afb6dce178a.ctex"]
+source_file="res://Environments/Visual Assets/wall2.png"
+dest_files=["res://.godot/imported/wall2.png-5075fd8beaeaa5e23f8f3fb0b75ef547.ctex"]
 
 [params]
 

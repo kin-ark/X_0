@@ -1,7 +1,7 @@
 [gd_scene load_steps=8 format=3 uid="uid://duqj5x25703j7"]
 
 [ext_resource type="Texture2D" uid="uid://d4c3f7n1uqlo5" path="res://Particles/red_flame.tres" id="1_n62wx"]
-[ext_resource type="Texture2D" uid="uid://dwrh8ehe3f08y" path="res://flame.png" id="1_tcpeu"]
+[ext_resource type="Texture2D" uid="uid://dwrh8ehe3f08y" path="res://Particles/flame.png" id="1_tcpeu"]
 
 [sub_resource type="Curve" id="Curve_1h241"]
 min_value = -360.0

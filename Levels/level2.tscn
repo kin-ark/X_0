@@ -1,38 +1,38 @@
-[gd_scene load_steps=32 format=4 uid="uid://c02o5f6m2qaeo"]
+[gd_scene load_steps=32 format=4 uid="uid://cp8e7e0ba65vo"]
 
-[ext_resource type="Texture2D" uid="uid://dvyenvqoy76km" path="res://tile.png" id="1_xkd6x"]
-[ext_resource type="Texture2D" uid="uid://1bphfnv5qalu" path="res://atlas.png" id="2_adcfb"]
-[ext_resource type="Script" path="res://tile_map_layer.gd" id="2_caxgk"]
-[ext_resource type="Texture2D" uid="uid://ct0kko8nok8yl" path="res://wallanimated.png" id="3_bm4br"]
+[ext_resource type="Texture2D" uid="uid://dvyenvqoy76km" path="res://Environments/Visual Assets/tile.png" id="1_0lvha"]
+[ext_resource type="Script" path="res://Environments/tile_map_layer.gd" id="2_caxgk"]
+[ext_resource type="Texture2D" uid="uid://1bphfnv5qalu" path="res://Environments/Visual Assets/atlas.png" id="2_n5rut"]
+[ext_resource type="Texture2D" uid="uid://ct0kko8nok8yl" path="res://Environments/Visual Assets/wallanimated.png" id="3_7olts"]
 [ext_resource type="PackedScene" uid="uid://dnbrpve5d416o" path="res://Characters/player.tscn" id="3_f72w4"]
 [ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="4_7y3t5"]
-[ext_resource type="Texture2D" uid="uid://c8jteexdneiw8" path="res://Bg still.PNG" id="5_iv8b6"]
-[ext_resource type="Resource" uid="uid://bcfvji2qjmubk" path="res://Skills/push.tres" id="5_v5p6j"]
-[ext_resource type="Texture2D" uid="uid://o2hjctk7tcab" path="res://IMG_0304.PNG" id="6_wtqwh"]
-[ext_resource type="Script" path="res://game_ui.gd" id="6_yuab5"]
+[ext_resource type="Texture2D" uid="uid://c8jteexdneiw8" path="res://Levels/Bg still.PNG" id="5_iv8b6"]
+[ext_resource type="Resource" uid="uid://cpq6nhdackybv" path="res://Skills/push.tres" id="5_v5p6j"]
+[ext_resource type="Texture2D" uid="uid://o2hjctk7tcab" path="res://Levels/IMG_0304.PNG" id="6_wtqwh"]
+[ext_resource type="Script" path="res://Levels/UI/game_ui.gd" id="6_yuab5"]
 [ext_resource type="PackedScene" uid="uid://le8uioavgm85" path="res://Levels/Level Summary/level_summary.tscn" id="7_5rkof"]
-[ext_resource type="Texture2D" uid="uid://d1hevewww2sw0" path="res://IMG_0305.PNG" id="7_a8uhn"]
-[ext_resource type="Texture2D" uid="uid://bblickox4lofc" path="res://IMG_0306.PNG" id="8_enlly"]
+[ext_resource type="Texture2D" uid="uid://d1hevewww2sw0" path="res://Levels/IMG_0305.PNG" id="7_a8uhn"]
+[ext_resource type="Texture2D" uid="uid://bblickox4lofc" path="res://Levels/IMG_0306.PNG" id="8_enlly"]
 [ext_resource type="Script" path="res://Levels/stage_manager.gd" id="9_4mkxp"]
 [ext_resource type="PackedScene" uid="uid://cfhyt71pjnllb" path="res://Environments/breakable.tscn" id="11_ocqjn"]
-[ext_resource type="Texture2D" uid="uid://ud0u7qcelavi" path="res://bigmc.PNG" id="11_w616a"]
+[ext_resource type="Texture2D" uid="uid://ud0u7qcelavi" path="res://Characters/Visual Assets/bigmc.PNG" id="11_w616a"]
 [ext_resource type="Script" path="res://Characters/doll.gd" id="12_inlnk"]
 [ext_resource type="PackedScene" uid="uid://va36l5srkgvk" path="res://Levels/Skill Selection/button_slot.tscn" id="13_ysl73"]
-[ext_resource type="Texture2D" uid="uid://ct32f42d0tpoc" path="res://confirm.png" id="14_flrog"]
+[ext_resource type="Texture2D" uid="uid://ct32f42d0tpoc" path="res://Common/confirm.png" id="14_flrog"]
 [ext_resource type="FontFile" uid="uid://e1s7fhiq80fb" path="res://Common/Pause Menu/Visual Assets/endless-smile/Endless Smile.ttf" id="15_cpac1"]
-[ext_resource type="Texture2D" uid="uid://c72de3ljdgo0k" path="res://List buttons.PNG" id="16_08n7x"]
+[ext_resource type="Texture2D" uid="uid://c72de3ljdgo0k" path="res://Common/List buttons.PNG" id="16_08n7x"]
 [ext_resource type="Resource" uid="uid://dha4a04qbyhy2" path="res://Skills/break.tres" id="18_65f7i"]
 [ext_resource type="Resource" uid="uid://boulre7hs3tgn" path="res://Skills/restoration.tres" id="19_er5wl"]
-[ext_resource type="Resource" uid="uid://c35qfxalaxn7s" path="res://Skills/possess.tres" id="20_1pydd"]
+[ext_resource type="Resource" uid="uid://dcvk31ymhey7v" path="res://Skills/possess.tres" id="20_1pydd"]
 [ext_resource type="PackedScene" uid="uid://cj7l5wswmuu8a" path="res://Common/Pause Menu/pause_menu.tscn" id="24_02l8f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_763ax"]
-texture = ExtResource("1_xkd6x")
+texture = ExtResource("1_0lvha")
 texture_region_size = Vector2i(119, 119)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rsb8w"]
-texture = ExtResource("2_adcfb")
+texture = ExtResource("2_n5rut")
 texture_region_size = Vector2i(86, 86)
 0:0/0 = 0
 1:0/0 = 0
@@ -48,7 +48,7 @@ texture_region_size = Vector2i(86, 86)
 0:2/0/custom_data_0 = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5352i"]
-texture = ExtResource("3_bm4br")
+texture = ExtResource("3_7olts")
 texture_region_size = Vector2i(86, 86)
 0:0/animation_columns = 3
 0:0/animation_speed = 5.0

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ud0u7qcelavi"
-path="res://.godot/imported/bigmc.PNG-b11b48a6022a22c33666e7d708c55784.ctex"
+uid="uid://drfeyyuafjb3t"
+path="res://.godot/imported/Bintang buat bg.PNG-aa150154b28ce5a5eef05a2efb61865f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://bigmc.PNG"
-dest_files=["res://.godot/imported/bigmc.PNG-b11b48a6022a22c33666e7d708c55784.ctex"]
+source_file="res://Levels/Bintang buat bg.PNG"
+dest_files=["res://.godot/imported/Bintang buat bg.PNG-aa150154b28ce5a5eef05a2efb61865f.ctex"]
 
 [params]
 

@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://3yjgfvxpfjw8"]
 
 [ext_resource type="Script" path="res://Characters/enemy_chase.gd" id="1_n45ks"]
-[ext_resource type="Texture2D" uid="uid://1bphfnv5qalu" path="res://atlas.png" id="2_m5qoc"]
+[ext_resource type="Texture2D" uid="uid://1bphfnv5qalu" path="res://Environments/Visual Assets/atlas.png" id="2_m5qoc"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2pfyf"]
 size = Vector2(86, 86)

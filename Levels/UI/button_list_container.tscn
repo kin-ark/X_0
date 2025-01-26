@@ -1,6 +1,6 @@
 [gd_scene load_steps=12 format=3 uid="uid://c61ypr8g3dx7m"]
 
-[ext_resource type="Texture2D" uid="uid://c72de3ljdgo0k" path="res://List buttons.PNG" id="1_ig8gf"]
+[ext_resource type="Texture2D" uid="uid://c72de3ljdgo0k" path="res://Common/List buttons.PNG" id="1_ig8gf"]
 [ext_resource type="FontFile" uid="uid://e1s7fhiq80fb" path="res://Common/Pause Menu/Visual Assets/endless-smile/Endless Smile.ttf" id="2_w2q32"]
 [ext_resource type="PackedScene" uid="uid://va36l5srkgvk" path="res://Levels/Skill Selection/button_slot.tscn" id="3_xs3vv"]
 [ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="4_vciel"]

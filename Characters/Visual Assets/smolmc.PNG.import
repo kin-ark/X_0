@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://c8jteexdneiw8"
-path="res://.godot/imported/Bg still.PNG-b34ad8b284c739f571090ff6d7d598c6.ctex"
+uid="uid://cbbx8hl0u5e86"
+path="res://.godot/imported/smolmc.PNG-87d7e15d4b47df45506238571b5649d1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Bg still.PNG"
-dest_files=["res://.godot/imported/Bg still.PNG-b34ad8b284c739f571090ff6d7d598c6.ctex"]
+source_file="res://Characters/Visual Assets/smolmc.PNG"
+dest_files=["res://.godot/imported/smolmc.PNG-87d7e15d4b47df45506238571b5649d1.ctex"]
 
 [params]
 
