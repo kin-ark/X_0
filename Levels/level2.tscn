@@ -7,7 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://dnbrpve5d416o" path="res://Characters/player.tscn" id="3_f72w4"]
 [ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="4_7y3t5"]
 [ext_resource type="Texture2D" uid="uid://c8jteexdneiw8" path="res://Levels/Bg still.PNG" id="5_iv8b6"]
-[ext_resource type="Resource" uid="uid://cpq6nhdackybv" path="res://Skills/push.tres" id="5_v5p6j"]
+[ext_resource type="Resource" uid="uid://bcfvji2qjmubk" path="res://Skills/push.tres" id="5_v5p6j"]
 [ext_resource type="Texture2D" uid="uid://o2hjctk7tcab" path="res://Levels/IMG_0304.PNG" id="6_wtqwh"]
 [ext_resource type="Script" path="res://Levels/UI/game_ui.gd" id="6_yuab5"]
 [ext_resource type="PackedScene" uid="uid://le8uioavgm85" path="res://Levels/Level Summary/level_summary.tscn" id="7_5rkof"]
@@ -23,7 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://c72de3ljdgo0k" path="res://Common/List buttons.PNG" id="16_08n7x"]
 [ext_resource type="Resource" uid="uid://dha4a04qbyhy2" path="res://Skills/break.tres" id="18_65f7i"]
 [ext_resource type="Resource" uid="uid://boulre7hs3tgn" path="res://Skills/restoration.tres" id="19_er5wl"]
-[ext_resource type="Resource" uid="uid://dcvk31ymhey7v" path="res://Skills/possess.tres" id="20_1pydd"]
+[ext_resource type="Resource" uid="uid://c35qfxalaxn7s" path="res://Skills/possess.tres" id="20_1pydd"]
 [ext_resource type="PackedScene" uid="uid://cj7l5wswmuu8a" path="res://Common/Pause Menu/pause_menu.tscn" id="24_02l8f"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_763ax"]

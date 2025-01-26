@@ -13,7 +13,7 @@
 [ext_resource type="PackedScene" uid="uid://va36l5srkgvk" path="res://Levels/Skill Selection/button_slot.tscn" id="13_71eoo"]
 [ext_resource type="FontFile" uid="uid://cay3ohjaj6giy" path="res://Levels/Level Solved Window/TechnoRaceItalic-eZRWe.otf" id="13_na2h4"]
 [ext_resource type="Texture2D" uid="uid://b8fg2pt7cl56f" path="res://Levels/UI/Tutorial/Keyboard/w.png" id="13_s8fx7"]
-[ext_resource type="PackedScene" uid="uid://4f3bwtludwxw" path="res://Levels/UI/black_overlay.tscn" id="14_4qrqw"]
+[ext_resource type="PackedScene" path="res://Levels/UI/black_overlay.tscn" id="14_4qrqw"]
 [ext_resource type="Texture2D" uid="uid://d0okl4f8163p4" path="res://Levels/UI/Tutorial/Keyboard/a.png" id="14_nsyp1"]
 [ext_resource type="Texture2D" uid="uid://ct32f42d0tpoc" path="res://Common/confirm.png" id="14_psdt8"]
 [ext_resource type="Texture2D" uid="uid://b8u10tgo6xekx" path="res://Levels/UI/Tutorial/Keyboard/s.png" id="15_7s0sc"]
