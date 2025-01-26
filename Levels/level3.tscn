@@ -1,29 +1,26 @@
-[gd_scene load_steps=32 format=4 uid="uid://bjld10jglxvyx"]
+[gd_scene load_steps=28 format=4 uid="uid://bjld10jglxvyx"]
 
-[ext_resource type="Texture2D" uid="uid://c8jteexdneiw8" path="res://Bg still.PNG" id="1_hcjiw"]
-[ext_resource type="Texture2D" uid="uid://ud0u7qcelavi" path="res://bigmc.PNG" id="2_a51w5"]
-[ext_resource type="Texture2D" uid="uid://dvyenvqoy76km" path="res://tile.png" id="6_7qrvc"]
-[ext_resource type="Texture2D" uid="uid://o2hjctk7tcab" path="res://IMG_0304.PNG" id="6_assni"]
-[ext_resource type="Texture2D" uid="uid://d1hevewww2sw0" path="res://IMG_0305.PNG" id="7_wv4an"]
-[ext_resource type="Texture2D" uid="uid://1bphfnv5qalu" path="res://atlas.png" id="8_2h5n3"]
-[ext_resource type="Texture2D" uid="uid://bblickox4lofc" path="res://IMG_0306.PNG" id="8_eis6o"]
-[ext_resource type="Texture2D" uid="uid://ct0kko8nok8yl" path="res://wallanimated.png" id="10_opax0"]
-[ext_resource type="Script" path="res://tile_map_layer.gd" id="11_x02v5"]
+[ext_resource type="Texture2D" uid="uid://ud0u7qcelavi" path="res://Characters/Visual Assets/bigmc.PNG" id="2_a51w5"]
+[ext_resource type="Texture2D" uid="uid://dvyenvqoy76km" path="res://Environments/Visual Assets/tile.png" id="6_7qrvc"]
+[ext_resource type="PackedScene" uid="uid://cg4fyune7sx0a" path="res://Levels/UI/margin_container.tscn" id="7_d0e22"]
+[ext_resource type="PackedScene" uid="uid://dyjnlagfgtc7s" path="res://Levels/UI/tutorial.tscn" id="7_g6jbi"]
+[ext_resource type="Texture2D" uid="uid://1bphfnv5qalu" path="res://Environments/Visual Assets/atlas.png" id="8_2h5n3"]
+[ext_resource type="PackedScene" uid="uid://4f3bwtludwxw" path="res://Levels/UI/black_overlay.tscn" id="8_lfgfb"]
+[ext_resource type="Texture2D" uid="uid://ct0kko8nok8yl" path="res://Environments/Visual Assets/wallanimated.png" id="10_opax0"]
+[ext_resource type="Script" path="res://Environments/tile_map_layer.gd" id="11_x02v5"]
 [ext_resource type="Script" path="res://Characters/doll.gd" id="12_aoaa2"]
 [ext_resource type="PackedScene" uid="uid://dnbrpve5d416o" path="res://Characters/player.tscn" id="12_jvt6h"]
 [ext_resource type="PackedScene" uid="uid://va36l5srkgvk" path="res://Levels/Skill Selection/button_slot.tscn" id="13_1ty4a"]
 [ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="13_vpcec"]
-[ext_resource type="Resource" uid="uid://dha4a04qbyhy2" path="res://Skills/break.tres" id="14_db6x4"]
-[ext_resource type="Texture2D" uid="uid://ct32f42d0tpoc" path="res://confirm.png" id="14_oggqm"]
-[ext_resource type="Script" path="res://game_ui.gd" id="15_l25wy"]
+[ext_resource type="Texture2D" uid="uid://ct32f42d0tpoc" path="res://Common/confirm.png" id="14_oggqm"]
+[ext_resource type="PackedScene" uid="uid://c61ypr8g3dx7m" path="res://Levels/UI/button_list_container.tscn" id="14_xiyn6"]
+[ext_resource type="PackedScene" uid="uid://dvnjfxwsdadol" path="res://Levels/UI/warning.tscn" id="15_ecoj0"]
+[ext_resource type="Script" path="res://Levels/UI/game_ui.gd" id="15_l25wy"]
 [ext_resource type="FontFile" uid="uid://e1s7fhiq80fb" path="res://Common/Pause Menu/Visual Assets/endless-smile/Endless Smile.ttf" id="15_ruici"]
-[ext_resource type="Texture2D" uid="uid://c72de3ljdgo0k" path="res://List buttons.PNG" id="16_imw7r"]
 [ext_resource type="PackedScene" uid="uid://le8uioavgm85" path="res://Levels/Level Summary/level_summary.tscn" id="16_smlsk"]
 [ext_resource type="Script" path="res://Levels/stage_manager.gd" id="17_dwosb"]
 [ext_resource type="PackedScene" uid="uid://cfhyt71pjnllb" path="res://Environments/breakable.tscn" id="18_fg2c3"]
-[ext_resource type="Resource" uid="uid://boulre7hs3tgn" path="res://Skills/restoration.tres" id="19_hsfvl"]
-[ext_resource type="Resource" uid="uid://c35qfxalaxn7s" path="res://Skills/possess.tres" id="20_231a2"]
-[ext_resource type="Resource" uid="uid://bcfvji2qjmubk" path="res://Skills/push.tres" id="21_mcgea"]
+[ext_resource type="PackedScene" uid="uid://bqgrh70d48n5n" path="res://Levels/UI/background_layer.tscn" id="21_f0xcy"]
 [ext_resource type="PackedScene" uid="uid://cj7l5wswmuu8a" path="res://Common/Pause Menu/pause_menu.tscn" id="25_ops8t"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_763ax"]
@@ -67,15 +64,6 @@ sources/0 = SubResource("TileSetAtlasSource_763ax")
 sources/1 = SubResource("TileSetAtlasSource_rsb8w")
 sources/2 = SubResource("TileSetAtlasSource_5352i")
 
-[sub_resource type="AnimatedTexture" id="AnimatedTexture_mkw47"]
-frames = 3
-speed_scale = 5.0
-frame_0/texture = ExtResource("6_assni")
-frame_1/texture = ExtResource("7_wv4an")
-frame_1/duration = 1.0
-frame_2/texture = ExtResource("8_eis6o")
-frame_2/duration = 1.0
-
 [sub_resource type="Environment" id="Environment_23kcl"]
 background_mode = 3
 glow_levels/1 = 1.0
@@ -95,31 +83,15 @@ tile_map_data = PackedByteArray("AAAHAAIAAgAAAAAAAAAIAAIAAgAAAAAAAAAJAAIAAgAAAAA
 tile_set = SubResource("TileSet_lp5yr")
 script = ExtResource("11_x02v5")
 
-[node name="BackgroundLayer" type="CanvasLayer" parent="."]
-layer = -128
-follow_viewport_enabled = true
-
-[node name="Space" type="TextureRect" parent="BackgroundLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = ExtResource("1_hcjiw")
-
-[node name="Stars" type="TextureRect" parent="BackgroundLayer"]
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-mouse_filter = 2
-texture = SubResource("AnimatedTexture_mkw47")
-
 [node name="UILayer" type="CanvasLayer" parent="."]
 script = ExtResource("15_l25wy")
 score_board = ExtResource("16_smlsk")
+
+[node name="Tutorial" parent="UILayer" instance=ExtResource("7_g6jbi")]
+
+[node name="MarginContainer" parent="UILayer" instance=ExtResource("7_d0e22")]
+
+[node name="BlackOverlay" parent="UILayer" instance=ExtResource("8_lfgfb")]
 
 [node name="BigMC" type="TextureRect" parent="UILayer"]
 anchors_preset = 4
@@ -176,210 +148,11 @@ theme_override_fonts/font = ExtResource("15_ruici")
 theme_override_font_sizes/font_size = 50
 text = "CONFIRM"
 
-[node name="ButtonListContainer" type="AspectRatioContainer" parent="UILayer"]
-anchors_preset = 11
-anchor_left = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 0
-grow_vertical = 2
-mouse_filter = 2
+[node name="ButtonListContainer" parent="UILayer" instance=ExtResource("14_xiyn6")]
+offset_left = 80.0
+offset_right = 2000.0
 
-[node name="ButtonList" type="TextureRect" parent="UILayer/ButtonListContainer"]
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 8
-mouse_filter = 2
-texture = ExtResource("16_imw7r")
-
-[node name="Label6" type="Label" parent="UILayer/ButtonListContainer/ButtonList"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -396.0
-offset_top = -451.0
-offset_right = -194.0
-offset_bottom = -409.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("15_ruici")
-theme_override_font_sizes/font_size = 60
-text = "BUTTONS"
-
-[node name="Button1" parent="UILayer/ButtonListContainer/ButtonList" instance=ExtResource("13_1ty4a")]
-layout_mode = 0
-offset_left = 1384.0
-offset_top = 232.0
-offset_right = 1744.0
-offset_bottom = 593.0
-
-[node name="TextureRect" parent="UILayer/ButtonListContainer/ButtonList/Button1" index="0"]
-lock_content = true
-button = ExtResource("13_vpcec")
-
-[node name="Button2" parent="UILayer/ButtonListContainer/ButtonList" instance=ExtResource("13_1ty4a")]
-layout_mode = 0
-offset_left = 1384.0
-offset_top = 380.0
-offset_right = 1744.0
-offset_bottom = 741.0
-
-[node name="TextureRect" parent="UILayer/ButtonListContainer/ButtonList/Button2" index="0"]
-lock_content = true
-button = ExtResource("14_db6x4")
-
-[node name="Button3" parent="UILayer/ButtonListContainer/ButtonList" instance=ExtResource("13_1ty4a")]
-layout_mode = 0
-offset_left = 1383.0
-offset_top = 534.0
-offset_right = 1743.0
-offset_bottom = 895.0
-
-[node name="TextureRect" parent="UILayer/ButtonListContainer/ButtonList/Button3" index="0"]
-lock_content = true
-button = ExtResource("19_hsfvl")
-
-[node name="Button4" parent="UILayer/ButtonListContainer/ButtonList" instance=ExtResource("13_1ty4a")]
-layout_mode = 0
-offset_left = 1383.0
-offset_top = 687.0
-offset_right = 1743.0
-offset_bottom = 1048.0
-
-[node name="TextureRect" parent="UILayer/ButtonListContainer/ButtonList/Button4" index="0"]
-lock_content = true
-button = ExtResource("20_231a2")
-
-[node name="Button5" parent="UILayer/ButtonListContainer/ButtonList" instance=ExtResource("13_1ty4a")]
-layout_mode = 0
-offset_left = 1386.0
-offset_top = 838.0
-offset_right = 1746.0
-offset_bottom = 1199.0
-
-[node name="TextureRect" parent="UILayer/ButtonListContainer/ButtonList/Button5" index="0"]
-lock_content = true
-button = ExtResource("21_mcgea")
-
-[node name="Label" type="Label" parent="UILayer/ButtonListContainer/ButtonList"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -346.0
-offset_top = -253.0
-offset_right = -144.0
-offset_bottom = -211.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "Phase"
-
-[node name="Label2" type="Label" parent="UILayer/ButtonListContainer/ButtonList"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -346.0
-offset_top = -90.0
-offset_right = -144.0
-offset_bottom = -48.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "Break"
-
-[node name="Label3" type="Label" parent="UILayer/ButtonListContainer/ButtonList"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -349.0
-offset_top = 61.0
-offset_right = -147.0
-offset_bottom = 103.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "Reestoration"
-
-[node name="Label4" type="Label" parent="UILayer/ButtonListContainer/ButtonList"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -354.0
-offset_top = 219.0
-offset_right = -152.0
-offset_bottom = 261.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "Possess"
-
-[node name="Label5" type="Label" parent="UILayer/ButtonListContainer/ButtonList"]
-layout_mode = 1
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -345.0
-offset_top = 379.0
-offset_right = -143.0
-offset_bottom = 421.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_font_sizes/font_size = 30
-text = "Push"
-
-[node name="MarginContainer" type="MarginContainer" parent="UILayer"]
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -200.0
-offset_top = -20.0
-offset_bottom = 20.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_constants/margin_right = 75
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UILayer/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 40
-
-[node name="Time" type="Label" parent="UILayer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("15_ruici")
-theme_override_font_sizes/font_size = 100
-text = "2 30"
-horizontal_alignment = 2
-
-[node name="Move" type="Label" parent="UILayer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("15_ruici")
-theme_override_font_sizes/font_size = 100
-text = "5"
-horizontal_alignment = 2
+[node name="Warning" parent="UILayer" instance=ExtResource("15_ecoj0")]
 
 [node name="StageManager" type="Node2D" parent="."]
 script = ExtResource("17_dwosb")
@@ -413,15 +186,11 @@ visible = false
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_23kcl")
 
+[node name="BackgroundLayer" parent="." instance=ExtResource("21_f0xcy")]
+
 [connection signal="pressed" from="UILayer/BigMC/ConfirmButton" to="UILayer/BigMC" method="_on_confirm_button_pressed"]
 [connection signal="destroy_button_left" from="Player" to="UILayer/BigMC" method="_on_player_destroy_button_left"]
 [connection signal="destroy_button_right" from="Player" to="UILayer/BigMC" method="_on_player_destroy_button_right"]
 [connection signal="use_button_left" from="Player" to="UILayer/BigMC" method="_on_player_use_button_left"]
 [connection signal="use_button_right" from="Player" to="UILayer/BigMC" method="_on_player_use_button_right"]
 [connection signal="use_restoration" from="Player" to="UILayer/BigMC" method="_on_player_use_restoration"]
-
-[editable path="UILayer/ButtonListContainer/ButtonList/Button1"]
-[editable path="UILayer/ButtonListContainer/ButtonList/Button2"]
-[editable path="UILayer/ButtonListContainer/ButtonList/Button3"]
-[editable path="UILayer/ButtonListContainer/ButtonList/Button4"]
-[editable path="UILayer/ButtonListContainer/ButtonList/Button5"]

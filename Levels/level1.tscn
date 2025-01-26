@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=4 uid="uid://c50xyau6o5uer"]
+[gd_scene load_steps=37 format=4 uid="uid://c50xyau6o5uer"]
 
 [ext_resource type="Texture2D" uid="uid://dvyenvqoy76km" path="res://Environments/Visual Assets/tile.png" id="1_8mg8s"]
 [ext_resource type="Texture2D" uid="uid://1bphfnv5qalu" path="res://Environments/Visual Assets/atlas.png" id="2_tv1tm"]
@@ -12,17 +12,18 @@
 [ext_resource type="PackedScene" uid="uid://c61ypr8g3dx7m" path="res://Levels/UI/button_list_container.tscn" id="12_d5tsa"]
 [ext_resource type="Script" path="res://Characters/doll.gd" id="12_fq54n"]
 [ext_resource type="PackedScene" uid="uid://va36l5srkgvk" path="res://Levels/Skill Selection/button_slot.tscn" id="13_71eoo"]
-[ext_resource type="FontFile" uid="uid://cay3ohjaj6giy" path="res://Levels/Level Solved Window/TechnoRaceItalic-eZRWe.otf" id="13_na2h4"]
 [ext_resource type="Texture2D" uid="uid://b8fg2pt7cl56f" path="res://Levels/UI/Tutorial/Keyboard/w.png" id="13_s8fx7"]
 [ext_resource type="PackedScene" uid="uid://4f3bwtludwxw" path="res://Levels/UI/black_overlay.tscn" id="14_4qrqw"]
 [ext_resource type="Texture2D" uid="uid://d0okl4f8163p4" path="res://Levels/UI/Tutorial/Keyboard/a.png" id="14_nsyp1"]
 [ext_resource type="Texture2D" uid="uid://ct32f42d0tpoc" path="res://Common/confirm.png" id="14_psdt8"]
 [ext_resource type="Texture2D" uid="uid://b8u10tgo6xekx" path="res://Levels/UI/Tutorial/Keyboard/s.png" id="15_7s0sc"]
 [ext_resource type="FontFile" uid="uid://e1s7fhiq80fb" path="res://Common/Pause Menu/Visual Assets/endless-smile/Endless Smile.ttf" id="15_dbgso"]
+[ext_resource type="PackedScene" uid="uid://cg4fyune7sx0a" path="res://Levels/UI/margin_container.tscn" id="15_tsahj"]
 [ext_resource type="Texture2D" uid="uid://b11kdh0c1ej12" path="res://Levels/UI/Tutorial/Keyboard/d.png" id="16_21lfm"]
 [ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="17_6h5bf"]
 [ext_resource type="Texture2D" uid="uid://dkkn5x6ioansw" path="res://Levels/UI/Tutorial/Keyboard/q.png" id="17_s41r1"]
 [ext_resource type="Texture2D" uid="uid://dfx3sjvl3lh1f" path="res://Levels/UI/Tutorial/Keyboard/e.png" id="18_e3754"]
+[ext_resource type="PackedScene" uid="uid://dvnjfxwsdadol" path="res://Levels/UI/warning.tscn" id="22_nqydm"]
 [ext_resource type="Script" path="res://Levels/stage_manager.gd" id="22_xi012"]
 [ext_resource type="PackedScene" uid="uid://dnbrpve5d416o" path="res://Characters/player.tscn" id="23_yy4rv"]
 [ext_resource type="PackedScene" uid="uid://cj7l5wswmuu8a" path="res://Common/Pause Menu/pause_menu.tscn" id="24_dnh0u"]
@@ -234,34 +235,7 @@ theme_override_fonts/font = ExtResource("15_dbgso")
 theme_override_font_sizes/font_size = 35
 text = "RIGHT BUTTON"
 
-[node name="MarginContainer" type="MarginContainer" parent="UILayer"]
-anchors_preset = 6
-anchor_left = 1.0
-anchor_top = 0.5
-anchor_right = 1.0
-anchor_bottom = 0.5
-offset_left = -275.0
-offset_top = -120.0
-offset_bottom = 120.0
-grow_horizontal = 0
-grow_vertical = 2
-theme_override_constants/margin_right = 75
-
-[node name="VBoxContainer" type="VBoxContainer" parent="UILayer/MarginContainer"]
-layout_mode = 2
-theme_override_constants/separation = 40
-
-[node name="Time" type="Label" parent="UILayer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("13_na2h4")
-theme_override_font_sizes/font_size = 100
-horizontal_alignment = 2
-
-[node name="Move" type="Label" parent="UILayer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_fonts/font = ExtResource("13_na2h4")
-theme_override_font_sizes/font_size = 100
-horizontal_alignment = 2
+[node name="MarginContainer" parent="UILayer" instance=ExtResource("15_tsahj")]
 
 [node name="BlackOverlay" parent="UILayer" instance=ExtResource("14_4qrqw")]
 modulate = Color(0.0980392, 0.0980392, 0.14902, 0.501961)
@@ -328,26 +302,8 @@ libraries = {
 autoplay = "big_mc"
 
 [node name="ButtonListContainer" parent="UILayer" instance=ExtResource("12_d5tsa")]
-offset_left = 80.0
-offset_right = 2000.0
 
-[node name="Warning" type="Label" parent="UILayer"]
-visible = false
-anchors_preset = 7
-anchor_left = 0.5
-anchor_top = 1.0
-anchor_right = 0.5
-anchor_bottom = 1.0
-offset_left = -382.5
-offset_top = -136.0
-offset_right = 382.5
-offset_bottom = -66.0
-grow_horizontal = 2
-grow_vertical = 0
-theme_override_colors/font_color = Color(0.988235, 0.729412, 0.67451, 0.803922)
-theme_override_fonts/font = ExtResource("15_dbgso")
-theme_override_font_sizes/font_size = 64
-text = "You cant use two same buttons"
+[node name="Warning" parent="UILayer" instance=ExtResource("22_nqydm")]
 
 [node name="StageManager" type="Node2D" parent="."]
 script = ExtResource("22_xi012")
