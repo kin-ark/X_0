@@ -406,6 +406,12 @@ position = Vector2(1075, 473)
 [node name="Breakable3" parent="Environments" instance=ExtResource("24_c631k")]
 position = Vector2(989, 473)
 
+[node name="Breakable4" parent="Environments" instance=ExtResource("24_c631k")]
+position = Vector2(817, 301)
+
+[node name="Breakable5" parent="Environments" instance=ExtResource("24_c631k")]
+position = Vector2(817, 473)
+
 [node name="Gate" parent="Environments" instance=ExtResource("25_kyloe")]
 position = Vector2(731, 559)
 

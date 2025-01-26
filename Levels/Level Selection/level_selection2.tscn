@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://c6y5twvio6vc2"]
+[gd_scene load_steps=14 format=3 uid="uid://c6y5twvio6vc2"]
 
 [ext_resource type="Script" path="res://Levels/Level Selection/level_selection.gd" id="1_uk6mi"]
 [ext_resource type="Texture2D" uid="uid://ds6xbya3kyudk" path="res://bg1.png" id="2_u3w60"]
@@ -9,6 +9,8 @@
 [ext_resource type="Texture2D" uid="uid://cgd8f8lin0or7" path="res://Levels/Level Selection/Assets/IMG_0306.PNG" id="7_nisgm"]
 [ext_resource type="FontFile" uid="uid://e1s7fhiq80fb" path="res://Common/Pause Menu/Visual Assets/endless-smile/Endless Smile.ttf" id="8_am41j"]
 [ext_resource type="PackedScene" uid="uid://cek5bwgweha54" path="res://Levels/Level Selection/stage_button.tscn" id="9_0bgxv"]
+[ext_resource type="Texture2D" uid="uid://dmvykxmuxvvwx" path="res://Common/Pause Menu/Visual Assets/pause_cursor.PNG" id="10_fpwxt"]
+[ext_resource type="AudioStream" uid="uid://bqsdcwbb6f6ov" path="res://Audio/click4.ogg" id="11_pcbga"]
 
 [sub_resource type="AnimatedTexture" id="AnimatedTexture_husli"]
 frames = 3
@@ -122,3 +124,25 @@ level_number = 11
 [node name="StageButton3" parent="VBoxContainer/HBoxContainer2" groups=["level_buttons"] instance=ExtResource("9_0bgxv")]
 layout_mode = 2
 level_number = 12
+
+[node name="BackButton" type="TextureButton" parent="."]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -1920.0
+offset_top = -135.0
+offset_right = -840.0
+offset_bottom = 945.0
+grow_horizontal = 0
+grow_vertical = 2
+scale = Vector2(0.25, 0.25)
+texture_normal = ExtResource("10_fpwxt")
+flip_h = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_pcbga")
+
+[connection signal="pressed" from="BackButton" to="." method="_on_back_button_pressed"]

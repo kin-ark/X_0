@@ -13,6 +13,7 @@ extends CenterContainer
 @onready var summary_bg: TextureRect = %SummaryBG
 
 @onready var StageManager: Node2D = $"../../StageManager"
+@onready var audio_stream_player_2: AudioStreamPlayer = $AudioStreamPlayer2
 
 var tween_int_value: int
 
@@ -82,14 +83,21 @@ func edit_move_value(count: int):
 
 
 func _on_next_button_pressed() -> void:
+	audio_stream_player_2.play()
 	GameManager.unlock_next_level(GameManager.current_level)
 	GameManager.save_game()
 	GameManager.load_level(GameManager.unlocked_levels)
 
 
 func _on_home_button_pressed() -> void:
+	audio_stream_player_2.play()
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Common/Main Menu/main_menu.tscn")
 
 
 func _on_selection_button_pressed() -> void:
+	audio_stream_player_2.play()
+	TransitionScreen.transition()
+	await TransitionScreen.on_transition_finished
 	get_tree().change_scene_to_file("res://Levels/Level Selection/level_selection.tscn")

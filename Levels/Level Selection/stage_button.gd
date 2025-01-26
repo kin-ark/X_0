@@ -2,6 +2,7 @@ class_name StageButton
 extends TextureButton
 
 @export var stars_scene: Array[PackedScene]
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 @export var level_number: int
 @export var locked: bool = true
@@ -34,3 +35,4 @@ func update_button_state():
 func _on_pressed():
 	if not locked:
 		GameManager.load_level(level_number)
+		audio_stream_player.play()
