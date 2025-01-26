@@ -3,7 +3,7 @@ extends TextureButton
 
 @export var stars_scene: Array[PackedScene]
 
-@export var level_number: int = 1
+@export var level_number: int
 @export var locked: bool = true
 const DISABLED_PATH = "res://Levels/Level Selection/Assets/locked.png"
 
@@ -12,7 +12,6 @@ func _ready():
 	texture_normal = load(texture_path)
 	texture_disabled = load(DISABLED_PATH)
 	update_button_state()
-	print(GameManager.level_data)
 
 func update_button_state():
 	if locked:
@@ -31,9 +30,6 @@ func update_button_state():
 			var star_node = stars_scene[i].instantiate()
 			star_node.add_to_group("stars")  # Add stars to a group for easy management
 			add_child(star_node)
-
-		
-
 
 func _on_pressed():
 	if not locked:

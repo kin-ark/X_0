@@ -25,9 +25,9 @@
 [ext_resource type="PackedScene" uid="uid://dnbrpve5d416o" path="res://Characters/player.tscn" id="23_ml6r1"]
 [ext_resource type="PackedScene" uid="uid://cfhyt71pjnllb" path="res://Environments/breakable.tscn" id="24_c631k"]
 [ext_resource type="PackedScene" uid="uid://3yjgfvxpfjw8" path="res://Characters/enemy_chase.tscn" id="24_mwh20"]
-[ext_resource type="PackedScene" path="res://Environments/gate.tscn" id="25_kyloe"]
+[ext_resource type="PackedScene" uid="uid://8k2lr60587he" path="res://Environments/gate.tscn" id="25_kyloe"]
 [ext_resource type="PackedScene" uid="uid://cj7l5wswmuu8a" path="res://Common/Pause Menu/pause_menu.tscn" id="25_pv8kn"]
-[ext_resource type="PackedScene" path="res://plates.tscn" id="26_wlstd"]
+[ext_resource type="PackedScene" uid="uid://bxsk20hcg1ejk" path="res://plates.tscn" id="26_wlstd"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_763ax"]
 texture = ExtResource("1_n6gd6")
