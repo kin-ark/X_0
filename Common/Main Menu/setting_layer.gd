@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Control
 
 @onready var volume_slider: HSlider = %VolumeSlider
 @onready var music_slider: HSlider = %MusicSlider

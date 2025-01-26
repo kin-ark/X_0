@@ -1,7 +1,7 @@
 extends CanvasLayer
 
 @onready var h_box_container: HBoxContainer = $HBoxContainer
-@onready var setting_layer: CanvasLayer = $SettingLayer
+@onready var setting_layer: Control = $SettingLayer
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
