@@ -1,4 +1,4 @@
-[gd_scene load_steps=40 format=4 uid="uid://bnbh8v7kjvvca"]
+[gd_scene load_steps=41 format=4 uid="uid://bnbh8v7kjvvca"]
 
 [ext_resource type="Texture2D" uid="uid://dvyenvqoy76km" path="res://Environments/Visual Assets/tile.png" id="1_b34fl"]
 [ext_resource type="Texture2D" uid="uid://1bphfnv5qalu" path="res://Environments/Visual Assets/atlas.png" id="2_tflsf"]
@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://8k2lr60587he" path="res://Environments/gate.tscn" id="27_o1kei"]
 [ext_resource type="PackedScene" uid="uid://diutlvqom6sxf" path="res://Environments/pushable.tscn" id="28_t4i2u"]
 [ext_resource type="PackedScene" uid="uid://cj7l5wswmuu8a" path="res://Common/Pause Menu/pause_menu.tscn" id="29_edypn"]
+[ext_resource type="PackedScene" uid="uid://cfhyt71pjnllb" path="res://Environments/breakable.tscn" id="29_xyok4"]
 [ext_resource type="PackedScene" uid="uid://bqgrh70d48n5n" path="res://Levels/UI/background_layer.tscn" id="30_37yhf"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_763ax"]
@@ -134,10 +135,10 @@ glow_strength = 1.5
 glow_blend_mode = 0
 glow_hdr_scale = 0.0
 
-[node name="Leveltest" type="Node2D"]
+[node name="Level6" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAHAAIAAgAAAAAAAAAIAAIAAgAAAAAAAAAJAAIAAgAAAAAAAAAKAAIAAgAAAAAAAAALAAIAAgAAAAAAAAAMAAIAAgAAAAAAAAANAAIAAgAAAAAAAAAHAAkAAgAAAAAAAAAIAAkAAgAAAAAAAAAJAAkAAgAAAAAAAAAKAAkAAgAAAAAAAAALAAkAAgAAAAAAAAAMAAkAAgAAAAAAAAANAAkAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAUAAgAAAAAAAAAHAAYAAgAAAAAAAAAHAAcAAgAAAAAAAAAHAAgAAgAAAAAAAAAOAAIAAgAAAAAAAAAOAAMAAgAAAAAAAAAOAAQAAgAAAAAAAAAOAAUAAgAAAAAAAAAOAAYAAgAAAAAAAAAOAAcAAgAAAAAAAAAOAAgAAgAAAAAAAAAOAAkAAgAAAAAAAAAIAAMAAQAAAAIAAAAIAAQAAQAAAAIAAAAIAAUAAQAAAAIAAAAIAAYAAQAAAAIAAAAIAAcAAgAAAAAAAAAIAAgAAgAAAAAAAAAJAAUAAQAAAAIAAAAJAAYAAQAAAAIAAAAJAAcAAgAAAAAAAAAJAAgAAgAAAAAAAAALAAYAAQAAAAIAAAALAAcAAgAAAAAAAAAMAAYAAQAAAAIAAAAMAAgAAQAAAAIAAAANAAQAAgAAAAAAAAANAAYAAQAAAAIAAAANAAcAAgAAAAAAAAAKAAcAAgAAAAAAAAAMAAUAAgAAAAAAAAALAAQAAQAAAAIAAAAKAAUAAQAAAAIAAAALAAUAAQAAAAIAAAAKAAYAAQAAAAIAAAANAAUAAgAAAAAAAAAKAAgAAgAAAAAAAAANAAMAAgAAAAAAAAAMAAQAAQAAAAIAAAAKAAQAAQAAAAIAAAAMAAMAAwAAAAAAAAAKAAMAAgAAAAAAAAAMAAcAAQAAAAIAAAALAAgAAQAAAAIAAAANAAgAAQAAAAIAAAAJAAQAAQAAAAIAAAAJAAMAAQAAAAIAAAALAAMAAQAAAAIAAAA=")
+tile_map_data = PackedByteArray("AAAHAAIAAgAAAAAAAAAIAAIAAgAAAAAAAAAJAAIAAgAAAAAAAAAKAAIAAgAAAAAAAAALAAIAAgAAAAAAAAAMAAIAAgAAAAAAAAANAAIAAgAAAAAAAAAHAAkAAgAAAAAAAAAIAAkAAgAAAAAAAAAJAAkAAgAAAAAAAAAKAAkAAgAAAAAAAAALAAkAAgAAAAAAAAAMAAkAAgAAAAAAAAANAAkAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAUAAgAAAAAAAAAHAAYAAgAAAAAAAAAHAAcAAgAAAAAAAAAHAAgAAgAAAAAAAAAOAAIAAgAAAAAAAAAOAAMAAgAAAAAAAAAOAAQAAgAAAAAAAAAOAAUAAgAAAAAAAAAOAAYAAgAAAAAAAAAOAAcAAgAAAAAAAAAOAAgAAgAAAAAAAAAOAAkAAgAAAAAAAAAIAAMAAQAAAAIAAAAIAAQAAQAAAAIAAAAIAAUAAQAAAAIAAAAIAAYAAQAAAAIAAAAJAAUAAgAAAAAAAAAJAAYAAQAAAAIAAAALAAYAAgAAAAAAAAAMAAYAAwAAAAAAAAAMAAgAAQAAAAIAAAANAAYAAQAAAAIAAAALAAQAAgAAAAAAAAAKAAUAAgAAAAAAAAALAAUAAgAAAAAAAAAKAAYAAQAAAAIAAAAKAAQAAgAAAAAAAAAMAAcAAgAAAAAAAAALAAgAAQAAAAIAAAANAAgAAQAAAAIAAAAJAAQAAgAAAAAAAAAJAAMAAgAAAAAAAAALAAMAAQAAAAIAAAALAAcAAwAAAAAAAAAIAAcAAQAAAAIAAAAIAAgAAQAAAAIAAAAJAAgAAQAAAAIAAAAJAAcAAQAAAAIAAAAKAAcAAQAAAAIAAAAKAAgAAQAAAAIAAAANAAcAAQAAAAIAAAANAAUAAQAAAAIAAAAMAAUAAQAAAAIAAAAMAAQAAQAAAAIAAAANAAQAAQAAAAIAAAANAAMAAQAAAAIAAAAMAAMAAQAAAAIAAAAKAAMAAQAAAAIAAAA=")
 tile_set = SubResource("TileSet_lp5yr")
 script = ExtResource("5_s0nlu")
 
@@ -357,7 +358,7 @@ text = "You cant use two same buttons"
 script = ExtResource("22_6utxa")
 
 [node name="Player" parent="." instance=ExtResource("23_brdlh")]
-position = Vector2(731, 559)
+position = Vector2(731, 301)
 skill_1 = ExtResource("24_roja2")
 
 [node name="Enemies" type="Node" parent="."]
@@ -366,24 +367,23 @@ skill_1 = ExtResource("24_roja2")
 position = Vector2(1075, 731)
 
 [node name="EnemyChase2" parent="Enemies" instance=ExtResource("25_syqkg")]
-position = Vector2(817, 301)
+position = Vector2(1161, 645)
 
 [node name="Environments" type="Node" parent="."]
 
 [node name="Plates" parent="Environments" node_paths=PackedStringArray("gates") instance=ExtResource("26_vcdi1")]
-position = Vector2(989, 387)
-gates = [NodePath("../Gate"), NodePath("../Gate2")]
+position = Vector2(1462, 473)
+gates = [NodePath("../Gate"), null]
 
 [node name="Gate" parent="Environments" instance=ExtResource("27_o1kei")]
-position = Vector2(1075, 645)
-open_direction = 1
-
-[node name="Gate2" parent="Environments" instance=ExtResource("27_o1kei")]
-position = Vector2(1075, 387)
+position = Vector2(1462, 645)
 open_direction = 1
 
 [node name="Pushable" parent="Environments" instance=ExtResource("28_t4i2u")]
-position = Vector2(989, 473)
+position = Vector2(1462, 387)
+
+[node name="Breakable" parent="Environments" instance=ExtResource("29_xyok4")]
+position = Vector2(731, 387)
 
 [node name="PauseMenu" parent="." instance=ExtResource("29_edypn")]
 visible = false
