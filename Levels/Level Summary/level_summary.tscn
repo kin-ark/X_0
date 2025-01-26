@@ -1,0 +1,136 @@
+[gd_scene load_steps=15 format=3 uid="uid://le8uioavgm85"]
+
+[ext_resource type="Script" path="res://Levels/Level Summary/level_summary.gd" id="1_t3vs3"]
+[ext_resource type="PackedScene" uid="uid://dolenc4kiw7ew" path="res://Levels/Level Summary/star_1.tscn" id="2_78lhq"]
+[ext_resource type="Texture2D" uid="uid://gh25f0i57jvy" path="res://Levels/Level Solved Window/success.png" id="2_qw6r1"]
+[ext_resource type="AudioStream" uid="uid://dq6aj1q6wekx" path="res://Audio/click5.ogg" id="2_t5x68"]
+[ext_resource type="FontFile" uid="uid://e1s7fhiq80fb" path="res://Common/Pause Menu/Visual Assets/endless-smile/Endless Smile.ttf" id="3_bh603"]
+[ext_resource type="PackedScene" uid="uid://3ic6vkax1np2" path="res://Levels/Level Summary/star_2.tscn" id="3_nnrtp"]
+[ext_resource type="PackedScene" uid="uid://t74ylyoseggg" path="res://Levels/Level Summary/star_3.tscn" id="4_guilp"]
+[ext_resource type="Texture2D" uid="uid://cenjckkybtyom" path="res://Levels/Level Solved Window/levelselection.png" id="4_mptbn"]
+[ext_resource type="Texture2D" uid="uid://bxt8jnbfqx416" path="res://Levels/Level Solved Window/levelselection hover.png" id="5_5lnie"]
+[ext_resource type="Texture2D" uid="uid://6k271ax6k87g" path="res://Levels/Level Solved Window/home.png" id="6_tmpfr"]
+[ext_resource type="Texture2D" uid="uid://msbb8nqh057" path="res://Levels/Level Solved Window/home hover.png" id="7_jcay8"]
+[ext_resource type="Texture2D" uid="uid://bpdlf6kdw8hu2" path="res://Levels/Level Solved Window/nextlevel.png" id="8_r7ao0"]
+[ext_resource type="Texture2D" uid="uid://br36ms7j4yj38" path="res://Levels/Level Solved Window/nextlevel hover.png" id="9_71fmh"]
+[ext_resource type="AudioStream" uid="uid://bqsdcwbb6f6ov" path="res://Audio/click4.ogg" id="14_acfxg"]
+
+[node name="LevelSummary" type="CenterContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_t3vs3")
+star1 = ExtResource("2_78lhq")
+star2 = ExtResource("3_nnrtp")
+star3 = ExtResource("4_guilp")
+
+[node name="SummaryBG" type="TextureRect" parent="."]
+unique_name_in_owner = true
+layout_mode = 2
+texture = ExtResource("2_qw6r1")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SummaryBG"]
+layout_mode = 2
+offset_left = 101.0
+offset_top = 336.0
+offset_right = 551.0
+offset_bottom = 687.0
+
+[node name="MarginContainer" type="MarginContainer" parent="SummaryBG/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 40
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 10
+theme_override_constants/margin_bottom = 20
+
+[node name="VBoxContainer" type="VBoxContainer" parent="SummaryBG/VBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SummaryBG/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="TimeLabel" type="Label" parent="SummaryBG/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.0196078, 0.180392, 0.498039, 1)
+theme_override_fonts/font = ExtResource("3_bh603")
+theme_override_font_sizes/font_size = 45
+text = "Time Elapsed"
+horizontal_alignment = 2
+
+[node name="TimeValLabel" type="Label" parent="SummaryBG/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.0196078, 0.180392, 0.498039, 1)
+theme_override_fonts/font = ExtResource("3_bh603")
+theme_override_font_sizes/font_size = 45
+text = "10.242"
+horizontal_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="SummaryBG/VBoxContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="MoveLabel" type="Label" parent="SummaryBG/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.0196078, 0.180392, 0.498039, 1)
+theme_override_fonts/font = ExtResource("3_bh603")
+theme_override_font_sizes/font_size = 45
+text = "Move Counts"
+horizontal_alignment = 2
+
+[node name="MoveValLabel" type="Label" parent="SummaryBG/VBoxContainer/MarginContainer/VBoxContainer/HBoxContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.0196078, 0.180392, 0.498039, 1)
+theme_override_fonts/font = ExtResource("3_bh603")
+theme_override_font_sizes/font_size = 45
+text = "10"
+horizontal_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="SummaryBG/VBoxContainer"]
+layout_mode = 2
+
+[node name="SelectionButton" type="TextureButton" parent="SummaryBG/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("4_mptbn")
+texture_pressed = ExtResource("5_5lnie")
+texture_hover = ExtResource("5_5lnie")
+
+[node name="HomeButton" type="TextureButton" parent="SummaryBG/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("6_tmpfr")
+texture_pressed = ExtResource("7_jcay8")
+texture_hover = ExtResource("7_jcay8")
+
+[node name="NextButton" type="TextureButton" parent="SummaryBG/VBoxContainer/HBoxContainer"]
+z_index = 10
+layout_mode = 2
+size_flags_horizontal = 6
+texture_normal = ExtResource("8_r7ao0")
+texture_pressed = ExtResource("9_71fmh")
+texture_hover = ExtResource("9_71fmh")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+unique_name_in_owner = true
+stream = ExtResource("2_t5x68")
+bus = &"Sfx"
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("14_acfxg")
+bus = &"Sfx"
+
+[connection signal="pressed" from="SummaryBG/VBoxContainer/HBoxContainer/SelectionButton" to="." method="_on_selection_button_pressed"]
+[connection signal="pressed" from="SummaryBG/VBoxContainer/HBoxContainer/HomeButton" to="." method="_on_home_button_pressed"]
+[connection signal="pressed" from="SummaryBG/VBoxContainer/HBoxContainer/NextButton" to="." method="_on_next_button_pressed"]

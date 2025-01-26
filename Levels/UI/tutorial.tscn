@@ -1,0 +1,102 @@
+[gd_scene load_steps=8 format=3 uid="uid://dyjnlagfgtc7s"]
+
+[ext_resource type="Texture2D" uid="uid://b8fg2pt7cl56f" path="res://Levels/UI/Tutorial/Keyboard/w.png" id="1_4usag"]
+[ext_resource type="Texture2D" uid="uid://d0okl4f8163p4" path="res://Levels/UI/Tutorial/Keyboard/a.png" id="2_f7k1d"]
+[ext_resource type="Texture2D" uid="uid://b8u10tgo6xekx" path="res://Levels/UI/Tutorial/Keyboard/s.png" id="3_8xyjm"]
+[ext_resource type="Texture2D" uid="uid://b11kdh0c1ej12" path="res://Levels/UI/Tutorial/Keyboard/d.png" id="4_wrwgf"]
+[ext_resource type="FontFile" uid="uid://e1s7fhiq80fb" path="res://Common/Pause Menu/Visual Assets/endless-smile/Endless Smile.ttf" id="5_57skq"]
+[ext_resource type="Texture2D" uid="uid://dkkn5x6ioansw" path="res://Levels/UI/Tutorial/Keyboard/q.png" id="6_7c0fo"]
+[ext_resource type="Texture2D" uid="uid://dfx3sjvl3lh1f" path="res://Levels/UI/Tutorial/Keyboard/e.png" id="7_xyylv"]
+
+[node name="Tutorial" type="VBoxContainer"]
+offset_right = 40.0
+offset_bottom = 340.0
+scale = Vector2(0.68, 0.68)
+theme_override_constants/separation = 170
+
+[node name="WASD" type="Control" parent="."]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="WASD"]
+layout_mode = 2
+offset_left = 63.0
+offset_top = -1.0
+offset_right = 182.0
+offset_bottom = 118.0
+texture = ExtResource("1_4usag")
+
+[node name="TextureRect2" type="TextureRect" parent="WASD"]
+layout_mode = 2
+offset_left = -5.0
+offset_top = 71.0
+offset_right = 114.0
+offset_bottom = 190.0
+texture = ExtResource("2_f7k1d")
+
+[node name="TextureRect3" type="TextureRect" parent="WASD"]
+layout_mode = 2
+offset_left = 63.0
+offset_top = 71.0
+offset_right = 182.0
+offset_bottom = 190.0
+texture = ExtResource("3_8xyjm")
+
+[node name="TextureRect4" type="TextureRect" parent="WASD"]
+layout_mode = 2
+offset_left = 132.0
+offset_top = 72.0
+offset_right = 251.0
+offset_bottom = 191.0
+texture = ExtResource("4_wrwgf")
+
+[node name="Label" type="Label" parent="WASD"]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 75.0
+offset_right = 337.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("5_57skq")
+theme_override_font_sizes/font_size = 35
+text = "MOVE"
+
+[node name="Q" type="Control" parent="."]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="Q"]
+layout_mode = 2
+offset_left = 61.7647
+offset_top = 3.52933
+offset_right = 180.765
+offset_bottom = 122.529
+texture = ExtResource("6_7c0fo")
+
+[node name="Label" type="Label" parent="Q"]
+layout_mode = 0
+offset_left = 263.238
+offset_top = 41.1083
+offset_right = 438.238
+offset_bottom = 76.1083
+theme_override_fonts/font = ExtResource("5_57skq")
+theme_override_font_sizes/font_size = 35
+text = "LEFT BUTTON"
+
+[node name="E" type="Control" parent="."]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="E"]
+layout_mode = 2
+offset_left = 64.7058
+offset_top = -54.706
+offset_right = 183.706
+offset_bottom = 64.294
+texture = ExtResource("7_xyylv")
+
+[node name="Label" type="Label" parent="E"]
+layout_mode = 0
+offset_left = 266.18
+offset_top = -17.1271
+offset_right = 459.18
+offset_bottom = 17.8729
+theme_override_fonts/font = ExtResource("5_57skq")
+theme_override_font_sizes/font_size = 35
+text = "RIGHT BUTTON"

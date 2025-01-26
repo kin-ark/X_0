@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://t74ylyoseggg"]
+
+[ext_resource type="Texture2D" uid="uid://cahejfsmhiak" path="res://Levels/Level Solved Window/star 3.png" id="1_7qtb8"]
+
+[node name="Star3" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_7qtb8")

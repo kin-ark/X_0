@@ -1,0 +1,37 @@
+[gd_scene load_steps=6 format=3 uid="uid://bqgrh70d48n5n"]
+
+[ext_resource type="Texture2D" uid="uid://c8jteexdneiw8" path="res://Levels/Bg still.PNG" id="1_0xald"]
+[ext_resource type="Texture2D" uid="uid://o2hjctk7tcab" path="res://Levels/IMG_0304.PNG" id="2_q3rcl"]
+[ext_resource type="Texture2D" uid="uid://d1hevewww2sw0" path="res://Levels/IMG_0305.PNG" id="3_n16de"]
+[ext_resource type="Texture2D" uid="uid://bblickox4lofc" path="res://Levels/IMG_0306.PNG" id="4_yif6n"]
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_mkw47"]
+frames = 3
+speed_scale = 5.0
+frame_0/texture = ExtResource("2_q3rcl")
+frame_1/texture = ExtResource("3_n16de")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("4_yif6n")
+frame_2/duration = 1.0
+
+[node name="BackgroundLayer" type="CanvasLayer"]
+layer = -128
+follow_viewport_enabled = true
+
+[node name="Space" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = ExtResource("1_0xald")
+
+[node name="Stars" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+texture = SubResource("AnimatedTexture_mkw47")

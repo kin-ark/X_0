@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="SkillResource" load_steps=3 format=3 uid="uid://boulre7hs3tgn"]
+
+[ext_resource type="Script" path="res://Skills/skill_resource.gd" id="1_ff0r3"]
+[ext_resource type="Texture2D" uid="uid://dum4j6gjg0oqd" path="res://Mata/yellow.PNG" id="2_lx8d0"]
+
+[resource]
+script = ExtResource("1_ff0r3")
+skill_name = "Restoration"
+skill_desc = "Restore"
+sprite = ExtResource("2_lx8d0")
+button_name = "Button of restore"

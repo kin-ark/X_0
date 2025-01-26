@@ -1,0 +1,19 @@
+[gd_scene load_steps=3 format=3 uid="uid://va36l5srkgvk"]
+
+[ext_resource type="Script" path="res://Levels/Skill Selection/button_slot.gd" id="1_27e8s"]
+[ext_resource type="Script" path="res://Levels/Skill Selection/button_slot_property.gd" id="2_xdnyk"]
+
+[node name="Left Button" type="PanelContainer"]
+self_modulate = Color(1, 1, 1, 0)
+offset_left = 301.191
+offset_top = 557.143
+offset_right = 661.191
+offset_bottom = 918.143
+scale = Vector2(0.428571, 0.428571)
+script = ExtResource("1_27e8s")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 2
+expand_mode = 1
+script = ExtResource("2_xdnyk")

@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://diutlvqom6sxf"]
+
+[ext_resource type="Script" path="res://Environments/pushable.gd" id="1_5y6l1"]
+[ext_resource type="Texture2D" uid="uid://bo7c5n3sdjym2" path="res://Environments/Visual Assets/pushable.png" id="2_4qekb"]
+[ext_resource type="AudioStream" uid="uid://dxwq4m5ytdstl" path="res://Audio/Suck 2.wav" id="3_1xeru"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_us6ub"]
+size = Vector2(86, 86)
+
+[node name="Pushable" type="Area2D"]
+script = ExtResource("1_5y6l1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_us6ub")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(0.697031, 0.697031)
+texture = ExtResource("2_4qekb")
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_1xeru")
+volume_db = 5.777
+pitch_scale = 0.47

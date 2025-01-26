@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://duqj5x25703j7"]
+
+[ext_resource type="Texture2D" uid="uid://d4c3f7n1uqlo5" path="res://Particles/red_flame.tres" id="1_n62wx"]
+[ext_resource type="Texture2D" uid="uid://dwrh8ehe3f08y" path="res://Particles/flame.png" id="1_tcpeu"]
+
+[sub_resource type="Curve" id="Curve_1h241"]
+min_value = -360.0
+max_value = 360.0
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.262911, 312.527), 0.0, 0.0, 0, 0, Vector2(0.521127, 3.95605), 0.0, 0.0, 0, 0, Vector2(0.760563, 257.143), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="CurveTexture" id="CurveTexture_pnuhv"]
+curve = SubResource("Curve_1h241")
+
+[sub_resource type="Curve" id="Curve_7hsl4"]
+_data = [Vector2(0.2723, 0.472527), 0.0, -2.34066, 0, 0, Vector2(0.600939, 1), -1.27064, -1.27064, 0, 0, Vector2(0.995305, 0.010989), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_x47qp"]
+curve = SubResource("Curve_7hsl4")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_hwc8n"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(2, 2, 2)
+emission_shape = 1
+emission_sphere_radius = 26.6
+direction = Vector3(0, -1, 0)
+spread = 6.0
+flatness = 0.567
+initial_velocity_max = 1000.0
+angular_velocity_curve = SubResource("CurveTexture_pnuhv")
+gravity = Vector3(0, -256, 0)
+scale_min = 0.0
+scale_curve = SubResource("CurveTexture_x47qp")
+color_ramp = ExtResource("1_n62wx")
+
+[node name="Particle" type="GPUParticles2D"]
+amount = 2000
+process_material = SubResource("ParticleProcessMaterial_hwc8n")
+texture = ExtResource("1_tcpeu")
+lifetime = 0.4
+speed_scale = 0.4
+randomness = 1.0

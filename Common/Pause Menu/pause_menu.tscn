@@ -1,0 +1,120 @@
+[gd_scene load_steps=8 format=3 uid="uid://cj7l5wswmuu8a"]
+
+[ext_resource type="Script" path="res://Common/Pause Menu/pause_menu.gd" id="1_6oogo"]
+[ext_resource type="Texture2D" uid="uid://bfkfs8au5gwyq" path="res://Common/Pause Menu/Visual Assets/bg_pause.PNG" id="1_samgf"]
+[ext_resource type="FontFile" uid="uid://e1s7fhiq80fb" path="res://Common/Pause Menu/Visual Assets/endless-smile/Endless Smile.ttf" id="2_ewpyb"]
+[ext_resource type="AudioStream" uid="uid://bqsdcwbb6f6ov" path="res://Audio/click4.ogg" id="4_jy3yy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qi2o4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0rk21"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jjje8"]
+
+[node name="PauseMenu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_6oogo")
+
+[node name="BG" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_samgf")
+
+[node name="PauseLabel" type="Label" parent="."]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -264.5
+offset_top = 132.0
+offset_right = 264.5
+offset_bottom = 332.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.737255, 0.301961, 0.0156863, 1)
+theme_override_fonts/font = ExtResource("2_ewpyb")
+theme_override_font_sizes/font_size = 160
+text = "PAUSED"
+horizontal_alignment = 1
+
+[node name="ResumeButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -224.0
+offset_top = -171.0
+offset_right = 224.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_disabled_color = Color(0.0196078, 0.180392, 0.498039, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.980392, 0.815686, 0.345098, 1)
+theme_override_colors/font_hover_color = Color(0.980392, 0.815686, 0.345098, 1)
+theme_override_colors/font_pressed_color = Color(0.980392, 0.815686, 0.345098, 1)
+theme_override_colors/font_focus_color = Color(0.0196078, 0.180392, 0.498039, 1)
+theme_override_colors/font_color = Color(0.0196078, 0.180392, 0.498039, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_ewpyb")
+theme_override_font_sizes/font_size = 150
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qi2o4")
+text = "RESUME"
+flat = true
+
+[node name="RestartButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -245.0
+offset_top = -7.0
+offset_right = 245.0
+offset_bottom = 151.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_disabled_color = Color(0.0196078, 0.180392, 0.498039, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.980392, 0.815686, 0.345098, 1)
+theme_override_colors/font_hover_color = Color(0.980392, 0.815686, 0.345098, 1)
+theme_override_colors/font_pressed_color = Color(0.980392, 0.815686, 0.345098, 1)
+theme_override_colors/font_focus_color = Color(0.0196078, 0.180392, 0.498039, 1)
+theme_override_colors/font_color = Color(0.0196078, 0.180392, 0.498039, 1)
+theme_override_fonts/font = ExtResource("2_ewpyb")
+theme_override_font_sizes/font_size = 150
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0rk21")
+text = "RESTART"
+flat = true
+
+[node name="QuitButton" type="Button" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -245.0
+offset_top = 150.0
+offset_right = 245.0
+offset_bottom = 308.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_disabled_color = Color(0.0196078, 0.180392, 0.498039, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.980392, 0.815686, 0.345098, 1)
+theme_override_colors/font_hover_color = Color(0.980392, 0.815686, 0.345098, 1)
+theme_override_colors/font_pressed_color = Color(0.980392, 0.815686, 0.345098, 1)
+theme_override_colors/font_focus_color = Color(0.0196078, 0.180392, 0.498039, 1)
+theme_override_colors/font_color = Color(0.0196078, 0.180392, 0.498039, 1)
+theme_override_fonts/font = ExtResource("2_ewpyb")
+theme_override_font_sizes/font_size = 150
+theme_override_styles/focus = SubResource("StyleBoxEmpty_jjje8")
+text = "QUIT"
+flat = true
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_jy3yy")
+bus = &"Sfx"
+
+[connection signal="pressed" from="ResumeButton" to="." method="pause_unpause"]
+[connection signal="pressed" from="RestartButton" to="." method="restart"]
+[connection signal="pressed" from="QuitButton" to="." method="exit"]

@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://cg4fyune7sx0a"]
+
+[ext_resource type="FontFile" uid="uid://cay3ohjaj6giy" path="res://Levels/Level Solved Window/TechnoRaceItalic-eZRWe.otf" id="1_hqdlb"]
+
+[node name="MarginContainer" type="MarginContainer"]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -275.0
+offset_top = -120.0
+offset_bottom = 120.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_constants/margin_right = 75
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 2
+theme_override_constants/separation = 40
+
+[node name="Time" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_hqdlb")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 2
+
+[node name="Move" type="Label" parent="VBoxContainer"]
+layout_mode = 2
+theme_override_fonts/font = ExtResource("1_hqdlb")
+theme_override_font_sizes/font_size = 100
+horizontal_alignment = 2
