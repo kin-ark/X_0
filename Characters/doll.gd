@@ -30,18 +30,18 @@ func _on_confirm_button_pressed() -> void:
 	StageManager.player.skill_1 = left_button_slot.texture_rect.property["BUTTON"]
 	
 	StageManager.player.skill_2 = right_button_slot.texture_rect.property["BUTTON"]
-	print(StageManager.player.skill_1)
-	print(StageManager.player.skill_2)
 	
 	var tween = get_tree().create_tween().set_trans(Tween.TRANS_CUBIC).set_parallel()
 	tween.tween_property(button_list, "global_position", button_list.global_position + Vector2(1920, 0), 1).set_ease(Tween.EASE_IN_OUT)
 	tween.tween_property(confirm_button, "global_position", confirm_button.global_position - Vector2(1920, 0), 1).set_ease(Tween.EASE_IN_OUT)
-	StageManager.game_state = StageManager.GAME_STATE.PLAY
+	
+	
+	get_parent().start_countdown()
 
 
 func _on_player_destroy_button_left() -> void:
 	print("l")
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(0.3).timeout
 	left_button_slot.hide()
 	left_particle_spot.hide()
 	var _particle = EXPLOSION.instantiate()
@@ -52,7 +52,7 @@ func _on_player_destroy_button_left() -> void:
 
 func _on_player_destroy_button_right() -> void:
 	print("r")
-	await get_tree().create_timer(1).timeout
+	await get_tree().create_timer(0.3).timeout
 	right_button_slot.hide()
 	right_particle_spot.hide()
 	var _particle = EXPLOSION.instantiate()

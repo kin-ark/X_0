@@ -28,7 +28,10 @@ func _process(delta: float) -> void:
 	if game_state != GAME_STATE.SKILL_SELECT && game_state != GAME_STATE.END:
 		time_elapsed += delta
 		#$Label.text = str(time_elapsed).pad_decimals(2)
-
+		
+func start_game():
+	game_state = GAME_STATE.PLAY
+	
 func move_enemies():
 	game_state = GAME_STATE.ENEMY
 	tile_map_layer.calculate_path()
@@ -51,6 +54,7 @@ func is_blocked(coords):
 				return true
 			
 	return false
+
 
 func fail():
 	print("fail")

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://c61ypr8g3dx7m"]
+[gd_scene load_steps=12 format=3 uid="uid://c61ypr8g3dx7m"]
 
 [ext_resource type="Texture2D" uid="uid://c72de3ljdgo0k" path="res://List buttons.PNG" id="1_ig8gf"]
 [ext_resource type="FontFile" uid="uid://e1s7fhiq80fb" path="res://Common/Pause Menu/Visual Assets/endless-smile/Endless Smile.ttf" id="2_w2q32"]
@@ -9,11 +9,47 @@
 [ext_resource type="Resource" uid="uid://dcvk31ymhey7v" path="res://Skills/possess.tres" id="7_pw20m"]
 [ext_resource type="Resource" uid="uid://cpq6nhdackybv" path="res://Skills/push.tres" id="8_6p0k5"]
 
+[sub_resource type="Animation" id="Animation_smvam"]
+resource_name = "button_list_intro"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.129408, 9.51366),
+"update": 0,
+"values": [Vector2(2000, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_lscdh"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.0743257, 5.85634),
+"update": 0,
+"values": [Vector2(2000, 0), Vector2(0, 0)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6tkoi"]
+_data = {
+"RESET": SubResource("Animation_lscdh"),
+"button_list_intro": SubResource("Animation_smvam")
+}
+
 [node name="ButtonListContainer" type="AspectRatioContainer"]
 anchors_preset = 11
 anchor_left = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -1920.0
 grow_horizontal = 0
 grow_vertical = 2
 mouse_filter = 2
@@ -25,23 +61,24 @@ size_flags_vertical = 8
 mouse_filter = 2
 texture = ExtResource("1_ig8gf")
 
-[node name="Label6" type="Label" parent="ButtonList"]
+[node name="PauseLabel" type="Label" parent="ButtonList"]
 layout_mode = 1
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -396.0
-offset_top = -451.0
-offset_right = -194.0
-offset_bottom = -409.0
+offset_left = -571.0
+offset_top = -467.0
+offset_right = -42.0
+offset_bottom = -384.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.737255, 0.301961, 0.0156863, 1)
 theme_override_fonts/font = ExtResource("2_w2q32")
-theme_override_font_sizes/font_size = 60
+theme_override_font_sizes/font_size = 80
 text = "BUTTONS"
+horizontal_alignment = 1
 
 [node name="Button1" parent="ButtonList" instance=ExtResource("3_xs3vv")]
 layout_mode = 0
@@ -182,6 +219,12 @@ grow_vertical = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_font_sizes/font_size = 30
 text = "Push"
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_6tkoi")
+}
+autoplay = "RESET"
 
 [editable path="ButtonList/Button1"]
 [editable path="ButtonList/Button2"]
