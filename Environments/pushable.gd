@@ -3,6 +3,7 @@ class_name Pushable
 @onready var ray_cast_2d: RayCast2D = $RayCast2D
 @onready var sprite_2d: Sprite2D = $Sprite2D
 @onready var StageManager: Node2D = $"../../StageManager"
+@onready var audio_stream_player: AudioStreamPlayer = $AudioStreamPlayer
 
 
 func get_next_tile(direction) -> Vector2i:
@@ -39,6 +40,8 @@ func move(direction) -> bool:
 
 	elif tile_data.get_custom_data("walkable") == false:
 			return false
+			
+	audio_stream_player.play()
 
 	global_position = StageManager.tile_map_layer.map_to_local(next_tile)
 	sprite_2d.global_position = tile_map_layer.map_to_local(curr_tile)

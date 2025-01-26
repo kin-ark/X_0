@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://bxsk20hcg1ejk"]
+[gd_scene load_steps=5 format=3 uid="uid://bxsk20hcg1ejk"]
 
 [ext_resource type="Script" path="res://Levels/plates.gd" id="1_l57kt"]
 [ext_resource type="Texture2D" uid="uid://uceflbrkalmw" path="res://Environments/Visual Assets/pressureplate.png" id="2_hp3st"]
+[ext_resource type="AudioStream" uid="uid://7bs6g5wickry" path="res://Audio/switch27.ogg" id="3_kb5xk"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_k8hly"]
 size = Vector2(64, 64)
@@ -15,6 +16,9 @@ shape = SubResource("RectangleShape2D_k8hly")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 z_index = -5
 texture = ExtResource("2_hp3st")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_kb5xk")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]

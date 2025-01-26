@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://diqo082bpnkhq"]
+[gd_scene load_steps=7 format=3 uid="uid://diqo082bpnkhq"]
 
 [ext_resource type="FontFile" uid="uid://cay3ohjaj6giy" path="res://Levels/Level Solved Window/TechnoRaceItalic-eZRWe.otf" id="1_3si1x"]
+[ext_resource type="AudioStream" uid="uid://d04db5yxvva5w" path="res://Audio/Confirm 1.wav" id="1_aij6j"]
+[ext_resource type="AudioStream" uid="uid://ld7nuuooonio" path="res://Audio/Cancel 1.wav" id="1_runxj"]
 
 [sub_resource type="Animation" id="Animation_rkefh"]
 resource_name = "countdown"
@@ -53,6 +55,33 @@ tracks/3/keys = {
 "update": 0,
 "values": [Vector2(697, -215), Vector2(697, 440), Vector2(697, 2000)]
 }
+tracks/4/type = "audio"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("AudioStreamPlayer")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"clips": [{
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("1_runxj")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("1_runxj")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("1_runxj")
+}, {
+"end_offset": 0.0,
+"start_offset": 0.0,
+"stream": ExtResource("1_aij6j")
+}],
+"times": PackedFloat32Array(0.0333334, 0.9, 1.83333, 2.8)
+}
+tracks/4/use_blend = true
 
 [sub_resource type="Animation" id="Animation_7act6"]
 length = 0.001
@@ -200,3 +229,5 @@ theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_fonts/font = ExtResource("1_3si1x")
 theme_override_font_sizes/font_size = 200
 text = "START"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
