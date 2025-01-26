@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=4 uid="uid://c50xyau6o5uer"]
+[gd_scene load_steps=31 format=4 uid="uid://c50xyau6o5uer"]
 
 [ext_resource type="Texture2D" uid="uid://dvyenvqoy76km" path="res://Environments/Visual Assets/tile.png" id="1_8mg8s"]
 [ext_resource type="Texture2D" uid="uid://1bphfnv5qalu" path="res://Environments/Visual Assets/atlas.png" id="2_tv1tm"]
@@ -22,7 +22,6 @@
 [ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="17_6h5bf"]
 [ext_resource type="Texture2D" uid="uid://dkkn5x6ioansw" path="res://Levels/UI/Tutorial/Keyboard/q.png" id="17_s41r1"]
 [ext_resource type="Texture2D" uid="uid://dfx3sjvl3lh1f" path="res://Levels/UI/Tutorial/Keyboard/e.png" id="18_e3754"]
-[ext_resource type="PackedScene" uid="uid://3yjgfvxpfjw8" path="res://Characters/enemy_chase.tscn" id="22_djxqx"]
 [ext_resource type="Script" path="res://Levels/stage_manager.gd" id="22_xi012"]
 [ext_resource type="PackedScene" uid="uid://dnbrpve5d416o" path="res://Characters/player.tscn" id="23_yy4rv"]
 [ext_resource type="PackedScene" uid="uid://cj7l5wswmuu8a" path="res://Common/Pause Menu/pause_menu.tscn" id="24_dnh0u"]
@@ -283,9 +282,6 @@ position = Vector2(731, 473)
 skill_1 = ExtResource("17_6h5bf")
 
 [node name="Enemies" type="Node" parent="."]
-
-[node name="EnemyChase" parent="Enemies" instance=ExtResource("22_djxqx")]
-position = Vector2(817, 559)
 
 [node name="Environments" type="Node" parent="."]
 
