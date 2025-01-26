@@ -1,6 +1,7 @@
 extends Node2D
 
 signal show_score
+signal show_fail
 
 @export var tile_size: int = 86
 
@@ -13,6 +14,7 @@ enum GAME_STATE {SKILL_SELECT, PLAY, ENEMY, SKILL_USE, END}
 var game_state: GAME_STATE = GAME_STATE.SKILL_SELECT
 
 var player_win: bool = false
+
 
 @onready var tile_map_layer: PlayableArea = $"../TileMapLayer"
 @onready var player: Player = $"../Player"
@@ -59,6 +61,7 @@ func is_blocked(coords):
 func fail():
 	print("fail")
 	game_state = GAME_STATE.END
+	show_fail.emit()
 
 func win():
 	print("win")

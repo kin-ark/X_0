@@ -26,7 +26,7 @@ func move() -> bool:
 	
 		if ray_cast_2d.is_colliding():
 			var collider = ray_cast_2d.get_collider()
-			if collider is not Plate:
+			if collider is not Plate and collider is not Player:
 				return false
 		var tween = get_tree().create_tween().set_trans(Tween.TRANS_SINE)
 		tween.tween_property(self, "global_position", target_position, 0.2)
