@@ -10,7 +10,7 @@ extends TextureRect
 @onready var right_particle_spot: Marker2D = $RightButton/RightParticleSpot
 @onready var left_particle_spot: Marker2D = $LeftButton/LeftParticleSpot
 const EXPLOSION = preload("res://Particles/explosion.tscn")
-
+@onready var warning: Label = $"../Warning"
 const GREEN_FLAME = preload("res://Particles/particle_green.tscn")
 const PINK_FLAME = preload("res://Particles/particle_pink.tscn")
 const PURPLE_FLAME = preload("res://Particles/particle_purple.tscn")
@@ -26,6 +26,10 @@ func _process(delta: float) -> void:
 	pass
 
 func _on_confirm_button_pressed() -> void:
+	if left_button_slot.texture_rect.property["BUTTON"] == right_button_slot.texture_rect.property["BUTTON"]:
+		warning.visible = true
+		return
+	warning.visible = false
 	StageManager.player.skill_1 = left_button_slot.texture_rect.property["BUTTON"]
 	
 	StageManager.player.skill_2 = right_button_slot.texture_rect.property["BUTTON"]
