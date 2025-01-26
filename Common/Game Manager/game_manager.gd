@@ -3,7 +3,7 @@ extends Node
 var unlocked_levels: int = 1  # Start with level 1 unlocked
 var save_path: String = "user://save_game.dat"
 var level_data: Dictionary = {}  # Stores star ratings and requirements for each level
-var current_level: int = 1
+var current_level: int
 
 func _ready():
 	load_game()

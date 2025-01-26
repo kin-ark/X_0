@@ -86,7 +86,7 @@ func _on_next_button_pressed() -> void:
 	audio_stream_player_2.play()
 	GameManager.unlock_next_level(GameManager.current_level)
 	GameManager.save_game()
-	GameManager.load_level(GameManager.unlocked_levels)
+	GameManager.load_level(GameManager.current_level + 1)
 
 
 func _on_home_button_pressed() -> void:

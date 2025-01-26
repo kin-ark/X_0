@@ -22,7 +22,10 @@ func _on_play_button_pressed() -> void:
 	audio_stream_player.play()
 	TransitionScreen.transition()
 	await TransitionScreen.on_transition_finished
-	get_tree().change_scene_to_file("res://Levels/level1.tscn")
+	if GameManager.level_data[1]["stars"] == 0:
+		GameManager.load_level(1)
+	else:
+		get_tree().change_scene_to_file("res://Levels/Level Selection/level_selection.tscn")
 
 # flow
 # case: belum pernah main
