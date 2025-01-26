@@ -11,6 +11,7 @@ extends CenterContainer
 @onready var time_val_label: Label = %TimeValLabel
 @onready var move_val_label: Label = %MoveValLabel
 @onready var summary_bg: TextureRect = %SummaryBG
+@onready var next_button: TextureButton = $SummaryBG/VBoxContainer/HBoxContainer/NextButton
 
 @onready var StageManager: Node2D = $"../../StageManager"
 @onready var audio_stream_player_2: AudioStreamPlayer = $AudioStreamPlayer2
@@ -18,6 +19,9 @@ extends CenterContainer
 var tween_int_value: int
 
 func _ready() -> void:
+	if GameManager.current_level == 8:
+		next_button.disabled = true
+		next_button.hide()
 	edit_time_value(int(StageManager.time_elapsed))
 	edit_move_value(StageManager.move_count)
 	var rows = v_box_container.get_children()
