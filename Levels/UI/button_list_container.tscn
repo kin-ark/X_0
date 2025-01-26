@@ -9,6 +9,20 @@
 [ext_resource type="Resource" uid="uid://dcvk31ymhey7v" path="res://Skills/possess.tres" id="7_pw20m"]
 [ext_resource type="Resource" uid="uid://cpq6nhdackybv" path="res://Skills/push.tres" id="8_6p0k5"]
 
+[sub_resource type="Animation" id="Animation_lscdh"]
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.0743257, 5.85634),
+"update": 0,
+"values": [Vector2(2000, 0), Vector2(0, 0)]
+}
+
 [sub_resource type="Animation" id="Animation_smvam"]
 resource_name = "button_list_intro"
 tracks/0/type = "value"
@@ -20,20 +34,6 @@ tracks/0/loop_wrap = true
 tracks/0/keys = {
 "times": PackedFloat32Array(0, 1),
 "transitions": PackedFloat32Array(0.129408, 9.51366),
-"update": 0,
-"values": [Vector2(2000, 0), Vector2(0, 0)]
-}
-
-[sub_resource type="Animation" id="Animation_lscdh"]
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath(".:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0, 1),
-"transitions": PackedFloat32Array(0.0743257, 5.85634),
 "update": 0,
 "values": [Vector2(2000, 0), Vector2(0, 0)]
 }

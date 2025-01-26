@@ -2,7 +2,9 @@ extends Area2D
 class_name Plate
 
 @export var gates: Array[Gate]
-
+const PRESSUREPLATE_OFF = preload("res://Environments/Visual Assets/pressureplate.png")
+const PRESSUREPLATE_ON  = preload("res://Environments/Visual Assets/pressureplate1.png")
+@onready var sprite_2d: Sprite2D = $Sprite2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -16,9 +18,11 @@ func _process(delta: float) -> void:
 
 
 func _on_area_entered(area: Area2D) -> void:
+	sprite_2d.texture = PRESSUREPLATE_ON
 	for gate in gates:
 		gate.open()
 
 func _on_area_exited(area: Area2D) -> void:
+	sprite_2d.texture = PRESSUREPLATE_OFF
 	for gate in gates:
 		gate.close()
