@@ -1,9 +1,9 @@
 [gd_scene load_steps=14 format=3 uid="uid://c6y5twvio6vc2"]
 
 [ext_resource type="Script" path="res://Levels/Level Selection/level_selection.gd" id="1_uk6mi"]
-[ext_resource type="Texture2D" uid="uid://ds6xbya3kyudk" path="res://bg1.png" id="2_u3w60"]
-[ext_resource type="Texture2D" uid="uid://br64xrhyewy3s" path="res://bg2.png" id="3_ut2o5"]
-[ext_resource type="Texture2D" uid="uid://ccrwowcebyj7w" path="res://bg3.png" id="4_i6ob4"]
+[ext_resource type="Texture2D" uid="uid://ds6xbya3kyudk" path="res://Levels/bg1.png" id="2_u3w60"]
+[ext_resource type="Texture2D" uid="uid://br64xrhyewy3s" path="res://Levels/bg2.png" id="3_ut2o5"]
+[ext_resource type="Texture2D" uid="uid://ccrwowcebyj7w" path="res://Levels/bg3.png" id="4_i6ob4"]
 [ext_resource type="Texture2D" uid="uid://vpu6uo26d8" path="res://Levels/Level Selection/Assets/IMG_0304.PNG" id="5_m4k17"]
 [ext_resource type="Texture2D" uid="uid://b70aocpofoj6m" path="res://Levels/Level Selection/Assets/IMG_0305.PNG" id="6_cw18o"]
 [ext_resource type="Texture2D" uid="uid://cgd8f8lin0or7" path="res://Levels/Level Selection/Assets/IMG_0306.PNG" id="7_nisgm"]
