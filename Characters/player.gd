@@ -83,6 +83,8 @@ func check_skill(skill_name, deactivate = true):
 		print("1", skill_name)
 		if (skill_name == "Restoration") and used_skill:
 			skill_2 = used_skill
+			if (skill_2.skill_name == "Possess"):
+				possess_count = -10
 			use_restoration.emit()
 		elif (skill_name == "Possess") and possess_count == -10:
 			possess_count = 3
@@ -96,6 +98,8 @@ func check_skill(skill_name, deactivate = true):
 		print("2", skill_name)
 		if (skill_name == "Restoration") and used_skill:
 			skill_1 = used_skill
+			if (skill_1.skill_name == "Possess"):
+				possess_count = -10
 			use_restoration.emit()
 		elif (skill_name == "Possess")  and possess_count == -10:
 			possess_count = 3
@@ -166,6 +170,7 @@ func _move(direction):
 				elif collider is not Plate:
 					return
 			next_tile = jump_tile
+			tile_data = jump_tile_data
 			check_skill("Jump")
 		else:
 			return
@@ -178,7 +183,7 @@ func _move(direction):
 	
 	var tween = get_tree().create_tween().set_trans(Tween.TRANS_SINE)
 	tween.tween_property(sprite_2d, "global_position", tile_map_layer.map_to_local(next_tile), 0.2)
-	if move_possessed == false:
+	if possess_count > 0 and move_possessed == false:
 		possess_count -= 1
 	if tile_data.get_custom_data("finish") == true:
 		tween.tween_callback(StageManager.win)
