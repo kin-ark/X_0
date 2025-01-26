@@ -12,7 +12,7 @@ func _get_drag_data(at_position):
 	return texture_rect
  
 func _can_drop_data(_pos, data):
-	return data is SlotData
+	return not texture_rect.lock_content and data is SlotData
  
 func _drop_data(_pos, data):
 	if texture_rect.lock_content and texture_rect.button_bak:
@@ -20,7 +20,9 @@ func _drop_data(_pos, data):
 			return
 	var temp = texture_rect.property
 	texture_rect.property = data.property
-	data.property = temp
+	if not data.lock_content:
+		data.property = temp
+
 	
 func get_preview():
 	var preview_texture = TextureRect.new()
