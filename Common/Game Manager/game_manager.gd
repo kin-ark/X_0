@@ -7,7 +7,6 @@ var current_level: int
 
 func _ready():
 	load_game()
-	initialize_level_data()
 
 func initialize_level_data():
 	# Define requirements for each level (move limit, time limit, etc.)
