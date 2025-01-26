@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=4 uid="uid://baixjoveubu2p"]
+[gd_scene load_steps=29 format=4 uid="uid://c50xyau6o5uer"]
 
 [ext_resource type="Texture2D" uid="uid://dvyenvqoy76km" path="res://tile.png" id="1_8mg8s"]
 [ext_resource type="Texture2D" uid="uid://1bphfnv5qalu" path="res://atlas.png" id="2_tv1tm"]
@@ -11,9 +11,15 @@
 [ext_resource type="PackedScene" uid="uid://c61ypr8g3dx7m" path="res://Levels/UI/button_list_container.tscn" id="12_d5tsa"]
 [ext_resource type="Script" path="res://Characters/doll.gd" id="12_fq54n"]
 [ext_resource type="PackedScene" uid="uid://va36l5srkgvk" path="res://Levels/Skill Selection/button_slot.tscn" id="13_71eoo"]
+[ext_resource type="Texture2D" uid="uid://b8fg2pt7cl56f" path="res://Levels/UI/Tutorial/Keyboard/w.png" id="13_s8fx7"]
+[ext_resource type="Texture2D" uid="uid://d0okl4f8163p4" path="res://Levels/UI/Tutorial/Keyboard/a.png" id="14_nsyp1"]
 [ext_resource type="Texture2D" uid="uid://ct32f42d0tpoc" path="res://confirm.png" id="14_psdt8"]
+[ext_resource type="Texture2D" uid="uid://b8u10tgo6xekx" path="res://Levels/UI/Tutorial/Keyboard/s.png" id="15_7s0sc"]
 [ext_resource type="FontFile" uid="uid://e1s7fhiq80fb" path="res://Common/Pause Menu/Visual Assets/endless-smile/Endless Smile.ttf" id="15_dbgso"]
+[ext_resource type="Texture2D" uid="uid://b11kdh0c1ej12" path="res://Levels/UI/Tutorial/Keyboard/d.png" id="16_21lfm"]
 [ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="17_6h5bf"]
+[ext_resource type="Texture2D" uid="uid://dkkn5x6ioansw" path="res://Levels/UI/Tutorial/Keyboard/q.png" id="17_s41r1"]
+[ext_resource type="Texture2D" uid="uid://dfx3sjvl3lh1f" path="res://Levels/UI/Tutorial/Keyboard/e.png" id="18_e3754"]
 [ext_resource type="Script" path="res://Levels/stage_manager.gd" id="22_xi012"]
 [ext_resource type="PackedScene" uid="uid://dnbrpve5d416o" path="res://Characters/player.tscn" id="23_yy4rv"]
 [ext_resource type="PackedScene" uid="uid://cj7l5wswmuu8a" path="res://Common/Pause Menu/pause_menu.tscn" id="24_dnh0u"]
@@ -74,7 +80,7 @@ glow_hdr_scale = 0.0
 [node name="Leveltest" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAHAAIAAgAAAAAAAAAIAAIAAgAAAAAAAAAJAAIAAgAAAAAAAAAKAAIAAgAAAAAAAAALAAIAAgAAAAAAAAAMAAIAAgAAAAAAAAANAAIAAgAAAAAAAAAHAAkAAgAAAAAAAAAIAAkAAgAAAAAAAAAJAAkAAgAAAAAAAAAKAAkAAgAAAAAAAAALAAkAAgAAAAAAAAAMAAkAAgAAAAAAAAANAAkAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAUAAgAAAAAAAAAHAAYAAgAAAAAAAAAHAAcAAgAAAAAAAAAHAAgAAgAAAAAAAAAOAAIAAgAAAAAAAAAOAAMAAgAAAAAAAAAOAAQAAgAAAAAAAAAOAAUAAgAAAAAAAAAOAAYAAgAAAAAAAAAOAAcAAgAAAAAAAAAOAAgAAgAAAAAAAAAOAAkAAgAAAAAAAAAKAAMAAgAAAAAAAAAKAAQAAgAAAAAAAAAKAAUAAgAAAAAAAAAKAAYAAgAAAAAAAAAKAAcAAgAAAAAAAAAKAAgAAgAAAAAAAAAIAAMAAQAAAAIAAAAIAAQAAQAAAAIAAAAIAAUAAQAAAAIAAAAIAAYAAQAAAAIAAAAIAAcAAQAAAAIAAAAIAAgAAQAAAAIAAAAJAAMAAQAAAAIAAAAJAAQAAQAAAAIAAAAJAAUAAQAAAAIAAAAJAAYAAQAAAAIAAAAJAAcAAQAAAAIAAAAJAAgAAQAAAAIAAAALAAMAAQAAAAIAAAALAAQAAQAAAAIAAAALAAUAAQAAAAIAAAALAAYAAQAAAAIAAAALAAcAAQAAAAIAAAALAAgAAQAAAAIAAAAMAAMAAgAAAAAAAAAMAAQAAgAAAAAAAAAMAAUAAgAAAAAAAAAMAAYAAgAAAAAAAAAMAAcAAgAAAAAAAAAMAAgAAgAAAAAAAAANAAMAAQAAAAIAAAANAAQAAQAAAAIAAAANAAUAAQABAAAAAAANAAYAAQAAAAIAAAANAAcAAQAAAAIAAAANAAgAAQAAAAIAAAA=")
+tile_map_data = PackedByteArray("AAAHAAIAAgAAAAAAAAAIAAIAAgAAAAAAAAAJAAIAAgAAAAAAAAAKAAIAAgAAAAAAAAALAAIAAgAAAAAAAAAMAAIAAgAAAAAAAAANAAIAAgAAAAAAAAAHAAkAAgAAAAAAAAAIAAkAAgAAAAAAAAAJAAkAAgAAAAAAAAAKAAkAAgAAAAAAAAALAAkAAgAAAAAAAAAMAAkAAgAAAAAAAAANAAkAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAUAAgAAAAAAAAAHAAYAAgAAAAAAAAAHAAcAAgAAAAAAAAAHAAgAAgAAAAAAAAAOAAIAAgAAAAAAAAAOAAMAAgAAAAAAAAAOAAQAAgAAAAAAAAAOAAUAAgAAAAAAAAAOAAYAAgAAAAAAAAAOAAcAAgAAAAAAAAAOAAgAAgAAAAAAAAAOAAkAAgAAAAAAAAAKAAMAAgAAAAAAAAAKAAQAAgAAAAAAAAAKAAUAAQAAAAAAAAAKAAYAAgAAAAAAAAAKAAcAAgAAAAAAAAAKAAgAAgAAAAAAAAAIAAMAAQAAAAIAAAAIAAQAAQAAAAIAAAAIAAUAAQAAAAIAAAAIAAYAAQAAAAIAAAAIAAcAAQAAAAIAAAAIAAgAAQAAAAIAAAAJAAMAAQAAAAIAAAAJAAQAAQAAAAIAAAAJAAUAAQAAAAIAAAAJAAYAAQAAAAIAAAAJAAcAAQAAAAIAAAAJAAgAAQAAAAIAAAALAAMAAQAAAAIAAAALAAQAAQAAAAIAAAALAAUAAQAAAAIAAAALAAYAAQAAAAIAAAALAAcAAQAAAAIAAAALAAgAAQAAAAIAAAAMAAMAAQAAAAIAAAAMAAQAAQAAAAIAAAAMAAUAAQAAAAIAAAAMAAYAAQAAAAIAAAAMAAcAAQAAAAIAAAAMAAgAAQAAAAIAAAANAAMAAQAAAAIAAAANAAQAAQAAAAIAAAANAAUAAQABAAAAAAANAAYAAQAAAAIAAAANAAcAAQAAAAIAAAANAAgAAQAAAAIAAAA=")
 tile_set = SubResource("TileSet_lp5yr")
 script = ExtResource("4_fikoh")
 
@@ -170,11 +176,104 @@ theme_override_font_sizes/font_size = 100
 text = "5"
 horizontal_alignment = 2
 
+[node name="Tutorial" type="VBoxContainer" parent="UILayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(0.68, 0.68)
+theme_override_constants/separation = 170
+
+[node name="WASD" type="Control" parent="UILayer/Tutorial"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UILayer/Tutorial/WASD"]
+layout_mode = 2
+offset_left = 63.0
+offset_top = -1.0
+offset_right = 182.0
+offset_bottom = 118.0
+texture = ExtResource("13_s8fx7")
+
+[node name="TextureRect2" type="TextureRect" parent="UILayer/Tutorial/WASD"]
+layout_mode = 2
+offset_left = -5.0
+offset_top = 71.0
+offset_right = 114.0
+offset_bottom = 190.0
+texture = ExtResource("14_nsyp1")
+
+[node name="TextureRect3" type="TextureRect" parent="UILayer/Tutorial/WASD"]
+layout_mode = 2
+offset_left = 63.0
+offset_top = 71.0
+offset_right = 182.0
+offset_bottom = 190.0
+texture = ExtResource("15_7s0sc")
+
+[node name="TextureRect4" type="TextureRect" parent="UILayer/Tutorial/WASD"]
+layout_mode = 2
+offset_left = 132.0
+offset_top = 72.0
+offset_right = 251.0
+offset_bottom = 191.0
+texture = ExtResource("16_21lfm")
+
+[node name="Label" type="Label" parent="UILayer/Tutorial/WASD"]
+layout_mode = 0
+offset_left = 264.0
+offset_top = 75.0
+offset_right = 337.0
+offset_bottom = 110.0
+theme_override_fonts/font = ExtResource("15_dbgso")
+theme_override_font_sizes/font_size = 35
+text = "MOVE"
+
+[node name="Q" type="Control" parent="UILayer/Tutorial"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UILayer/Tutorial/Q"]
+layout_mode = 2
+offset_left = 61.7647
+offset_top = 3.52933
+offset_right = 180.765
+offset_bottom = 122.529
+texture = ExtResource("17_s41r1")
+
+[node name="Label" type="Label" parent="UILayer/Tutorial/Q"]
+layout_mode = 0
+offset_left = 263.238
+offset_top = 41.1083
+offset_right = 438.238
+offset_bottom = 76.1083
+theme_override_fonts/font = ExtResource("15_dbgso")
+theme_override_font_sizes/font_size = 35
+text = "LEFT BUTTON"
+
+[node name="E" type="Control" parent="UILayer/Tutorial"]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="UILayer/Tutorial/E"]
+layout_mode = 2
+offset_left = 64.7058
+offset_top = -54.706
+offset_right = 183.706
+offset_bottom = 64.294
+texture = ExtResource("18_e3754")
+
+[node name="Label" type="Label" parent="UILayer/Tutorial/E"]
+layout_mode = 0
+offset_left = 266.18
+offset_top = -17.1271
+offset_right = 459.18
+offset_bottom = 17.8729
+theme_override_fonts/font = ExtResource("15_dbgso")
+theme_override_font_sizes/font_size = 35
+text = "RIGHT BUTTON"
+
 [node name="StageManager" type="Node2D" parent="."]
 script = ExtResource("22_xi012")
 
 [node name="Player" parent="." instance=ExtResource("23_yy4rv")]
-position = Vector2(731, 473)
+position = Vector2(817, 731)
 skill_1 = ExtResource("17_6h5bf")
 
 [node name="Enemies" type="Node" parent="."]

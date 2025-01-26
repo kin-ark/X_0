@@ -1,10 +1,21 @@
-[gd_scene load_steps=4 format=3 uid="uid://8k2lr60587he"]
+[gd_scene load_steps=7 format=3 uid="uid://8k2lr60587he"]
 
 [ext_resource type="Script" path="res://Environments/gate.gd" id="1_am5di"]
-[ext_resource type="Texture2D" uid="uid://dgrmvtp5k53qh" path="res://icon.png" id="2_b8e6r"]
+[ext_resource type="Texture2D" uid="uid://bqy0yycist1hm" path="res://Environments/Visual Assets/gate1.png" id="2_kdysu"]
+[ext_resource type="Texture2D" uid="uid://bdrn686t1ngdv" path="res://Environments/Visual Assets/gate2.png" id="3_0rth2"]
+[ext_resource type="Texture2D" uid="uid://dd0jsiwjucbfe" path="res://Environments/Visual Assets/gate3.png" id="4_6x6ny"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0uywu"]
 size = Vector2(86, 86)
+
+[sub_resource type="AnimatedTexture" id="AnimatedTexture_18htb"]
+frames = 3
+speed_scale = 5.0
+frame_0/texture = ExtResource("2_kdysu")
+frame_1/texture = ExtResource("3_0rth2")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("4_6x6ny")
+frame_2/duration = 1.0
 
 [node name="Gate" type="Area2D"]
 script = ExtResource("1_am5di")
@@ -13,5 +24,5 @@ script = ExtResource("1_am5di")
 shape = SubResource("RectangleShape2D_0uywu")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2(0.289999, 0.66)
-texture = ExtResource("2_b8e6r")
+scale = Vector2(0.718082, 0.692624)
+texture = SubResource("AnimatedTexture_18htb")

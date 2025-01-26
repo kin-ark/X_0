@@ -9,7 +9,7 @@ extends TextureRect
 @onready var confirm_button: TextureButton = $ConfirmButton
 @onready var right_particle_spot: Marker2D = $RightButton/RightParticleSpot
 @onready var left_particle_spot: Marker2D = $LeftButton/LeftParticleSpot
-
+const EXPLOSION = preload("res://Particles/explosion.tscn")
 
 const GREEN_FLAME = preload("res://Particles/particle_green.tscn")
 const PINK_FLAME = preload("res://Particles/particle_pink.tscn")
@@ -40,14 +40,24 @@ func _on_confirm_button_pressed() -> void:
 
 func _on_player_destroy_button_left() -> void:
 	print("l")
+	await get_tree().create_timer(1).timeout
 	left_button_slot.hide()
 	left_particle_spot.hide()
+	var _particle = EXPLOSION.instantiate()
+	get_tree().current_scene.add_child(_particle)
+	_particle.global_position = left_particle_spot.global_position
+	_particle.emitting = true
 
 
 func _on_player_destroy_button_right() -> void:
 	print("r")
+	await get_tree().create_timer(1).timeout
 	right_button_slot.hide()
 	right_particle_spot.hide()
+	var _particle = EXPLOSION.instantiate()
+	add_child(_particle)
+	_particle.global_position = right_particle_spot.global_position
+	_particle.emitting = true
 
 
 func _on_player_use_button_left() -> void:
