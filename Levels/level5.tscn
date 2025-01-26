@@ -1,39 +1,43 @@
-[gd_scene load_steps=36 format=4 uid="uid://c50xyau6o5uer"]
+[gd_scene load_steps=40 format=4 uid="uid://dfe750wd843tt"]
 
-[ext_resource type="Texture2D" uid="uid://dvyenvqoy76km" path="res://Environments/Visual Assets/tile.png" id="1_8mg8s"]
-[ext_resource type="Texture2D" uid="uid://1bphfnv5qalu" path="res://Environments/Visual Assets/atlas.png" id="2_tv1tm"]
-[ext_resource type="Texture2D" uid="uid://ct0kko8nok8yl" path="res://Environments/Visual Assets/wallanimated.png" id="3_im31o"]
-[ext_resource type="Texture2D" uid="uid://ceolw7cgbamye" path="res://Environments/Visual Assets/portalanim.png" id="4_8vxx0"]
-[ext_resource type="Script" path="res://Environments/tile_map_layer.gd" id="4_fikoh"]
-[ext_resource type="PackedScene" uid="uid://bqgrh70d48n5n" path="res://Levels/UI/background_layer.tscn" id="5_t0ck0"]
-[ext_resource type="Script" path="res://Levels/UI/game_ui.gd" id="9_2v3v1"]
-[ext_resource type="PackedScene" uid="uid://le8uioavgm85" path="res://Levels/Level Summary/level_summary.tscn" id="10_cc0nh"]
-[ext_resource type="Texture2D" uid="uid://ud0u7qcelavi" path="res://Characters/Visual Assets/bigmc.PNG" id="11_wiy6f"]
-[ext_resource type="PackedScene" uid="uid://c61ypr8g3dx7m" path="res://Levels/UI/button_list_container.tscn" id="12_d5tsa"]
-[ext_resource type="Script" path="res://Characters/doll.gd" id="12_fq54n"]
-[ext_resource type="PackedScene" uid="uid://va36l5srkgvk" path="res://Levels/Skill Selection/button_slot.tscn" id="13_71eoo"]
-[ext_resource type="FontFile" uid="uid://cay3ohjaj6giy" path="res://Levels/Level Solved Window/TechnoRaceItalic-eZRWe.otf" id="13_na2h4"]
-[ext_resource type="Texture2D" uid="uid://b8fg2pt7cl56f" path="res://Levels/UI/Tutorial/Keyboard/w.png" id="13_s8fx7"]
-[ext_resource type="PackedScene" path="res://Levels/UI/black_overlay.tscn" id="14_4qrqw"]
-[ext_resource type="Texture2D" uid="uid://d0okl4f8163p4" path="res://Levels/UI/Tutorial/Keyboard/a.png" id="14_nsyp1"]
-[ext_resource type="Texture2D" uid="uid://ct32f42d0tpoc" path="res://Common/confirm.png" id="14_psdt8"]
-[ext_resource type="Texture2D" uid="uid://b8u10tgo6xekx" path="res://Levels/UI/Tutorial/Keyboard/s.png" id="15_7s0sc"]
-[ext_resource type="FontFile" uid="uid://e1s7fhiq80fb" path="res://Common/Pause Menu/Visual Assets/endless-smile/Endless Smile.ttf" id="15_dbgso"]
-[ext_resource type="Texture2D" uid="uid://b11kdh0c1ej12" path="res://Levels/UI/Tutorial/Keyboard/d.png" id="16_21lfm"]
-[ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="17_6h5bf"]
-[ext_resource type="Texture2D" uid="uid://dkkn5x6ioansw" path="res://Levels/UI/Tutorial/Keyboard/q.png" id="17_s41r1"]
-[ext_resource type="Texture2D" uid="uid://dfx3sjvl3lh1f" path="res://Levels/UI/Tutorial/Keyboard/e.png" id="18_e3754"]
-[ext_resource type="Script" path="res://Levels/stage_manager.gd" id="22_xi012"]
-[ext_resource type="PackedScene" uid="uid://dnbrpve5d416o" path="res://Characters/player.tscn" id="23_yy4rv"]
-[ext_resource type="PackedScene" uid="uid://cj7l5wswmuu8a" path="res://Common/Pause Menu/pause_menu.tscn" id="24_dnh0u"]
+[ext_resource type="Texture2D" uid="uid://dvyenvqoy76km" path="res://Environments/Visual Assets/tile.png" id="1_66xdn"]
+[ext_resource type="Texture2D" uid="uid://1bphfnv5qalu" path="res://Environments/Visual Assets/atlas.png" id="2_7do13"]
+[ext_resource type="Texture2D" uid="uid://ct0kko8nok8yl" path="res://Environments/Visual Assets/wallanimated.png" id="3_to2ol"]
+[ext_resource type="Texture2D" uid="uid://ceolw7cgbamye" path="res://Environments/Visual Assets/portalanim.png" id="4_c8gyg"]
+[ext_resource type="Script" path="res://Environments/tile_map_layer.gd" id="5_g3nhu"]
+[ext_resource type="Script" path="res://Levels/UI/game_ui.gd" id="6_g5nm6"]
+[ext_resource type="PackedScene" uid="uid://le8uioavgm85" path="res://Levels/Level Summary/level_summary.tscn" id="7_mhkmh"]
+[ext_resource type="Texture2D" uid="uid://b8fg2pt7cl56f" path="res://Levels/UI/Tutorial/Keyboard/w.png" id="8_bft27"]
+[ext_resource type="Texture2D" uid="uid://d0okl4f8163p4" path="res://Levels/UI/Tutorial/Keyboard/a.png" id="9_2vh4m"]
+[ext_resource type="Texture2D" uid="uid://b8u10tgo6xekx" path="res://Levels/UI/Tutorial/Keyboard/s.png" id="10_grg8r"]
+[ext_resource type="Texture2D" uid="uid://b11kdh0c1ej12" path="res://Levels/UI/Tutorial/Keyboard/d.png" id="11_qgvk3"]
+[ext_resource type="FontFile" uid="uid://e1s7fhiq80fb" path="res://Common/Pause Menu/Visual Assets/endless-smile/Endless Smile.ttf" id="12_sgndp"]
+[ext_resource type="Texture2D" uid="uid://dkkn5x6ioansw" path="res://Levels/UI/Tutorial/Keyboard/q.png" id="13_qjbys"]
+[ext_resource type="Texture2D" uid="uid://dfx3sjvl3lh1f" path="res://Levels/UI/Tutorial/Keyboard/e.png" id="14_nw00d"]
+[ext_resource type="FontFile" uid="uid://cay3ohjaj6giy" path="res://Levels/Level Solved Window/TechnoRaceItalic-eZRWe.otf" id="15_5sxkg"]
+[ext_resource type="PackedScene" path="res://Levels/UI/black_overlay.tscn" id="16_myoea"]
+[ext_resource type="Texture2D" uid="uid://ud0u7qcelavi" path="res://Characters/Visual Assets/bigmc.PNG" id="17_paoyx"]
+[ext_resource type="Script" path="res://Characters/doll.gd" id="18_e1kxl"]
+[ext_resource type="PackedScene" uid="uid://va36l5srkgvk" path="res://Levels/Skill Selection/button_slot.tscn" id="19_a3mot"]
+[ext_resource type="Texture2D" uid="uid://ct32f42d0tpoc" path="res://Common/confirm.png" id="20_atwq8"]
+[ext_resource type="PackedScene" uid="uid://c61ypr8g3dx7m" path="res://Levels/UI/button_list_container.tscn" id="21_c2fh7"]
+[ext_resource type="Script" path="res://Levels/stage_manager.gd" id="22_hys1a"]
+[ext_resource type="PackedScene" uid="uid://dnbrpve5d416o" path="res://Characters/player.tscn" id="23_oisnn"]
+[ext_resource type="Resource" uid="uid://bwuy05uunjbxo" path="res://Skills/jump.tres" id="24_ywv5w"]
+[ext_resource type="PackedScene" uid="uid://cj7l5wswmuu8a" path="res://Common/Pause Menu/pause_menu.tscn" id="25_h6r77"]
+[ext_resource type="PackedScene" uid="uid://bxsk20hcg1ejk" path="res://Environments/plates.tscn" id="25_hwffk"]
+[ext_resource type="PackedScene" uid="uid://3yjgfvxpfjw8" path="res://Characters/enemy_chase.tscn" id="25_qf04e"]
+[ext_resource type="PackedScene" uid="uid://bqgrh70d48n5n" path="res://Levels/UI/background_layer.tscn" id="26_7f2cn"]
+[ext_resource type="PackedScene" uid="uid://8k2lr60587he" path="res://Environments/gate.tscn" id="27_iak81"]
+[ext_resource type="PackedScene" uid="uid://diutlvqom6sxf" path="res://Environments/pushable.tscn" id="28_v234e"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_763ax"]
-texture = ExtResource("1_8mg8s")
+texture = ExtResource("1_66xdn")
 texture_region_size = Vector2i(119, 119)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_rsb8w"]
-texture = ExtResource("2_tv1tm")
+texture = ExtResource("2_7do13")
 texture_region_size = Vector2i(86, 86)
 0:0/0 = 0
 1:0/0 = 0
@@ -49,7 +53,7 @@ texture_region_size = Vector2i(86, 86)
 0:2/0/custom_data_0 = true
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5352i"]
-texture = ExtResource("3_im31o")
+texture = ExtResource("3_to2ol")
 texture_region_size = Vector2i(86, 86)
 0:0/animation_columns = 3
 0:0/animation_speed = 5.0
@@ -59,7 +63,7 @@ texture_region_size = Vector2i(86, 86)
 0:0/0 = 0
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_qy3hi"]
-texture = ExtResource("4_8vxx0")
+texture = ExtResource("4_c8gyg")
 texture_region_size = Vector2i(86, 86)
 0:0/animation_columns = 4
 0:0/animation_speed = 5.0
@@ -130,16 +134,16 @@ glow_strength = 1.5
 glow_blend_mode = 0
 glow_hdr_scale = 0.0
 
-[node name="Leveltest2" type="Node2D"]
+[node name="Leveltest" type="Node2D"]
 
 [node name="TileMapLayer" type="TileMapLayer" parent="."]
-tile_map_data = PackedByteArray("AAAHAAIAAgAAAAAAAAAIAAIAAgAAAAAAAAAJAAIAAgAAAAAAAAAKAAIAAgAAAAAAAAALAAIAAgAAAAAAAAAMAAIAAgAAAAAAAAANAAIAAgAAAAAAAAAHAAkAAgAAAAAAAAAIAAkAAgAAAAAAAAAJAAkAAgAAAAAAAAAKAAkAAgAAAAAAAAALAAkAAgAAAAAAAAAMAAkAAgAAAAAAAAANAAkAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAUAAgAAAAAAAAAHAAYAAgAAAAAAAAAHAAcAAgAAAAAAAAAHAAgAAgAAAAAAAAAOAAIAAgAAAAAAAAAOAAMAAgAAAAAAAAAOAAQAAgAAAAAAAAAOAAUAAgAAAAAAAAAOAAYAAgAAAAAAAAAOAAcAAgAAAAAAAAAOAAgAAgAAAAAAAAAOAAkAAgAAAAAAAAAKAAMAAgAAAAAAAAAKAAQAAgAAAAAAAAAKAAUAAgAAAAAAAAAKAAYAAgAAAAAAAAAKAAcAAgAAAAAAAAAKAAgAAgAAAAAAAAAIAAMAAQAAAAIAAAAIAAQAAQAAAAIAAAAIAAUAAQAAAAIAAAAIAAYAAQAAAAIAAAAIAAcAAQAAAAIAAAAIAAgAAQAAAAIAAAAJAAMAAQAAAAIAAAAJAAQAAQAAAAIAAAAJAAUAAQAAAAIAAAAJAAYAAQAAAAIAAAAJAAcAAQAAAAIAAAAJAAgAAQAAAAIAAAALAAMAAQAAAAIAAAALAAQAAQAAAAIAAAALAAUAAQAAAAIAAAALAAYAAQAAAAIAAAALAAcAAQAAAAIAAAALAAgAAQAAAAIAAAAMAAMAAQAAAAIAAAAMAAQAAQAAAAIAAAAMAAUAAQAAAAIAAAAMAAYAAQAAAAIAAAAMAAcAAQAAAAIAAAAMAAgAAQAAAAIAAAANAAMAAQAAAAIAAAANAAQAAQAAAAIAAAANAAUAAwAAAAAAAAANAAYAAQAAAAIAAAANAAcAAQAAAAIAAAANAAgAAQAAAAIAAAA=")
+tile_map_data = PackedByteArray("AAAHAAIAAgAAAAAAAAAIAAIAAgAAAAAAAAAJAAIAAgAAAAAAAAAKAAIAAgAAAAAAAAALAAIAAgAAAAAAAAAMAAIAAgAAAAAAAAANAAIAAgAAAAAAAAAHAAkAAgAAAAAAAAAIAAkAAgAAAAAAAAAJAAkAAgAAAAAAAAAKAAkAAgAAAAAAAAALAAkAAgAAAAAAAAAMAAkAAgAAAAAAAAANAAkAAgAAAAAAAAAHAAMAAgAAAAAAAAAHAAQAAgAAAAAAAAAHAAUAAgAAAAAAAAAHAAYAAgAAAAAAAAAHAAcAAgAAAAAAAAAHAAgAAgAAAAAAAAAOAAIAAgAAAAAAAAAOAAMAAgAAAAAAAAAOAAQAAgAAAAAAAAAOAAUAAgAAAAAAAAAOAAYAAgAAAAAAAAAOAAcAAgAAAAAAAAAOAAgAAgAAAAAAAAAOAAkAAgAAAAAAAAAIAAMAAQAAAAIAAAAIAAQAAQAAAAIAAAAIAAUAAQAAAAIAAAAIAAYAAQAAAAIAAAAIAAcAAgAAAAAAAAAIAAgAAgAAAAAAAAAJAAUAAQAAAAIAAAAJAAYAAQAAAAIAAAAJAAcAAgAAAAAAAAAJAAgAAgAAAAAAAAALAAYAAQAAAAIAAAALAAcAAgAAAAAAAAAMAAYAAQAAAAIAAAAMAAgAAQAAAAIAAAANAAQAAgAAAAAAAAANAAYAAQAAAAIAAAANAAcAAgAAAAAAAAAKAAcAAgAAAAAAAAAMAAUAAgAAAAAAAAALAAQAAQAAAAIAAAAKAAUAAQAAAAIAAAALAAUAAQAAAAIAAAAKAAYAAQAAAAIAAAANAAUAAgAAAAAAAAAKAAgAAgAAAAAAAAANAAMAAgAAAAAAAAAMAAQAAQAAAAIAAAAKAAQAAQAAAAIAAAAMAAMAAwAAAAAAAAAKAAMAAgAAAAAAAAAMAAcAAQAAAAIAAAALAAgAAQAAAAIAAAANAAgAAQAAAAIAAAAJAAQAAQAAAAIAAAAJAAMAAQAAAAIAAAALAAMAAQAAAAIAAAA=")
 tile_set = SubResource("TileSet_lp5yr")
-script = ExtResource("4_fikoh")
+script = ExtResource("5_g3nhu")
 
 [node name="UILayer" type="CanvasLayer" parent="."]
-script = ExtResource("9_2v3v1")
-score_board = ExtResource("10_cc0nh")
+script = ExtResource("6_g5nm6")
+score_board = ExtResource("7_mhkmh")
 
 [node name="Tutorial" type="VBoxContainer" parent="UILayer"]
 offset_right = 40.0
@@ -156,7 +160,7 @@ offset_left = 63.0
 offset_top = -1.0
 offset_right = 182.0
 offset_bottom = 118.0
-texture = ExtResource("13_s8fx7")
+texture = ExtResource("8_bft27")
 
 [node name="TextureRect2" type="TextureRect" parent="UILayer/Tutorial/WASD"]
 layout_mode = 2
@@ -164,7 +168,7 @@ offset_left = -5.0
 offset_top = 71.0
 offset_right = 114.0
 offset_bottom = 190.0
-texture = ExtResource("14_nsyp1")
+texture = ExtResource("9_2vh4m")
 
 [node name="TextureRect3" type="TextureRect" parent="UILayer/Tutorial/WASD"]
 layout_mode = 2
@@ -172,7 +176,7 @@ offset_left = 63.0
 offset_top = 71.0
 offset_right = 182.0
 offset_bottom = 190.0
-texture = ExtResource("15_7s0sc")
+texture = ExtResource("10_grg8r")
 
 [node name="TextureRect4" type="TextureRect" parent="UILayer/Tutorial/WASD"]
 layout_mode = 2
@@ -180,7 +184,7 @@ offset_left = 132.0
 offset_top = 72.0
 offset_right = 251.0
 offset_bottom = 191.0
-texture = ExtResource("16_21lfm")
+texture = ExtResource("11_qgvk3")
 
 [node name="Label" type="Label" parent="UILayer/Tutorial/WASD"]
 layout_mode = 0
@@ -188,7 +192,7 @@ offset_left = 264.0
 offset_top = 75.0
 offset_right = 337.0
 offset_bottom = 110.0
-theme_override_fonts/font = ExtResource("15_dbgso")
+theme_override_fonts/font = ExtResource("12_sgndp")
 theme_override_font_sizes/font_size = 35
 text = "MOVE"
 
@@ -201,7 +205,7 @@ offset_left = 61.7647
 offset_top = 3.52933
 offset_right = 180.765
 offset_bottom = 122.529
-texture = ExtResource("17_s41r1")
+texture = ExtResource("13_qjbys")
 
 [node name="Label" type="Label" parent="UILayer/Tutorial/Q"]
 layout_mode = 0
@@ -209,7 +213,7 @@ offset_left = 263.238
 offset_top = 41.1083
 offset_right = 438.238
 offset_bottom = 76.1083
-theme_override_fonts/font = ExtResource("15_dbgso")
+theme_override_fonts/font = ExtResource("12_sgndp")
 theme_override_font_sizes/font_size = 35
 text = "LEFT BUTTON"
 
@@ -222,7 +226,7 @@ offset_left = 64.7058
 offset_top = -54.706
 offset_right = 183.706
 offset_bottom = 64.294
-texture = ExtResource("18_e3754")
+texture = ExtResource("14_nw00d")
 
 [node name="Label" type="Label" parent="UILayer/Tutorial/E"]
 layout_mode = 0
@@ -230,7 +234,7 @@ offset_left = 266.18
 offset_top = -17.1271
 offset_right = 459.18
 offset_bottom = 17.8729
-theme_override_fonts/font = ExtResource("15_dbgso")
+theme_override_fonts/font = ExtResource("12_sgndp")
 theme_override_font_sizes/font_size = 35
 text = "RIGHT BUTTON"
 
@@ -253,17 +257,17 @@ theme_override_constants/separation = 40
 
 [node name="Time" type="Label" parent="UILayer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("13_na2h4")
+theme_override_fonts/font = ExtResource("15_5sxkg")
 theme_override_font_sizes/font_size = 100
 horizontal_alignment = 2
 
 [node name="Move" type="Label" parent="UILayer/MarginContainer/VBoxContainer"]
 layout_mode = 2
-theme_override_fonts/font = ExtResource("13_na2h4")
+theme_override_fonts/font = ExtResource("15_5sxkg")
 theme_override_font_sizes/font_size = 100
 horizontal_alignment = 2
 
-[node name="BlackOverlay" parent="UILayer" instance=ExtResource("14_4qrqw")]
+[node name="BlackOverlay" parent="UILayer" instance=ExtResource("16_myoea")]
 modulate = Color(0.0980392, 0.0980392, 0.14902, 0.501961)
 
 [node name="BigMC" type="TextureRect" parent="UILayer"]
@@ -278,10 +282,10 @@ grow_vertical = 2
 scale = Vector2(0.644957, 0.644957)
 pivot_offset = Vector2(0, 1080)
 mouse_filter = 2
-texture = ExtResource("11_wiy6f")
-script = ExtResource("12_fq54n")
+texture = ExtResource("17_paoyx")
+script = ExtResource("18_e1kxl")
 
-[node name="LeftButton" parent="UILayer/BigMC" instance=ExtResource("13_71eoo")]
+[node name="LeftButton" parent="UILayer/BigMC" instance=ExtResource("19_a3mot")]
 layout_mode = 0
 offset_left = 304.563
 offset_top = 558.941
@@ -291,7 +295,7 @@ offset_bottom = 919.941
 [node name="LeftParticleSpot" type="Marker2D" parent="UILayer/BigMC/LeftButton"]
 position = Vector2(168.482, 177.492)
 
-[node name="RightButton" parent="UILayer/BigMC" instance=ExtResource("13_71eoo")]
+[node name="RightButton" parent="UILayer/BigMC" instance=ExtResource("19_a3mot")]
 layout_mode = 0
 offset_left = 523.505
 offset_top = 534.478
@@ -308,7 +312,7 @@ offset_top = 37.8822
 offset_right = 471.785
 offset_bottom = 182.882
 scale = Vector2(2.17257, 2.17257)
-texture_normal = ExtResource("14_psdt8")
+texture_normal = ExtResource("20_atwq8")
 
 [node name="Label" type="Label" parent="UILayer/BigMC/ConfirmButton"]
 layout_mode = 0
@@ -317,7 +321,7 @@ offset_top = 35.0562
 offset_right = 240.253
 offset_bottom = 85.0562
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_fonts/font = ExtResource("15_dbgso")
+theme_override_fonts/font = ExtResource("12_sgndp")
 theme_override_font_sizes/font_size = 50
 text = "CONFIRM"
 
@@ -327,7 +331,7 @@ libraries = {
 }
 autoplay = "big_mc"
 
-[node name="ButtonListContainer" parent="UILayer" instance=ExtResource("12_d5tsa")]
+[node name="ButtonListContainer" parent="UILayer" instance=ExtResource("21_c2fh7")]
 offset_left = 80.0
 offset_right = 2000.0
 
@@ -345,28 +349,49 @@ offset_bottom = -66.0
 grow_horizontal = 2
 grow_vertical = 0
 theme_override_colors/font_color = Color(0.988235, 0.729412, 0.67451, 0.803922)
-theme_override_fonts/font = ExtResource("15_dbgso")
+theme_override_fonts/font = ExtResource("12_sgndp")
 theme_override_font_sizes/font_size = 64
 text = "You cant use two same buttons"
 
 [node name="StageManager" type="Node2D" parent="."]
-script = ExtResource("22_xi012")
+script = ExtResource("22_hys1a")
 
-[node name="Player" parent="." instance=ExtResource("23_yy4rv")]
-position = Vector2(731, 473)
-skill_1 = ExtResource("17_6h5bf")
+[node name="Player" parent="." instance=ExtResource("23_oisnn")]
+position = Vector2(731, 559)
+skill_1 = ExtResource("24_ywv5w")
 
 [node name="Enemies" type="Node" parent="."]
 
+[node name="EnemyChase" parent="Enemies" instance=ExtResource("25_qf04e")]
+position = Vector2(1075, 731)
+
+[node name="EnemyChase2" parent="Enemies" instance=ExtResource("25_qf04e")]
+position = Vector2(817, 301)
+
 [node name="Environments" type="Node" parent="."]
 
-[node name="PauseMenu" parent="." instance=ExtResource("24_dnh0u")]
+[node name="Plates" parent="Environments" node_paths=PackedStringArray("gates") instance=ExtResource("25_hwffk")]
+position = Vector2(989, 387)
+gates = [NodePath("../Gate"), NodePath("../Gate2")]
+
+[node name="Gate" parent="Environments" instance=ExtResource("27_iak81")]
+position = Vector2(1075, 645)
+open_direction = 1
+
+[node name="Gate2" parent="Environments" instance=ExtResource("27_iak81")]
+position = Vector2(1075, 387)
+open_direction = 1
+
+[node name="Pushable" parent="Environments" instance=ExtResource("28_v234e")]
+position = Vector2(989, 473)
+
+[node name="PauseMenu" parent="." instance=ExtResource("25_h6r77")]
 visible = false
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_23kcl")
 
-[node name="BackgroundLayer" parent="." instance=ExtResource("5_t0ck0")]
+[node name="BackgroundLayer" parent="." instance=ExtResource("26_7f2cn")]
 
 [connection signal="pressed" from="UILayer/BigMC/ConfirmButton" to="UILayer/BigMC" method="_on_confirm_button_pressed"]
 [connection signal="destroy_button_left" from="Player" to="UILayer/BigMC" method="_on_player_destroy_button_left"]
